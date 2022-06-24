@@ -8,6 +8,6 @@ Nos gustó la forma en que Solodeportes presenta el formulario de inicio e inclu
 La forma en la que Puma muestra su detalle de producto nos parece interesante, con un modelo simple de una imagen central y otras a un lado para mostrar distintos ángulos (no usaríamos el carrusel🎠 Edu, no te preocupes). Además incluyendo al otro lado el nombre del producto, el precio, las opciones para seleccionar color, talle y cantidad y colocando un "acerca del producto" más abajo.
 
 4.[Nike](https://www.nike.com/ar/) 
-De la página de Nike nos fijamos en la simpleza del footer, colocando algunas datos de ayuda y un "sobre nosotros" de la marca acompañado de los íconos de las redes sociales.
+De la página de Nike nos fijamos en la simpleza y el cambio a otro color del footer, colocando algunas datos de ayuda y un "sobre nosotros" de la marca acompañado de los íconos de las redes sociales.
 
 ↩️[Back](./README.md)
