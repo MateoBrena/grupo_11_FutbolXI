@@ -1,5 +1,5 @@
 1.[Sportline](https://www.sportline.com.ar/) 
-Nos inspiramos en esta página por la distribución del Home.
+De esta página nos gustó la distribución del Home.
 
 2.[Solodeportes](https://www.solodeportes.com.ar/customer/account/login/) 
 Nos gustó la forma en que Solodeportes presenta el formulario de inicio e incluye un botón para el formulario de registro de nuevos usarios. No utiliza desplegables en su Home sino que ambos redireccionan al usuario a otras páginas.
