@@ -2,4 +2,4 @@
 ## 👨‍💻[Integrantes](./Documentos/Integrantes.md)
 ## 🎁[Nuestros productos](./Documentos/productos.md)
 ## 🔍[Referentes](./Documentos/referentes.md)
-## ✏️[Wireframes](./Documentos/wireframes.md)
+## ✏️[Wireframes](./Documentos/Wireframe/wireframes.md)
