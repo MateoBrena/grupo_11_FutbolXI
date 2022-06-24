@@ -11,4 +11,4 @@ La forma en la que Puma muestra su detalle de producto nos parece interesante, c
 De la página de Nike nos fijamos en la simpleza y el cambio a otro color del footer, colocando algunas datos de ayuda y un "sobre nosotros" de la marca acompañado de los íconos de las redes sociales.
 
 
-↩️[Back](./README.md)
+↩️[Back](https://github.com/MateoBrena/grupo_11_ElNombre/blob/main/README.md)
