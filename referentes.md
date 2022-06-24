@@ -9,3 +9,5 @@ La forma en la que Puma muestra su detalle de producto nos parece interesante, c
 
 4.[Nike](https://www.nike.com/ar/) 
 De la página de Nike nos fijamos en la simpleza del footer, colocando algunas datos de ayuda y un "sobre nosotros" de la marca acompañado de los íconos de las redes sociales.
+
+[^1]: This is the footnote.
