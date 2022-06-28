@@ -3,5 +3,5 @@
 ## 🎁[Nuestros productos](./Documentos/productos.md)
 ## 🔍[Referentes](./Documentos/referentes.md)
 ## ✏️[Wireframes](./Wireframe/wireframes.md)
-## 🖌️[Design](./Design)
-## 🖼️[Bocetos](./Bocetos)
+## 🖌️[Design](./Diseño)
+## 🖼️[Bocetos](./Bocetos/BocetoDePrueba.md)
