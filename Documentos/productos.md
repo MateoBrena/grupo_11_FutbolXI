@@ -1,3 +1,3 @@
-En nuestro grupo decidimos que nuestro producto sea Botines. Creemos que nos diferenciaríamos del resto por la venta exclusiva de botines para futbol o por nuestras ofertas motivo. Nuestro público sería la gente que se dedica a jugar al futbol en cancha de 11.
+En nuestro grupo decidimos que nuestro producto sean los botines de fútbol, en particular aquellos con suela y tapones para canchas de césped natural, tanto la variante con tapones de plástico como la variante con tapones de plástico y metal (para terreno firme y para terreno suave respectivamente) . Creemos que nos diferenciaríamos del resto por dedicarnos exclusivamente a la venta de botines para fútbol, no venderemos ningún otro producto relacionado con este ni ningún otro deporte. Nuestro público serían aquellas personas amateurs o semi-profesionales que jueguen al fútbol en cancha de 11 y de césped natural (mayormente las canchas de 11 son de césped natural).
 
 ↩️[Back](../README.md)
