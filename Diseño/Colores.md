@@ -1,4 +1,5 @@
-52B788 -> Verde
+verde1 (Footer y Header) <- 248232
+verde2 (Fondo) <-B7EFC5
 
 ADB5BD -> Gris
 
