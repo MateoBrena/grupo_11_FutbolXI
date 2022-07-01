@@ -1,5 +1,4 @@
-Tipografía Heebo
-https://fonts.google.com/specimen/Heebo?preview.text=Futbol&preview.text_type=custom
+[Tipografía Heebo](https://fonts.google.com/specimen/Heebo?preview.text=)
 
 🔙[Back to Design](../Diseño)
 
