@@ -1,6 +1,8 @@
-Verde1 (Footer y Header) <- 248232
+Verde1 (Footer y Header) = 248232
 
-Verde2 (Fondo) <-B7EFC5
+Verde2 (Fondo) = AADDBB
+
+Verde3 = B7EFC5
 
 
 🔙[Back to Design](../Diseño)
