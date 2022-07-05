@@ -4,4 +4,4 @@
 ## 🔍[Referentes](./Documentos/referentes.md)
 ## ✏️[Wireframes](./Wireframe/wireframes.md)
 ## 🖌️[Design](./Diseño)
-## 🖼️[Bocetos](./Bocetos/BocetoDePrueba.md)
+## 🖼️[Bocetos](./Bocetos/BocetoInicial.md)
