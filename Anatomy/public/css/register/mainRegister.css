@@ -1,0 +1,59 @@
+@import url(stylesRegister.css);
+
+body {
+    background-color: #AADDBB;
+    font-family: Heebo;
+}
+
+section {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.formulario-registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.formulario-registro input {
+    margin: 5px 5px;
+    border: none;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.formulario-registro label {
+    margin: 10px 0px 0px 5px;
+}
+
+h1 {
+    font-size: 1.2rem;
+    background-color: #248232;
+    color: white;
+    border: 1px solid gray;
+    text-align: center;
+    margin: 20px 10px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.botones button {
+    background-color: #248232 ;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 10px 20px;
+}
+
+@media (min-width: 768px) {
+    section {
+        border: 1px solid black;
+    }
+}
