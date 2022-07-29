@@ -82,4 +82,4 @@ También elegimos la tipografía [Permanent Marker](https://fonts.google.com/spe
 
 ## Tablero de trabajo
 
-Les dejamos el ![link](https://trello.com/b/RnNenVro/futbol-xi) a nuestro tablero de trabajo, para el cual decidimos utilizar la herramienta Trello
+Les dejamos el [link](https://trello.com/b/RnNenVro/futbol-xi) a nuestro tablero de trabajo, para el cual decidimos utilizar la herramienta Trello
