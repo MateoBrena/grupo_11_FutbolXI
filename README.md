@@ -78,3 +78,8 @@ También elegimos la tipografía [Permanent Marker](https://fonts.google.com/spe
 
 
 ![Logo](https://user-images.githubusercontent.com/106563665/177088152-45e037d7-78aa-4181-9792-4944d8d151d8.png)
+
+
+## Tablero de trabajo
+
+Les dejamos el ![link](https://trello.com/b/RnNenVro/futbol-xi) a nuestro tablero de trabajo, para el cual decidimos utilizar la herramienta Trello
