@@ -1,4 +1,4 @@
-@import url(stylesLogin.css);
+@import url(liststyles.css);
 
 * {
     margin: 0px;
@@ -136,4 +136,3 @@ header {
         right: 50px;
     }
 }
-

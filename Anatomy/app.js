@@ -37,3 +37,7 @@ server.get('/register', function (req, res) {
     let file = path.join(__dirname, 'views', 'register.html');
     res.sendFile(file);
 })
+server.get('/productList', function (req, res) {
+    let file = path.join(__dirname, 'views', 'productList.html');
+    res.sendFile(file);
+})
