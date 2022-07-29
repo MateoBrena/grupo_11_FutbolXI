@@ -1,8 +1,7 @@
 @import url(stylesRegister.css);
 
 footer {
-    position: absolute;
-    bottom: 0px;
+    position: relative;
     background-color: #248232;
     display: flex;
     justify-content: space-between;

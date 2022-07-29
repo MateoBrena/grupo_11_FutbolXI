@@ -23,12 +23,20 @@ h3 {
     margin-left: 10px;
 }
 
+section article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+section article{
+    transition: box-shadow 450ms
+}
+
 .ofertas article {
     text-align: center;
     background-color: white;
     width: 80%;
     margin: auto;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 div a {
@@ -59,6 +67,11 @@ article img {
     padding: 8px;
     border: none;
     border-radius: 5px;
+    transition: box-shadow 450ms
+}
+
+.agregar-carrito:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 @media (min-width: 768px) {
