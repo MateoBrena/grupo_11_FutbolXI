@@ -60,6 +60,12 @@ article img {
     width: 80%;
 }
 
+.verde{
+    background-color:#248232 ;
+    color: #fff;
+}
+
+
 .agregar-carrito {
     margin: 10px 0px;
     color: white;

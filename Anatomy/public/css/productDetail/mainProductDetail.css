@@ -1,0 +1,174 @@
+@import url(stylesProductDetail.css);
+
+
+body {
+    background-color: #AADDBB;
+    font-family: Heebo;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+#imagen-principal {
+    width: 100%;
+    height: 50%;
+    margin: 20px 0px 20px 0px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+section article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+section article{
+    transition: box-shadow 450ms
+}
+
+
+.prueba1{
+    text-align: center;
+    display: block;
+    align-items: center;
+    background-color: white;
+    height: 72%;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.linial{
+    display: flex;
+    justify-content: space-around;
+}
+
+.minimagenes{
+ margin: 0rem;
+}
+
+.minimagenes1{
+    width: 30%;
+    height: 30%;
+    border: 1px solid #111;
+}
+.minimagenes2{
+    width: 30%;
+    height: 30%;
+    border: 1px solid #111;
+}
+.minimagenes3{
+    width: 30%;
+    height: 30%;
+    border: 1px solid #111;
+}
+   
+
+
+div a {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    margin-top: 5px;
+
+}
+
+.descripcion {
+    width: 100%;
+}
+
+article div {
+    width: 100%;
+}
+
+article img {
+    width: 100%;
+    border-top: 1px solid #111;
+}
+
+.verde{
+    background-color:#248232 ;
+    color: #fff;
+}
+
+
+.agregar-carrito {
+    margin: 10px 0px;
+    color: white;
+    background-color: #248232;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow 450ms
+}
+
+.agregar-carrito:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+@media (min-width: 768px) {
+    .prueba1{
+        text-align: center;
+        display: block;
+        align-items: center;
+        background-color: white;
+        height: 72%;
+        width: 55%;
+        position: relative;
+        left: 22%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    
+    
+}
+
+@media (min-width: 1280px) {
+    .prueba1{
+        text-align: center;
+        display: block;
+        align-items: center;
+        background-color: white;
+        height: 72%;
+        width: 45%;
+        position: relative;
+        left: 28%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        
+    }
+    
+    .descripcion {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+        margin-left: 10px;
+        font-size: 2.5rem;
+    }
+
+    .linial{
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.5rem;
+    }
+
+    .diseño{
+        font-size: 1.5rem;
+    }
+
+    .verde{
+        background-color:#248232 ;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+}
