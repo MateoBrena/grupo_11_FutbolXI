@@ -57,7 +57,7 @@ section article{
 }
 
 .prueba3{
-    text-align: center;
+    text-align: left;
     display: block;
     align-items: center;
     background-color: white;
@@ -70,16 +70,7 @@ section article{
     margin-bottom: 10%;
 }
 
-.posi{
-    display: block;
-    background-color: #fff;
-    text-align: center;
-    width: 80%;
-    margin-top: 10%;
-    position: absolute;
-    left: 7.3%;
-    top: 22%;
-}
+
 
 .linial{
     display: flex;
@@ -126,7 +117,7 @@ article div {
 
 article img {
     width: 100%;
-    border-top: 1px solid #111;
+    
 }
 
 .verde{
@@ -152,70 +143,53 @@ article img {
 @media (min-width: 768px) {
 
     article img {
-        width: 100%;
+        width:100%;
     }
 
     .prueba1{
         text-align: center;
         display: block;
-        align-items: center;
         background-color: white;
         height: 72%;
-        width: 40%;
-        position: relative;
-        left: 48.5%;
-        margin-top: 12.5%;
-        margin-bottom: 10%;
+        width: 55%;
+        margin-top: 10%;
         
     }
-    
+
+
     .prueba2{
         text-align: center;
         display: block;
-        align-items: center;
         background-color: white;
         height: 16%;
-        width: 78.5%;
-        position: absolute;
-        left: 10%;
-        bottom: -16.4%;
+        width: 55%;
         margin-bottom: 10%;
         border-top: 1px solid #111;
     }
     
     .prueba3{
-        text-align: center;
+        text-align: left;
         display: block;
-        align-items: center;
         background-color: white;
-        height: 54.5%;
-        width: 38.4%;
+        height: 80%;
+        width: 55%;
         padding: 2%;
-        position: absolute;
-        left: 10%;
-        top: 25.8%;
-        border-top: 1px solid #111;
     }
 
-    .posi{
-        display: block;
-        background-color: #fff;
-        text-align: center;
-        width: 78.6%;
-        margin-top: 10%;
-        position: absolute;
-        left: 8.6%;
-        top: 22%;
-    }
 
     .productComple{
-        margin-bottom: 25%;
+        margin-bottom: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        left: -8.5%;
     }
 }
 
 @media (min-width: 1280px) {
     article img {
-        width: 100%;
+        width: 76%;
     }
 
     .prueba1{
@@ -223,11 +197,10 @@ article img {
         display: block;
         align-items: center;
         background-color: white;
-        height: 70%;
+        height: 67vh;
         width: 30%;
         position: relative;
-        left: 35.5%;
-        margin-top: 12.5%;
+        left: 44%;
         margin-bottom: 10%;
         border: 1px solid #111;
         
@@ -238,86 +211,68 @@ article img {
         display: block;
         align-items: center;
         background-color: white;
-        height: 67.3%;
-        width: 29%;
-        position: absolute;
-        left: 69%;
-        bottom: -28.4%;
-        margin-bottom: 10%;
+        height: 67vh;
+        width: 30%;
+        position: relative;
+        left: 45.5%;
+        margin-bottom: 0%;
         border: 1px solid #111;
     }
     
     .prueba3{
-        text-align: center;
+        text-align: left;
         display: block;
-        align-items: center;
         background-color: white;
-        height: 67.3%;
+        height: 67vh;
         width: 30%;
+        position: relative;
+        left: -48%;
         padding: 2%;
-        position: absolute;
-        left: 2%;
-        top: 27.6%;
         border: 1px solid #111;
     }
 
-    .posi{
-        display: block;
-        background-color: #fff;
-        text-align: center;
-        width: 27.5%;
-        z-index: 15;
-        position: absolute;
-        left: 69%;
-        top: 30%;
+    .empuje{
+        margin-top: 10%;
+        margin-bottom: 25%;
+    }
+
+    .formulario{
         font-size: 1.5rem;
-        border: 1px solid #111;
-    }
-
-    .ubi{
-        
-        position:absolute;
-        bottom: 55%;
-        right: 18%;
     }
 
     .diseño{
         font-size: 1.5rem;
     }
-    
 
-    .linial{
-        font-size: 1.5rem;
-        
-    }
-
-    
-
-    .descripcion {
-        width: 100%;
-        position:absolute;
+    .descripcion{
+        position: absolute;
         bottom: 30%;
         font-size: 1.5rem;
     }
-
-
+    
     .agregar-carrito {
         margin: 10px 0px;
-        font-size: 1.5rem;
         color: white;
         background-color: #248232;
         padding: 8px;
         border: none;
         border-radius: 5px;
         transition: box-shadow 450ms;
-        position:absolute;
-        bottom: 6%;
-        left: 26%; 
-    }
+        position: absolute;
+        bottom: 11%;
+        left: 27%;
+        font-size: 1.5rem;
+    } 
+
 
     .productComple{
-        margin-bottom: 25%;
+        margin-bottom: 15%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
     }
 
+   
 
 }
