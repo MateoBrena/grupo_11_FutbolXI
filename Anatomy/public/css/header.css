@@ -1,0 +1,121 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #248232;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-logo {
+    position: absolute;
+    top: 0.125rem;
+    left: 0.3125rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.searchbar {
+    position: relative;
+    background-color: white;
+    margin-top: 0.625rem;
+    width: 50vw;
+    margin-right: 0.9375rem;
+}
+
+.searchbar input , 
+.searchbar button {
+    background-color: white;
+    border: none;
+}
+
+.searchbar button {
+    position: absolute;
+    top: 0.3125rem;
+    right: 0.3125rem;
+}
+
+#usuario {
+    position: absolute;
+    top: 0.3125rem;
+    right: 2.8125rem;
+    color: white;
+    padding: 0.3125rem 0.625rem;
+    background-color: black;
+    border-radius: 3.125rem;
+    width: 2.125rem;
+    height: 2.125rem;
+}
+
+#carrito {
+    position: absolute;
+    top: 0.3125rem;
+    right: 0.3125rem;
+    color: white;
+    padding: 0.3125rem 0.5rem;
+    background-color: black;
+    border-radius: 3.125rem;
+    width: 2.125rem;
+    height: 2.125rem;
+}
+
+.imagenes-marcas {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.25rem;
+}
+
+.imagenes-marcas a img {
+    margin: 1.25rem 0px 0.9375rem 0px;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
+
+#logo-nike {
+    width: 28vw;
+    margin-top: 1.75rem;
+    max-width: 6rem;
+}
+
+#logo-puma {
+    width: 28vw;
+    margin-top: 1.5625rem;
+    max-width: 6rem;
+}
+
+#logo-adidas {
+    width: 30vw;
+    margin-top: 1.375rem;
+    max-width: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+    
+
+    .imagen-logo {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+
+    .searchbar {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+    }
+
+    #carrito {
+        top: 0.9375rem;
+        right: 0.625rem;
+    }
+
+    #usuario {
+        top: 0.9375rem;
+        right: 3.125rem;
+    }
+}

@@ -1,14 +1,19 @@
-@import url(stylesRegister.css);
-
+@import url(footer.css);
+@import url(header.css);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     background-color: #AADDBB;
-    font-family: Heebo;
+    font-family: "Heebo";
 }
 
 section {
-    max-width: 600px;
-    margin: 20px auto;
-    width: 80%;
+    
+    margin: 1.25rem auto;
+    width: 80vw;
 }
 
 .formulario-registro {
@@ -18,14 +23,14 @@ section {
 }
 
 .formulario-registro input {
-    margin: 5px 5px;
+    margin: 0.3125rem 0.3125rem;
     border: none;
     height: 2rem;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 
 .formulario-registro label {
-    margin: 10px 0px 0px 5px;
+    margin: 0.625rem 0px 0px 0.3125rem;
 }
 
 h1 {
@@ -34,13 +39,13 @@ h1 {
     color: white;
     border: 1px solid gray;
     text-align: center;
-    margin: 20px 10px;
+    margin: 1.25rem 0.625rem;
 }
 
 .botones {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
 .botones button {
@@ -48,19 +53,25 @@ h1 {
     font-size: 1.2rem;
     color: white;
     border: none;
-    padding: 15px;
-    margin: 10px 20px;
-    border-radius: 5px;
+    padding: 0.9375rem;
+    margin: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
     transition: box-shadow 450ms
 }
 
 .botones button:hover {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: 0px 0px 0.625rem rgb(100, 100, 100);
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     section {
         border: 1px solid black;
         background-color: #B7EFC5;
+        max-width: 60vw;
+    }
+}
+@media screen and (min-width: 1280px) {
+    section {
+        max-width: 60vw;
     }
 }

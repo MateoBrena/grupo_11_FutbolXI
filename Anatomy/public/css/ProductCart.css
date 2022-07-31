@@ -1,0 +1,153 @@
+@import url(footer.css);
+@import url(header.css);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #AADDBB;
+    font-family: "Heebo";
+}
+
+.carrito {
+    background-color: #248232;
+    color: white;
+    border: 1px solid black;
+    width: 30vw;
+    max-width: 10rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    margin-left: 2.1875rem;
+    padding: 0.3125rem;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.ofertas {
+    margin-top: 1.25rem;
+}
+
+.ofertas article {
+    text-align: center;
+    background-color: white;
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 1.25rem;
+    transition: box-shadow 450ms
+}
+
+.ofertas article:hover {
+    box-shadow: 0px 0px 0.625rem rgb(100, 100, 100);
+}
+
+div a {
+    width: 28vw;
+    text-align: center;
+    background-color: white;
+    margin-top: 0.3125rem;
+
+}
+
+article .descripcion {
+    border-top: 1px solid gray;
+    width: 80vw;
+}
+
+article div {
+    width: 80vw;
+}
+
+article img {
+    width: 60vw;
+}
+
+.agregar-carrito {
+    margin: 0.625rem 0px;
+    color: white;
+    background-color: #248232;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3125rem;
+    transition: box-shadow 450ms;
+}
+
+.agregar-carrito:hover {
+    box-shadow: 0px 0px 0.625rem rgb(100, 100, 100);
+}
+
+.ultimo-boton {
+    text-align: center;
+    margin: 1.25rem;
+}
+
+.ultimo-boton button {
+    transition: box-shadow 450ms;
+}
+
+
+.ultimo-boton button:hover {
+    box-shadow: 0px 0px 0.625rem rgb(100, 100, 100);
+}
+
+.comprar-carrito {
+    margin: 0.625rem 0px;
+    color: white;
+    background-color: #248232;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3125rem;
+}
+
+@media screen and (min-width: 768px) {
+    .ofertas {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ofertas article {
+        flex-grow: 0.3;
+        width: 35%;
+    }
+
+    .comprar-carrito {
+        position: absolute;
+        top: 13.75rem;
+        right: 2.5rem;
+    }
+    div a {
+        width: 15vw;
+    
+    }
+    article .descripcion {
+        
+        width: 44vw;
+    }
+    article div {
+        width: 44vw;
+    }
+    article img {
+        width: 40vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .ofertas article{
+        flex-grow: 0.2;
+        width: 15vw;
+    }
+    article .descripcion {
+        
+        width: 23vw;
+    }   
+    article div {
+        width: 23vw;
+    }
+    article img {
+        width: 20vw;
+    }
+}

@@ -6,7 +6,7 @@ server.listen(port,start());
 
 const path = require('path');
 
-const public = path.join(__dirname, 'public');
+const public = path.join(__dirname, '../public');
 
 const statics = express.static(public);
 

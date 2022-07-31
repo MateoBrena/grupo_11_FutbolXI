@@ -2,9 +2,9 @@
   "name": "anatomy",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "Anatomy/src/app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node Anatomy/src/app.js"
   },
   "keywords": [],
   "author": "",
