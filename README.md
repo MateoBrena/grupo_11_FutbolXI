@@ -6,6 +6,10 @@
 
 [Mateo Brena](https://docs.google.com/presentation/d/13jx7oJOTdFAnT26rqKgbfouSVbagA6ZhHox9U7G7AzA/edit#slide=id.g872c0fb5d6_0_105)
 
+[Jeremías Rombolá](https://docs.google.com/presentation/d/1XWt10yUHT1CJCQ8QJwQFD-UX5g1TiCuljaxZvYuUBG8/edit#slide=id.g872c0fb5d6_0_105)
+
+[Emilse Díaz](https://docs.google.com/presentation/d/10Dg_hMhvk-qiNkzyXMMdiEcraPWh0otP5jMYlvg5Ivs/edit#slide=id.g872c0fb5d6_0_105)
+
 ## Nuestros productos 
 
 Nuestro producto serán los botines de fútbol, en particular aquellos con suela y tapones para canchas de césped natural, tanto la variante con tapones de plástico como la variante con tapones de plástico y metal (para terreno firme y para terreno suave respectivamente) . Creemos que nos diferenciaríamos del resto por dedicarnos exclusivamente a la venta de botines para fútbol, no venderemos ningún otro producto relacionado con este ni ningún otro deporte. Nuestro público serían aquellas personas amateurs o semi-profesionales del país que jueguen al fútbol en cancha de 11 y de césped natural (mayormente las canchas de 11 son de césped natural).
