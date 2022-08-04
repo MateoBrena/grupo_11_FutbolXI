@@ -1,32 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Futbol XI </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <%- include('./partials/head.ejs')  %> 
     <link rel="stylesheet" href="\css\list.css">
 </head>
     <body>
         <header>
-            <nav class="encabezado">
-                 <a href="/" class="imagen-logo"><img src="/img/logo-futbolXI.png" alt="Logo Futbol XI"  class="imagen-logo"></a>
-                <form action="/" method="get" class="searchbar"> 
-                    <input  type="text"  placeholder="Buscar productos,marcas">
-                    <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
-                </form>
-                <a href="/productCart" id="carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="/login" id="usuario"><i class="fa-solid fa-user"></i></a>
-            </nav>  
-            <nav class="imagenes-marcas">
-                <a href="\productList"><img src="/img/logo-adidas.png" alt="Logo Adidas" id="logo-adidas"></a>
-                <a href="\productList"><img src="/img/logo-nike.png" alt="Logo Nike" id="logo-nike"></a>
-                <a href="\productList"><img src="/img/logo-puma.jpg" alt="Logo Puma" id="logo-puma"></a>
-            </nav>
+            <%- include('./partials/header.ejs')  %> 
+
         </header>
         <main> 
             <h3>Adidas</h3>
@@ -200,16 +181,7 @@
             </section>
         </main>
         <footer>
-            <article class="textos">
-                <p> Términos de uso</p>
-                <p> Política de privacidad </p>
-                <p>© 2022 FutbolXI, Inc. Todos los derechos reservados.</p>
-            </article>
-            <article class="iconos-redes">
-                <a href="#" class="logo-twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="logo-instagram"> <i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="logo-facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            </article>
+            <%- include('./partials/footer.ejs')  %> 
         </footer>
     </body>
 </html>

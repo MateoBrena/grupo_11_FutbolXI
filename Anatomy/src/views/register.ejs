@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/Register.css">
+</head>
+<body>
+    <header>
+        <%- include('./partials/header.ejs')  %> 
+
+    </header>
+    <main>
+        <section>
+            <h1> Todavía no estás registrado? Podes hacerlo completando los siguientes datos:</h1>
+            <form action="/" method="post" class="formulario-registro">
+                <label for="email"> Email</label>
+                <input type="email" name="email" required>
+                <label for=""> Nombre de usuario </label>
+                <input type="text" name="nombre-usuario" required>
+                <label for="contraseña"> Ingrese una contraseña </label>
+                <input type="password" name="contraseña" required>
+                <label for="confirmar-contraseña"> Confirme su contraseña </label>
+                <input type="password" name="confirmar-contraseña" required>
+                <div class="botones">
+                    <button type="submit"> Crear </button>
+                    <button type="reset"> Borrar </button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <%- include('./partials/footer.ejs')  %> 
+    </footer>
+</body>
+</html>
