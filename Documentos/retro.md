@@ -1,12 +1,14 @@
 # Retrospectiva estrella de mar 
 
 ### Comenzar a hacer
-Reuniones diarias o frecuentes de pocos minutos para chequear el progreso de cada uno de los miembros del equipo y sus respectivas tareas. (Daily standup meetings)
+Hacer más commits entre todos, para mostrar el avance del trabajo y que todos puedan visualizarlo y descargarlo.
 ### Hacer más
-Testear entre todos los miembros el trabajo realizado para recibir feedback o corregir detalles previo a la fecha de entrega.
+Tener comunicación con los miembros del equipo, actualizar al resto sobre el progreso del trabajo.
 ### Continuar haciendo
 Dividir adecuadamente el trabajo para no sobrecargar a ningún miembro y conseguir cumplir con los plazos de entrega pactados.
+Reuniones diarias o frecuentes de pocos minutos para chequear el progreso de cada uno de los miembros del equipo y sus respectivas tareas. (Daily standup meetings).
+Testear entre todos los miembros el trabajo realizado para recibir feedback o corregir detalles previo a la fecha de entrega.
 ### Hacer menos
-Tener poca comunicación con los miembros del equipo, no actualizar al resto sobre el progreso del trabajo.
+Usar medidas no relativas, en lo posible evitarlas para dar dinamismo y adaptabilidad a la página. (rems, vw, vh).
 ### Dejar de hacer
-Subir al repositorio código defectuoso o incompleto, en su lugar intentar completar o solicitar ayuda a otros miembros o profesores en caso de no conseguir los resultados esperados.
+No usar simepre la misma descripción o nombres genéricos para los commits.
