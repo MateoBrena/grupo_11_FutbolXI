@@ -36,6 +36,12 @@ header {
     border: none;
 }
 
+.searchbar input {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
 .searchbar button {
     position: absolute;
     top: 0.3125rem;
@@ -75,7 +81,7 @@ header {
 .imagenes-marcas a img {
     margin: 1.25rem 0px 0.9375rem 0px;
     filter: brightness(1.1);
-    mix-blend-mode: multiply;
+    mix-blend-mode: screen;
 }
 
 #logo-nike {
@@ -91,6 +97,8 @@ header {
 }
 
 #logo-adidas {
+    position: relative;
+    top: 10%;
     width: 30vw;
     margin-top: 1.375rem;
     max-width: 6rem;

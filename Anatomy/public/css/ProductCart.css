@@ -6,7 +6,7 @@
     padding: 0;
 }
 body {
-    background-color: #AADDBB;
+    background-color: #E7E7E7;
     font-family: "Heebo";
 }
 
@@ -135,7 +135,7 @@ article img {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
     .ofertas article{
         flex-grow: 0.2;
         width: 15vw;

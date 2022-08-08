@@ -5,12 +5,11 @@
 }
 footer {
     position: relative;
-   
     background-color: #248232;
     display: flex;
     justify-content: space-between;
     height: 4.375rem;
-    width: 100vw;
+    width: 100%;
     
 }
 .textos {
@@ -19,6 +18,7 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     margin-left: 0.3125rem;
+    color: white;
 }
 
 .iconos-redes {

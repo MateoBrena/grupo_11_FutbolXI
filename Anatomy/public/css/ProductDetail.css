@@ -7,7 +7,7 @@
     padding: 0;
 }
 body {
-    background-color: #AADDBB;
+    background-color: #E7E7E7;
     font-family: "Heebo";
 }
 
@@ -28,14 +28,10 @@ h3 {
     margin-left: 10px;
 }
 
-section article:hover {
+.prueba1:hover,
+.prueba2:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-
-section article{
-    transition: box-shadow 450ms
-}
-
 
 .prueba1{
     text-align: center;
@@ -47,7 +43,7 @@ section article{
     position: relative;
     left: 10%;
     margin-top: 20%;
-    
+    transition: box-shadow 450ms
 }
 
 .prueba2{
@@ -60,6 +56,7 @@ section article{
     position: relative;
     left: 10%;
     margin-bottom: 10%;
+    transition: box-shadow 450ms
 }
 
 .prueba3{
@@ -75,8 +72,6 @@ section article{
     margin-top: 10%;
     margin-bottom: 10%;
 }
-
-
 
 .linial{
     display: flex;
