@@ -1,5 +1,6 @@
 @import url(footer.css);
 @import url(header.css);
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -70,6 +71,13 @@ article img {
     color: #fff;
 }
 
+.fa-plus{
+    position: absolute;
+    left: 90%;
+    bottom: 50%;
+    font-size: 8vw;
+    position: fixed;
+}
 
 .agregar-carrito {
     margin: 0.625rem 0px;
@@ -79,6 +87,16 @@ article img {
     border: none;
     border-radius: 0.3125rem;
     transition: box-shadow 450ms
+}
+
+.contenedor{
+    position: relative;
+}
+
+.fa-pencil{
+    position: absolute;
+    left:73vw;
+    bottom: 1rem;
 }
 
 .agregar-carrito:hover {
@@ -109,6 +127,20 @@ article img {
     article img {
         width: 40vw;
     }
+
+    .fa-pencil{
+        position: absolute;
+        left:40vw;
+        bottom: 1rem;
+    }
+
+    .fa-plus{
+        position: absolute;
+        left: 95%;
+        bottom: 50%;
+        font-size: 4vw;
+        position: fixed;
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -125,5 +157,17 @@ article img {
     }
     article img {
         width: 20vw;
+    }
+    .fa-pencil{
+        position: absolute;
+        left:21vw;
+        bottom: 1rem;
+    }
+    .fa-plus{
+        position: absolute;
+        left: 97%;
+        bottom: 50%;
+        font-size: 2vw;
+        position: fixed;
     }
 }

@@ -10,6 +10,14 @@ const controller = {
     login: (req,res) => {
         return res.render("login")
         
+    },
+    create: (req,res) => {
+        return res.render("create")
+        
+    },
+    edits: (req,res) => {
+        return res.render("edits")
+        
     }
 
 }
