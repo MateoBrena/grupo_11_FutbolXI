@@ -1,0 +1,111 @@
+[
+    {
+        "id": "1",
+        "nombre": "Nemezis",
+        "precio": 38000,
+        "marca": "Adidas",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Adidas Nemeziz 19.jpg" 
+    },
+    {
+        "id": "2",
+        "nombre": "Predator 19.3",
+        "precio": 38000,
+        "marca": "Adidas",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Botines Adidas Predator 19.3.jpg"
+    },
+    {
+        "id": "3",
+        "nombre": "Predator 20.3",
+        "precio": 38000,
+        "marca": "Adidas",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Botines Adidas Predator 20.3.jpg"
+    },
+    {
+        "id": "4",
+        "nombre": "Predator Edge.3",
+        "precio": 38000,
+        "marca": "Adidas",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Botines Adidas Predator Edge.3.jpg"
+    },
+    {
+        "id": "5",
+        "nombre": "Phantom Vision",
+        "precio": 38000,
+        "marca": "Nike",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Nike Phantom Vision.jpg"
+    },
+    {
+        "id": "6",
+        "nombre": "Suprefly 8",
+        "precio": 38000,
+        "marca": "Nike",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Nike Superfly 8.jpg"
+    },
+    {
+        "id": "7",
+        "nombre": "Mercurial Vapor 13",
+        "precio": 38000,
+        "marca": "Nike",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Botines Nike Mercurial Vapor 13 Elite FG.jpg"
+    },
+    {
+        "id": "8",
+        "nombre": "Tiempo Legend 8",
+        "precio": 38000,
+        "marca": "Nike",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Botines Nike Tiempo Legend 8 Elite Fg.jpg"
+    },
+    {
+        "id": "9",
+        "nombre": "Ultra-3.1",
+        "precio": 38000,
+        "marca": "Puma",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Botines Puma Ultra-3.1.jpg"
+    },
+    {
+        "id": "10",
+        "nombre": "Ultra Eclipse",
+        "precio": 38000,
+        "marca": "Puma",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Botines Puma Ultra Eclipse.jpg"
+    },
+    {
+        "id": "11",
+        "nombre": "Ultra 4.2",
+        "precio": 38000,
+        "marca": "Puma",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Botines Puma Ultra 4.2.jpg"
+    },
+    {
+        "id": "12",
+        "nombre": "King",
+        "precio": 38000,
+        "marca": "Puma",
+        "tallas" : 10,
+        "Descripcion": "" , 
+        "imagen":"Botines Puma King.jpg"
+    }
+    
+]
