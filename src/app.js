@@ -12,4 +12,5 @@ server.use(static(join(__dirname, '../public')));
 const productsRoutes = require('./routes/products.routes'); 
 const indexRoutes = require("./routes/index.routes")
 server.use(productsRoutes); 
-server.use(indexRoutes)
+server.use(indexRoutes);
+server.use(express.urlencoded({extended:true}))
