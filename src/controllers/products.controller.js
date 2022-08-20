@@ -27,8 +27,12 @@ const controller = {
     },
 
     save: (req,res) => {
+       // req.body.image = req.files && req.files.length >0 ? req.files[0].filename : "default.png";
         let nuevo = generate(req.body)
-        return res.send(nuevo)
+        let todos = all()
+        todos.push(nuevo)
+        write(todos)
+        return res.redirect("/")
     },
     
     remove: (req,res) => {
