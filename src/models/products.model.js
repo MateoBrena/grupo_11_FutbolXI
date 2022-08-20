@@ -16,12 +16,14 @@ let model ={
         let all = model.all()
         let last = all.pop()
         let product = {}
+
+        product.id = last.id + 1
         product.nombre = data.nombre
         product.tallas = data.tallas
         product.Descripcion = data.Descripcion
         product.precio = parseInt(data.precio)
         product.marca = data.marca
-        product.id = last.id + 1
+        
         return product;
         
     },
