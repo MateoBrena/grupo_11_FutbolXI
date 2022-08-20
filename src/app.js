@@ -2,11 +2,11 @@ const express = require('express');
 const methodOverride = require('method-override');
 
 const server = express();
-const {join} = require('path');
+const {join,resolve} = require('path');
 const{port,start} = require("./modules/server")
 server.listen(port,start());
 
-server.set('views', join(__dirname,'./views'))
+server.set('views', resolve(__dirname, 'views'))
 server.set('view engine', 'ejs')
 
 const static = require("./modules/static")

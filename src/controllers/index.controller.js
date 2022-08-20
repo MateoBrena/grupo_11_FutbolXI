@@ -6,12 +6,12 @@ const controller = {
     },
     
     register: (req,res) => {
-        return res.render("register")
+        return res.render("../views/Users/register")
         
     },
     
     login: (req,res) => {
-        return res.render("login")
+        return res.render("../views/Users/login")
         
     },
     

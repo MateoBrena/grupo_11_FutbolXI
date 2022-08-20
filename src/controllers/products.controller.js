@@ -3,27 +3,27 @@ const {all,one, generate, write} = require("../models/products.model")
 const controller = {
     cart: (req,res) => {
 
-        return res.render("productCart")  
+        return res.render("../views/Product/productCart")  
     },
 
     detail: (req,res) => {
 
-        return res.render("productDetail")    
+        return res.render("../views/Product/productDetail.ejs")    
     },
 
     list: (req,res) => {
 
-        return res.render("productList")    
+        return res.render("../views/Product/productList")    
     },
 
     create: (req,res) => {
         
-        return res.render("create")
+        return res.render("../views/Product/create.ejs")
     },
     
     edits: (req,res) => {
 
-        return res.render("edits")  
+        return res.render("../views/Product/edits")  
     },
 
     save: (req,res) => {
