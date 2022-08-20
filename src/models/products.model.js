@@ -32,4 +32,4 @@ let model ={
     },
 }
 
-module.export = model
+module.exports = model

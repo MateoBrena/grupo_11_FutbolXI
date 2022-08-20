@@ -27,8 +27,8 @@ const controller = {
     },
 
     save: (req,res) => {
-        
-        return res.send("Llego info")
+        let nuevo = generate(req.body)
+        return res.send(nuevo)
     },
     
     remove: (req,res) => {
