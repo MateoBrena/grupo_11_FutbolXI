@@ -1,6 +1,15 @@
 const {all,one, generate, write} = require("../models/products.model")
 
 const controller = {
+    index: (req,res) => {
+        let products = all()
+
+        if(req.params.marcas){
+            products = products.filter(e => e.marca == req.params.marcas)
+            return res.render('../views/Product/productList',{products})
+        } return res.render('../views/Product/productList',{products})
+    },
+
     cart: (req,res) => {
 
         return res.render("../views/Product/productCart")  
@@ -11,10 +20,8 @@ const controller = {
         return res.render("../views/Product/productDetail.ejs")    
     },
 
-    list: (req,res) => {
-
-        return res.render("../views/Product/productList")    
-    },
+   
+       
 
     create: (req,res) => {
         

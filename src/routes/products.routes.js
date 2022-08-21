@@ -5,7 +5,7 @@ const controller = require("../controllers/products.controller")
 const {resolve, extname} = require("path")
 const { existsSync,mkdirSync } = require('fs')
 const destination = function(req,file,cb){
-    let folder = resolve(__dirname,"..","..","public","products")
+    let folder = resolve(__dirname,"..","..","public","img")
     if(!existsSync(folder)){
         mkdirSync(folder)
     }
@@ -28,7 +28,7 @@ const upload = multer({
 route.get("/create",controller.create)
 route.post("/save", controller.save)
 
-route.get("/productList",controller.list)
+route.get("/productList",controller.index)
 route.get("/productDetail/:id?",controller.detail)
 route.get("/productCart",controller.cart)
 
