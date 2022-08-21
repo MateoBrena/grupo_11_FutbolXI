@@ -1,14 +1,18 @@
 # Retrospectiva estrella de mar 
 
 ### Comenzar a hacer
-Hacer más commits entre todos, para mostrar el avance del trabajo y que todos puedan visualizarlo y descargarlo.
+Determinar en un principio fecha de entrega a las tareas individuales para cumplir con los tiempos y estar organizados.
 ### Hacer más
-Tener comunicación con los miembros del equipo, actualizar al resto sobre el progreso del trabajo.
+Recordar hacer un "git pull" antes de comenzar a modificar código. 
+Hacer más commits entre todos, para mostrar el avance del trabajo y que todos puedan visualizarlo y descargarlo.
 ### Continuar haciendo
+Tener comunicación con los miembros del equipo, actualizar al resto sobre el progreso del trabajo.
 Dividir adecuadamente el trabajo para no sobrecargar a ningún miembro y conseguir cumplir con los plazos de entrega pactados.
 Reuniones diarias o frecuentes de pocos minutos para chequear el progreso de cada uno de los miembros del equipo y sus respectivas tareas. (Daily standup meetings).
 Testear entre todos los miembros el trabajo realizado para recibir feedback o corregir detalles previo a la fecha de entrega.
 ### Hacer menos
 Usar medidas no relativas, en lo posible evitarlas para dar dinamismo y adaptabilidad a la página. (rems, vw, vh).
+Evitar demoras en el comienzo del sprint, no dejar pasar mucho tiempo antes de comenzar a trabajar.
 ### Dejar de hacer
-No usar simepre la misma descripción o nombres genéricos para los commits.
+No usar siempre la misma descripción o nombres genéricos para los commits.
+No comunicarse con otros miembros y no avisar sobre nuevos commits que puedan generar conflicto con el código de alguien más.
