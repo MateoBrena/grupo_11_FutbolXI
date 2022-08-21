@@ -64,15 +64,25 @@ h1 {
     box-shadow: 0px 0px 0.625rem rgb(100, 100, 100);
 }
 
+.footerout{
+    margin-top: 5%;
+    margin-bottom: 18%;
+}
+
 @media screen and (min-width: 768px) {
     section {
         border: 1px solid black;
         background-color: #B7EFC5;
         max-width: 60vw;
     }
+    
 }
 @media screen and (min-width: 1280px) {
     section {
         max-width: 60vw;
+    }
+    .footerout{
+        margin-top: 5%;
+        margin-bottom: 8%;
     }
 }
