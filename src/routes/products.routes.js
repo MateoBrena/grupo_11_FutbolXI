@@ -5,7 +5,7 @@ const controller = require("../controllers/products.controller")
 const {resolve, extname} = require("path")
 const { existsSync,mkdirSync } = require('fs')
 const destination = function(req,file,cb){
-    let folder = resolve(__dirname,"..","..","public","img")
+    let folder = resolve(__dirname,"..","..","public","img","Botines")
     if(!existsSync(folder)){
         mkdirSync(folder)
     }
