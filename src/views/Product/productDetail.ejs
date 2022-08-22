@@ -12,24 +12,24 @@
     <main> 
         
         <section class="productComple">
-                
+            <% if (product) { %>
                 <article class="prueba1">
 
                     <picture>
-                        <img src="/img/Adidas Nemeziz 19.jpg" alt="">
+                        <img src="/img/Botines/<%= product.imagen %> " alt="">
                     </picture>
-
+                
                     <article class="minimagenes">
-                        <img class="minimagenes1" src="/img/Adidas Nemeziz 19.jpg">
-                        <img class="minimagenes2" src="\img\Adidas Nemeziz-19.2.jpg">
-                        <img class="minimagenes3" src="\img\Adidas Nemeziz-19.3.jpg">
+                        <img class="minimagenes1" src="\img\Botines/Adidas Nemeziz 19.jpg">
+                        <img class="minimagenes2" src="\img\Botines/Adidas Nemeziz-19.2.jpg">
+                        <img class="minimagenes3" src="\img\Botines/Adidas Nemeziz-19.3.jpg">
                     </article>
-        
+                    
                 </article>
                 
-
+                
                 <article class="prueba2">
-                    <h2 class="empuje">Adidas Nemeziz 19</h2>
+                    <h2 class="empuje"><%= product.nombre %> </h2>
                     <section class="linial">
                         <article class="formulario">
                             <label>Talle</label>
@@ -62,23 +62,23 @@
                         </article>
                     </section>
                     
-
+                
                     <div class="descripcion">
                         <p> Tipo de terreno: Firme </p>
-                        <p> Precio: $38.000 </p>
+                        <p> Precio: <%= product.precio %> </p>
                     </div>
-
+                
                     <button type="submit" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button>
                     
-
+                
                 </article>
 
                 <article class="prueba3">
                     <h3>DETALLES:</h3>
                     
-                    <p>No estás engañando el sistema, simplemente manipulás las reglas. Encontrá tu ventaja competitiva y transforma tu juego con el totalmente renovado calzado Adidas Nemeziz 19. Este botin de fútbol presenta un exterior suave con un diseño de corte medio que sujeta y estabiliza el tobillo. Elementos en relieve sobresalen en el empeine para ayudarte a darle más curva a la pelota. Tomá el control con los botines Nemeziz 19 para terreno firme.</p>                    
+                    <p>No estás engañando el sistema, simplemente manipulás las reglas. Encontrá tu ventaja competitiva y transforma tu juego con el totalmente renovado calzado <%= product.nombre %>. Este botin de fútbol presenta un exterior suave con un diseño de corte medio que sujeta y estabiliza el tobillo. Elementos en relieve sobresalen en el empeine para ayudarte a darle más curva a la pelota. Tomá el control con los botines <%= product.nombre %> para terreno firme.</p>                    
                 </article>
-
+                    <% }%> 
         </section>
     </main>
     <footer>

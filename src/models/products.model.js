@@ -7,9 +7,9 @@ let model ={
         let data = fs.readFileSync(file);
         return JSON.parse(data);
     },
-    one: function(id){
+    one: function (id){
         let all = model.all();
-        return all.find( a => a.id == id)
+        return all.find(a => a.id == id)
     },
     generate: function(data){
         //Genera un Objeto con la info que nosotros necesitamos para generar un nuevo producto

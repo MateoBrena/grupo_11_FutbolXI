@@ -29,7 +29,7 @@ route.get("/create",controller.create)
 route.post("/save", controller.save)
 
 route.get("/productList",controller.index)
-route.get("/productDetail/:id?",controller.detail)
+route.get("/productDetail/:producto", controller.show)
 route.get("/productCart",controller.cart)
 
 route.get("/edits",controller.edits)
