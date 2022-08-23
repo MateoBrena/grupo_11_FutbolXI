@@ -16,5 +16,9 @@ server.use(methodOverride("m"))
 
 const productsRoutes = require('./routes/products.routes'); 
 const indexRoutes = require("./routes/index.routes")
+const usersRoutes = require("./routes/users.routes")
+
 server.use(productsRoutes); 
 server.use(indexRoutes);
+server.use(usersRoutes); 
+

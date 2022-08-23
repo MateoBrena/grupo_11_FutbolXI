@@ -1,0 +1,61 @@
+@import url(footer.css);
+@import url(header.css);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #E7E7E7;
+    font-family: "Heebo";
+}
+
+h1 {
+    margin: 0.4rem;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen-usuario {
+    width: 15vw;
+    mix-blend-mode: normal;
+
+}
+
+.tarjeta-usuario {
+    position: relative;
+    background-color: #FFFFFF;
+    width: 90vw;
+    margin: 1rem;
+}
+
+.tarjeta-usuario span {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.tarjeta-usuario p {
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    .tarjeta-usuario p,
+    .tarjeta-usuario span {
+        left: 20%;
+    }
+
+    .tarjeta-usuario span {
+        top: 20%;
+    }
+}

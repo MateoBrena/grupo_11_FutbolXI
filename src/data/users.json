@@ -1,0 +1,47 @@
+[
+  {
+    "id": 2,
+    "nombre": "Mauricio",
+    "apellido": "Duch",
+    "email": "mauricioduch@futbolxi.com",
+    "clave": "123456",
+    "categoria": "Administrador",
+    "imagen": "default.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Jeremías",
+    "apellido": "Rombolá",
+    "email": "jeremiasrombola@futbolxi.com",
+    "clave": "123456",
+    "categoria": "Administrador",
+    "imagen": "default.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Emilse",
+    "apellido": "Díaz",
+    "email": "emilsediaz@futbolxi.com",
+    "clave": "123456",
+    "categoria": "Administrador",
+    "imagen": "default.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Primer",
+    "apellido": "Cliente",
+    "email": "uncliente@gmail.com",
+    "clave": "123456",
+    "categoria": "Cliente",
+    "imagen": "default.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Mateo",
+    "apellido": "Brena",
+    "email": "matubrena@futbolxi.com",
+    "clave": "123456",
+    "categoria": "Administrador",
+    "imagen": "default.png"
+  }
+]

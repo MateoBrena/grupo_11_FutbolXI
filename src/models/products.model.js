@@ -23,6 +23,7 @@ let model ={
         product.Descripcion = data.Descripcion
         product.precio = parseInt(data.precio)
         product.marca = data.marca
+        product.image = data.image
         
         return product;
         

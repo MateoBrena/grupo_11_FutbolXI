@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/userProfile.css">
+</head>
+<body>
+    <header>
+        <%- include('../partials/header.ejs')  %> 
+    </header>
+    <main>
+        <% if (user) { %>
+            <section>
+                <h1> Detalle de Usuario <%= user.id %> </h1>
+                <article>
+                    <img src="/img/Usuarios/<%= user.imagen %>" class="imagen-usuario" alt="">
+                    <h3> <span> Nombre:</span> <%= user.nombre %> <%= user.apellido %>  </h3>
+                    <p class="info-usuario"> <span> Email:</span> <%= user.email %> </p>
+                    <p class="info-usuario" id="categoria"> <span> Categoría:</span> <%= user.categoria  %> </p>
+                    <a href="/userEdit/<%= user.id%>" class="boton">Editar Usuario</a>
+                    <form action="/borrar?m=DELETE" method="post">
+                        <input type="hidden" name="id" value="<%= user.id %>">
+                        <button type="submit" class="boton">Eliminar Usuario</button>
+                    </form>
+                </article>
+            </section>
+            
+        <% } else { %>
+            <h1>No se encontró usuario</h1>
+        <% } %> 
+    </main>
+    <footer>
+        <%- include('../partials/footer.ejs')  %> 
+    </footer>
+</body>
+</html>

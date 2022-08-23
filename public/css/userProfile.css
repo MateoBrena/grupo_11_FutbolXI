@@ -1,0 +1,66 @@
+@import url(footer.css);
+@import url(header.css);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #E7E7E7;
+    font-family: "Heebo";
+}
+
+section {
+    margin: 1rem;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.imagen-usuario {
+    width: 50vw;
+    margin-left: 1rem;
+}
+
+span {
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: normal;
+    margin: 1rem;
+}
+
+.info-usuario {
+    margin: 1rem;
+}
+
+#categoria {
+    margin-bottom: 2rem;
+}
+
+.boton {
+    background-color: #248232 ;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    text-decoration: none;
+    padding: 0.9375rem;
+    margin: 1.5rem 1.25rem;
+    border-radius: 0.3125rem;
+    transition: box-shadow 450ms;
+}
+
+.boton:hover {
+    box-shadow: 0px 0px 0.625rem rgb(100, 100, 100);
+}
+
+
+@media screen and (min-width: 768px) {
+    .imagen-usuario {
+        width: 30vw;
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/usersList.css">
+</head>
+<body>
+    <header>
+        <%- include('../partials/header.ejs')  %> 
+    </header>
+    <main>
+        <section>
+            <h1>Lista de usuarios</h1>
+            <% if (usuarios.length > 0) { %>
+            <ul class="contenedor-principal">
+                <% usuarios.forEach(element => { %>
+                            <%- include('../partials/userInfo.ejs',{element:element})  %> 
+                <% }) %>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <%- include('../partials/footer.ejs')  %> 
+    </footer>
+</body>
+</html>

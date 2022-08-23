@@ -1,11 +1,11 @@
 const {Router} = require('express')
 const route = Router();
-const controller = require("../controllers/products.controller")
+const controller = require("../controllers/user.controller")
 
 const {resolve, extname} = require("path")
 const { existsSync,mkdirSync } = require('fs')
 const destination = function(req,file,cb){
-    let folder = resolve(__dirname,"..","..","public","img","Botines")
+    let folder = resolve(__dirname,"..","..","public","img","Users")
     if(!existsSync(folder)){
         mkdirSync(folder)
     }
@@ -24,18 +24,19 @@ const upload = multer({
     storage: multer.diskStorage({destination,filename})
 })
 
+route.get("/login",controller.login)
 
-route.get("/create",controller.create)
-route.post("/save", upload.any(), controller.save)
 
-route.get("/productList",controller.index)
-route.get("/productDetail/:producto", controller.show)
-route.get("/productCart",controller.cart)
+route.get("/register",controller.register)
+route.post("/register/save", upload.any(), controller.save)
 
-route.get("/edits",controller.edits)
-//route.put("/update", controller.update)
+route.get("/usersList",controller.index)
+route.get("/userProfile/:id", controller.show)
 
-route.delete("/delete/:id", controller.remove)
+route.get('/userEdit/:id',controller.edit)
+route.put("/actualizar",upload.any(),controller.update)
+
+route.delete("/borrar", controller.remove)
 
 
 module.exports = route

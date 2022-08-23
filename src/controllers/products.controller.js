@@ -43,12 +43,12 @@ const controller = {
     },
 
     save: (req,res) => {
-       // req.body.image = req.files && req.files.length >0 ? req.files[0].filename : "default.png";
+        req.body.image = req.files && req.files.length > 0 ? req.files[0].filename : "default.png";
         let nuevo = generate(req.body)
         let todos = all()
         todos.push(nuevo)
         write(todos)
-        return res.redirect("/")
+        return res.redirect("/usersList")
     },
     
     remove: (req,res) => {

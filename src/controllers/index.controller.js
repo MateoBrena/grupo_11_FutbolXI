@@ -10,18 +10,6 @@ const controller = {
         } 
         return res.render('index',{products})
     },
-    
-    register: (req,res) => {
-        return res.render("../views/Users/register")
-        
-    },
-    
-    login: (req,res) => {
-        return res.render("../views/Users/login")
-        
-    },
-    
-
 }
 
 module.exports = controller

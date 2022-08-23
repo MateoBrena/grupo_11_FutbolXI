@@ -12,12 +12,12 @@
     <main>
         <section class="footerout">
             <h1> Nuevo producto</h1>
-            <form action="/save" method="post" class="formulario-registro">
+            <form action="/save" method="post" class="formulario-registro" enctype="multipart/form-data">
                 <label for="nombre"> Nombre del producto </label>
                 <input type="text" name="nombre" required>
                 <label for="Descripcion"> Descripción </label>
                 <input type="text" name="Descripcion" required>
-                <label for="marca"> Marcas </label>
+                <label for="marca"> Marca </label>
                 <input type="text" name="marca" required>
                 <label for="tallas"> Talla </label>
                 <input type="number" name="tallas" required>
