@@ -8,16 +8,12 @@ footer {
     background-color: #248232;
     display: flex;
     justify-content: space-between;
-    height: 4.375rem;
-    width: 100%;
-    
+    width: 100vw;
 }
-.textos {
+footer p {
     font-size: 0.6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-left: 0.3125rem;
+    display:block;
+    margin: 0.6125rem .3125rem;
     color: white;
 }
 
@@ -31,43 +27,40 @@ footer {
 
 
 .logo-twitter {
-    position: absolute;
-    bottom: 1.875rem;
+    position: relative;
+    top: .35rem;
     right: 5.3125rem;
     padding: 0.3125rem 0.5rem;
     background-color: black;
     border-radius: 3.125rem;
-    align-items: flex-start;
     width: 2.125rem;
     height: 2.125rem;
 }
 
 .logo-instagram {
-    position: absolute;
-    bottom: 1.875rem;
+    position: relative;
+    bottom: 1.73rem;
     right: 2.8125rem;
     padding: 0.25rem 0.5625rem;
     background-color: black;
     border-radius: 3.125rem;
-    align-items: flex-start;
     width: 2.125rem;
     height: 2.125rem;
 }
 
 .logo-facebook {
-    position: absolute;
-    bottom: 1.875rem;
+    position: relative;
+    bottom: 3.85rem;
     right: 0.3125rem;
     padding: 0.3125rem 0.6875rem;
     background-color: black;
     border-radius: 3.125rem;
-    align-items: flex-start;
     width: 2.125rem;
     height: 2.125rem;
 }
 
 @media screen and (min-width: 768px) {
-    .textos {
+    footer p {
         font-size: 0.8rem;
     }
 

@@ -4,107 +4,120 @@
     "nombre": "Nemezis",
     "precio": 38000,
     "marca": "Adidas",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Adidas Nemeziz 19.jpg"
+    "imagen": ["Adidas Nemeziz 19.jpg","Adidas Nemeziz-19.2.jpg", "Adidas Nemeziz-19.3.jpg"],
+    "oferta": "Si"
   },
   {
     "id": 2,
     "nombre": "Predator 19.3",
     "precio": 38000,
     "marca": "Adidas",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Botines Adidas Predator 19.3.jpg"
+    "imagen": ["Botines Adidas Predator 19.3.jpg"],
+    "oferta": "No"
   },
   {
     "id": 3,
     "nombre": "Predator 20.3",
     "precio": 38000,
     "marca": "Adidas",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Botines Adidas Predator 20.3.jpg"
+    "imagen": ["Botines Adidas Predator 20.3.jpg"],
+    "oferta": "No"
   },
   {
     "id": 4,
     "nombre": "Predator Edge.3",
     "precio": 38000,
     "marca": "Adidas",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Botines Adidas Predator Edge.3.jpg"
+    "imagen": ["Botines Adidas Predator Edge.3.jpg"],
+    "oferta": "Si"
   },
   {
     "id": 5,
     "nombre": "Phantom Vision",
     "precio": 38000,
     "marca": "Nike",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Nike Phantom Vision.jpg"
+    "imagen": ["Nike Phantom Vision.jpg"],
+    "oferta": "No"
   },
   {
     "id": 6,
     "nombre": "Suprefly 8",
     "precio": 38000,
     "marca": "Nike",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Nike Superfly 8.jpg"
+    "imagen": ["Nike Superfly 8.jpg"],
+    "oferta": "Si"
   },
   {
     "id": 7,
     "nombre": "Mercurial Vapor 13",
     "precio": 38000,
     "marca": "Nike",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Botines Nike Mercurial Vapor 13 Elite FG.jpg"
+    "imagen": ["Botines Nike Mercurial Vapor 13 Elite FG.jpg"],
+    "oferta": "Si"
   },
   {
     "id": 8,
     "nombre": "Tiempo Legend 8",
     "precio": 38000,
     "marca": "Nike",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Botines Nike Tiempo Legend 8 Elite Fg.jpg"
+    "imagen": ["Botines Nike Tiempo Legend 8 Elite Fg.jpg","Botines Nike Tiempo Legend 8 Elite Fg.2.jpg","Botines Nike Tiempo Legend 8 Elite Fg.3.jpg"],
+    "oferta": "Si"
   },
   {
     "id": 9,
     "nombre": "Ultra-3.1",
     "precio": 38000,
     "marca": "Puma",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Botines Puma Ultra-3.1.jpg"
+    "imagen": ["Botines Puma Ultra-3.1.jpg"],
+    "oferta": "No"
   },
   {
     "id": 10,
     "nombre": "Ultra Eclipse",
     "precio": 38000,
     "marca": "Puma",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Botines Puma Ultra Eclipse.jpg"
+    "imagen": ["Botines Puma Ultra Eclipse.jpg"],
+    "oferta": "No"
   },
   {
     "id": 11,
     "nombre": "Ultra 4.2",
     "precio": 38000,
     "marca": "Puma",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Botines Puma Ultra 4.2.jpg"
+    "imagen": ["Botines Puma Ultra 4.2.jpg"],
+    "oferta": "No"
   },
   {
     "id": 12,
     "nombre": "King",
     "precio": 38000,
     "marca": "Puma",
-    "tallas": 10,
+    "terreno": "Firme",
     "Descripcion": "",
-    "imagen": "Botines Puma King.jpg"
+    "imagen": ["Botines Puma King.jpg"],
+    "oferta": "No"
   }
+
 ]

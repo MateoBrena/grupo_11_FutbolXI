@@ -1,0 +1,13 @@
+<article>
+    <a href="/productDetail/<%= elemento.id %> ">
+        <img src="/img/Botines/<%=elemento.imagen[0]%> " alt="">
+        <div class="descripcion">
+            <h5> <%= elemento.nombre %></h5>
+            <p> Terreno <%= elemento.terreno %> </p>
+            <p> <%= elemento.precio %>  </p>
+        </div>
+        </a>
+    <div>
+        <button type="submit" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button>
+    </div>
+</article>

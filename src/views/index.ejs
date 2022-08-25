@@ -11,61 +11,13 @@
     <main> 
         <img src="/img/imagen-principal-home.jpg" alt="Imagen Principal" id="imagen-principal">
         <section>
-        <h3>Sección de ofertas</h3>
-        <section class="ofertas">
-                <article>
-                    <a href="/productDetail">
-                        <img src="/img/Botines/Adidas Nemeziz 19.jpg" alt="">
-                        <div class="descripcion">
-                            <h5> Adidas Nemeziz 19</h5>
-                            <p> Terreno Firme </p>
-                            <p> $38.000 </p>
-                        </div>
-                        </a>
-                    <div>
-                        <button type="submit" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button>
-                    </div>
-                </article>
-                <article>
-                    <a href="/productDetail">
-                        <img src="/img/Botines/Nike Superfly 8.jpg" alt="">
-                        <div class="descripcion">
-                            <h5> Nike Suprefly 8</h5>
-                            <p> Terreno Firme </p>
-                            <p> $38.000 </p>
-                        </div>
-                    </a>
-                    <div>
-                        <button type="submit" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button>
-                    </div>
-                </article>
-                <article>
-                    <a href="/productDetail">
-                        <img src="/img/Botines/Botines Nike Mercurial Vapor 13 Elite FG.jpg" alt="">
-                        <div class="descripcion">
-                            <h5> Nike Mercurial Vapor 13</h5>
-                            <p> Terreno Firme </p>
-                            <p> $38.000 </p>
-                        </div>
-                    </a>
-                    <div>
-                        <button type="submit" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button>
-                    </div>
-                </article>
-                <article>    
-                    <a class= "imagen-de-producto" href="/productDetail">
-                        <img src="/img/Botines/Botines Nike Tiempo Legend 8 Elite Fg.jpg" alt="">
-                        <div class="descripcion">
-                            <h5> Nike Tiempo Legend 8</h5>
-                            <p> Terreno Firme </p>
-                            <p> $38.000 </p>
-                        </div>
-                    </a>
-                    <div>
-                        <button type="submit" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button>
-                    </div>
-                </article>
-        </section>
+            <h3>Sección de ofertas</h3>
+             <section class="ofertas">
+                <% products.filter(elemento => {if (elemento.oferta == "Si") { %> 
+        
+                <%- include("./partials/ofertas.ejs",{elemento:elemento}) %> 
+                <%}})%> 
+            </section>
         </section>
     </main>
     <footer>

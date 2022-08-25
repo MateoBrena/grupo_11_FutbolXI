@@ -1,4 +1,4 @@
-const {all,one, generate, write} = require("../models/products.model")
+const {all,one, generate, write} = require("../models/index.model")
 const controller = {
     
     index: (req,res) => {

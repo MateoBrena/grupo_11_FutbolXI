@@ -4,7 +4,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
+
 body {
     background-color: #E7E7E7;
     font-family: "Heebo";
@@ -12,16 +14,16 @@ body {
 
 a {
     display: block;
-    text-decoration: none;
+   
     color: black;
 }
 
 #imagen-principal {
-    width: 100%;
+    width: 100vw;
     margin: 1.25rem 0px 1.25rem 0px;
 }
 
-h3 {
+.ofertas h3 {
     margin: 0.625rem 2rem;
 }
 
@@ -30,16 +32,15 @@ section article:hover {
 }
 
 section article{
-    transition: box-shadow 450ms
-}
-
-.ofertas article {
+    transition: box-shadow 450ms;
     text-align: center;
     background-color: white;
     width: 80vw;
     margin: auto;
     margin-bottom: 1.25rem;
 }
+
+
 
 div a {
     width: 28vw;
@@ -90,8 +91,8 @@ article img {
     }
 
     .ofertas article {
-        flex-grow: 0.3;
-        width: 35vw;
+        
+        width: 44vw;
     }
     div a {
         width: 15vw;
@@ -110,9 +111,8 @@ article img {
 }
 
 @media screen and (min-width: 1280px) {
-    .ofertas article{
-        flex-grow: 0.2;
-        width: 15vw;
+    .ofertas article {
+        width: 23vw;
     }
     article .descripcion {
         

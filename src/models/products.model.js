@@ -19,11 +19,12 @@ let model ={
 
         product.id = last.id + 1
         product.nombre = data.nombre
-        product.tallas = data.tallas
+        product.terreno = data.terreno
         product.Descripcion = data.Descripcion
         product.precio = parseInt(data.precio)
         product.marca = data.marca
         product.image = data.image
+        product.oferta = data.oferta
         
         return product;
         
