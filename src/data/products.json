@@ -6,7 +6,11 @@
     "marca": "Adidas",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Adidas Nemeziz 19.jpg","Adidas Nemeziz-19.2.jpg", "Adidas Nemeziz-19.3.jpg"],
+    "imagen": [
+      "Adidas Nemeziz 19.jpg",
+      "Adidas Nemeziz-19.2.jpg",
+      "Adidas Nemeziz-19.3.jpg"
+    ],
     "oferta": "Si"
   },
   {
@@ -16,7 +20,9 @@
     "marca": "Adidas",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Botines Adidas Predator 19.3.jpg"],
+    "imagen": [
+      "Botines Adidas Predator 19.3.jpg"
+    ],
     "oferta": "No"
   },
   {
@@ -26,7 +32,9 @@
     "marca": "Adidas",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Botines Adidas Predator 20.3.jpg"],
+    "imagen": [
+      "Botines Adidas Predator 20.3.jpg"
+    ],
     "oferta": "No"
   },
   {
@@ -36,7 +44,9 @@
     "marca": "Adidas",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Botines Adidas Predator Edge.3.jpg"],
+    "imagen": [
+      "Botines Adidas Predator Edge.3.jpg"
+    ],
     "oferta": "Si"
   },
   {
@@ -46,7 +56,9 @@
     "marca": "Nike",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Nike Phantom Vision.jpg"],
+    "imagen": [
+      "Nike Phantom Vision.jpg"
+    ],
     "oferta": "No"
   },
   {
@@ -56,7 +68,9 @@
     "marca": "Nike",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Nike Superfly 8.jpg"],
+    "imagen": [
+      "Nike Superfly 8.jpg"
+    ],
     "oferta": "Si"
   },
   {
@@ -66,7 +80,9 @@
     "marca": "Nike",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Botines Nike Mercurial Vapor 13 Elite FG.jpg"],
+    "imagen": [
+      "Botines Nike Mercurial Vapor 13 Elite FG.jpg"
+    ],
     "oferta": "Si"
   },
   {
@@ -76,7 +92,11 @@
     "marca": "Nike",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Botines Nike Tiempo Legend 8 Elite Fg.jpg","Botines Nike Tiempo Legend 8 Elite Fg.2.jpg","Botines Nike Tiempo Legend 8 Elite Fg.3.jpg"],
+    "imagen": [
+      "Botines Nike Tiempo Legend 8 Elite Fg.jpg",
+      "Botines Nike Tiempo Legend 8 Elite Fg.2.jpg",
+      "Botines Nike Tiempo Legend 8 Elite Fg.3.jpg"
+    ],
     "oferta": "Si"
   },
   {
@@ -86,7 +106,9 @@
     "marca": "Puma",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Botines Puma Ultra-3.1.jpg"],
+    "imagen": [
+      "Botines Puma Ultra-3.1.jpg"
+    ],
     "oferta": "No"
   },
   {
@@ -96,7 +118,9 @@
     "marca": "Puma",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Botines Puma Ultra Eclipse.jpg"],
+    "imagen": [
+      "Botines Puma Ultra Eclipse.jpg"
+    ],
     "oferta": "No"
   },
   {
@@ -106,7 +130,9 @@
     "marca": "Puma",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Botines Puma Ultra 4.2.jpg"],
+    "imagen": [
+      "Botines Puma Ultra 4.2.jpg"
+    ],
     "oferta": "No"
   },
   {
@@ -116,8 +142,10 @@
     "marca": "Puma",
     "terreno": "Firme",
     "Descripcion": "",
-    "imagen": ["Botines Puma King.jpg"],
+    "imagen": [
+      "Botines Puma King.jpg"
+    ],
     "oferta": "No"
   }
-
+  
 ]
