@@ -20,10 +20,10 @@ let model ={
         product.id = last.id + 1
         product.nombre = data.nombre
         product.terreno = data.terreno
-        product.Descripcion = data.Descripcion
+        product.descripcion = data.descripcion
         product.precio = parseInt(data.precio)
         product.marca = data.marca
-        product.image = data.image
+        product.imagen = data.imagen
         product.oferta = data.oferta
         
         return product;

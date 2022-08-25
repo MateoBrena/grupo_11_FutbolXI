@@ -15,16 +15,33 @@
             <form action="/save" method="post" class="formulario-registro" enctype="multipart/form-data">
                 <label for="nombre"> Nombre del producto </label>
                 <input type="text" name="nombre" required>
-                <label for="Descripcion"> Descripción </label>
-                <input type="text" name="Descripcion" required>
+                
                 <label for="marca"> Marca </label>
                 <input type="text" name="marca" required>
-                <label for="tallas"> Talla </label>
-                <input type="number" name="tallas" required>
+                <label for="terreno"> Tipo de terreno </label>
+                <span>
+                    <input type="radio" name="terreno" value="Firme" id="Firme">
+                    <label for="Firme"> Firme </label>
+                </span>
+                <span>
+                    <input type="radio" name="terreno" value="Blando" id="Blando">
+                    <label for="Blando"> Blando </label>
+                </span>
                 <label for="Price"> Precio </label>
                 <input type="number" name="precio" required>
+                <label for="oferta"> Está en oferta</label>
+                <span>
+                    <input type="radio" name="oferta" value="Si" id="Si">
+                    <label for="Si"> Si </label>
+                </span>
+                <span>
+                    <input type="radio" name="oferta" value="No" id="No">
+                    <label for="No"> No </label>
+                </span>
                 <label for="imagen"> Imagen </label>
                 <input type="file" name="imagen" >
+                <label for="descripcion"> Descripción </label>
+                <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea required>
                 <div class="botones">
                     <button type="submit"> Crear </button>
                     <button type="reset"> Borrar </button>

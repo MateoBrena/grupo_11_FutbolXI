@@ -34,12 +34,6 @@
                         <article class="formulario">
                             <label>Talle</label>
                                 <select name="TalleDecCalzado" class="diseño">
-                                    <option value="Talla">30</option>
-                                    <option value="Talla">31</option>
-                                    <option value="Talla">32</option>
-                                    <option value="Talla">33</option>
-                                    <option value="Talla">34</option>
-                                    <option value="Talla">35</option>
                                     <option value="Talla">36</option>
                                     <option value="Talla">37</option>
                                     <option value="Talla">38</option>
@@ -47,6 +41,12 @@
                                     <option value="Talla">40</option>
                                     <option value="Talla">41</option>
                                     <option value="Talla">42</option>
+                                    <option value="Talla">43</option>
+                                    <option value="Talla">44</option>
+                                    <option value="Talla">45</option>
+                                    <option value="Talla">46</option>
+                                    <option value="Talla">47</option>
+                                    <option value="Talla">48</option>
                                 </select>
                         </article>
                         <br>
@@ -65,7 +65,7 @@
                 
                     <div class="descripcion">
                         <p> Tipo de terreno: Firme </p>
-                        <p> Precio: <%= product.precio %> </p>
+                        <p> Precio: $<%= product.precio %> </p>
                     </div>
                 
                     <button type="submit" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button>
@@ -75,10 +75,9 @@
 
                 <article class="prueba3">
                     <h3>DETALLES:</h3>
-                    
-                    <p>No estás engañando el sistema, simplemente manipulás las reglas. Encontrá tu ventaja competitiva y transforma tu juego con el totalmente renovado calzado <%= product.nombre %>. Este botin de fútbol presenta un exterior suave con un diseño de corte medio que sujeta y estabiliza el tobillo. Elementos en relieve sobresalen en el empeine para ayudarte a darle más curva a la pelota. Tomá el control con los botines <%= product.nombre %> para terreno firme.</p>                    
+                   <p> <%= product.descripcion %> </p>                   
                 </article>
-                    <% }%> 
+                    <% } %> 
         </section>
     </main>
     <footer>

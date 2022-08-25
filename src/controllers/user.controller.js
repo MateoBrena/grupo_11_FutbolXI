@@ -56,7 +56,7 @@ const userController = {
     remove : (req,res) => {
         let user = one(req.body.id)
         if (user.imagen != "default.png") {
-            let file = resolve(__dirname,"..","..","public","Usuarios", user.imagen)
+            let file = resolve(__dirname,"..","..","public","img","Usuarios", user.imagen)
             unlinkSync(file)
         }
         let todos = all();
