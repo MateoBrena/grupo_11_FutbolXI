@@ -12,7 +12,6 @@ let userModel ={
         return all.find(u => u.id == id)
     },
     generate: function(data){
-        //Genera un Objeto con la info que nosotros necesitamos para generar un nuevo usuario
         let all = userModel.all()
         let last = all.pop()
         let user = {}
@@ -24,9 +23,7 @@ let userModel ={
         user.clave = data.clave
         user.categoria = data.email.includes("@futbolxi") ? "Administrador" : "Cliente"
         user.imagen = data.imagen
-        
         return user;
-        
     },
     write: function(data){
         let file = resolve(__dirname,'../data','users.json')

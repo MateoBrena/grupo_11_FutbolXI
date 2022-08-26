@@ -3,20 +3,16 @@ const {unlinkSync} = require("fs")
 const {resolve} = require('path');
 
 const userController = {
-
     index: (req,res) => {
         let usuarios = all()
         return res.render('../views/Users/usersList',{usuarios})
     },
-      
     register: (req,res) => {
         return res.render("../views/Users/register")
         
     },
-    
     login: (req,res) => {
         return res.render("../views/Users/login")
-        
     },
     show: (req,res) =>{
          let user = one(req.params.id)
@@ -29,7 +25,6 @@ const userController = {
         let user = one(req.params.id)
         return res.render("../views/Users/userEdit", {user})  
     },
-
     save: (req,res) => {
         req.body.imagen = req.files && req.files.length > 0 ? req.files[0].filename : "default.png";
         let nuevo = generate(req.body)

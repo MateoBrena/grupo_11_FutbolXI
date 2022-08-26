@@ -32,8 +32,8 @@ route.get("/productList",controller.index)
 route.get("/productDetail/:producto", controller.show)
 route.get("/productCart",controller.cart)
 
-route.get("/edits",controller.edits)
-//route.put("/update", controller.update)
+route.get("/edit/:id",controller.edit)
+route.put("/update",upload.any(), controller.update)
 
 route.delete("/delete/:id", controller.remove)
 
