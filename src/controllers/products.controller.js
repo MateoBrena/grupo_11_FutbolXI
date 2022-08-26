@@ -48,7 +48,7 @@ const controller = {
         let todos = all()
         todos.push(nuevo)
         write(todos)
-        return res.send(nuevo)
+        return res.redirect("/productList")
     },
     
     remove: (req,res) => {
