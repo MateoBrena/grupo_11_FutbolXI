@@ -11,17 +11,20 @@ body {
 }
 
 section {
-    
     margin: 1.25rem auto;
     width: 80vw;
 }
 
-input {
-    display: block;
+.formulario-registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.formulario-registro input {
+    margin: 0.3125rem 0.3125rem;
     border: none;
-    padding: .5rem 0;
-    width: 50vw;
-    margin: .5rem 0;
+    height: 2rem;
     border-radius: 0.3125rem;
 }
 
@@ -40,8 +43,9 @@ h1 {
 }
 
 #check {
-  width: 5vw;
-
+    position:relative;
+    left: -45%;
+    height: 1rem;
 }
 
 .botones {
@@ -55,7 +59,9 @@ h1 {
     font-size: 1.2rem;
     color: white;
     border: none;
-    padding: 0.8rem;
+    padding: 0.9375rem 0;
+    width: 20vw;
+    max-width: 7rem;
     margin: 0.625rem 1.25rem;
     border-radius: 0.3125rem;
     transition: box-shadow 450ms
@@ -70,7 +76,10 @@ h1 {
     text-align: center;
     margin: 0.5rem 0px;
 }
-
+.footerout{
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
 
 @media screen and (min-width: 768px) {
     section {

@@ -8,7 +8,6 @@ footer {
     background-color: #248232;
     display: flex;
     justify-content: space-between;
-    width: 100%;
 }
 footer p {
     font-size: 0.6rem;
@@ -27,8 +26,8 @@ footer p {
 
 
 .logo-twitter {
-    position: relative;
-    top: .35rem;
+    position: absolute;
+    top: .5rem;
     right: 5.3125rem;
     padding: 0.3125rem 0.5rem;
     background-color: black;
@@ -38,8 +37,8 @@ footer p {
 }
 
 .logo-instagram {
-    position: relative;
-    bottom: 1.73rem;
+    position: absolute;
+    top: 0.5rem;
     right: 2.8125rem;
     padding: 0.25rem 0.5625rem;
     background-color: black;
@@ -49,8 +48,8 @@ footer p {
 }
 
 .logo-facebook {
-    position: relative;
-    bottom: 3.85rem;
+    position: absolute;
+    top:0.5rem;
     right: 0.3125rem;
     padding: 0.3125rem 0.6875rem;
     background-color: black;

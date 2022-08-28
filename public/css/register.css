@@ -54,7 +54,9 @@ h1 {
     font-size: 1.2rem;
     color: white;
     border: none;
-    padding: 0.9375rem;
+    padding: 0.9375rem 0;
+    width: 20vw;
+    max-width: 7rem;
     margin: 0.625rem 1.25rem;
     border-radius: 0.3125rem;
     transition: box-shadow 450ms
