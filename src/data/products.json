@@ -146,5 +146,17 @@
       "Botines Puma King.jpg"
     ],
     "oferta": "No"
+  },
+  {
+    "id": 13,
+    "nombre": "botines de prueba",
+    "terreno": "Firme",
+    "descripcion": "botin de descarte",
+    "precio": 5000,
+    "marca": "Nike",
+    "imagen": [
+      "imagen-1661708269045-727744484.jpg"
+    ],
+    "oferta": "Si"
   }
 ]
