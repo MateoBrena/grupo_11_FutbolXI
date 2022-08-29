@@ -1,0 +1,30 @@
+@import url(footer.css);
+@import url(header.css);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #E7E7E7;
+    font-family: "Heebo";
+}
+
+section {
+    text-align: center;
+    margin: 1rem;
+}
+
+img {
+    width: 90%;
+    margin-bottom: 35%;
+}
+
+@media screen and (min-width: 768px) {
+    img {
+        width: 70%;
+        margin-bottom: 0%;
+    }
+}

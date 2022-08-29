@@ -87,6 +87,12 @@ article img {
     position: relative;
 }
 
+.eliminar{
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+}
+
 .fa-pencil{
     position: absolute;
     left:73vw;

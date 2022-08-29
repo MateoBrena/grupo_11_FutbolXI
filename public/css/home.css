@@ -14,13 +14,16 @@ body {
 
 a {
     display: block;
-   
     color: black;
 }
 
 #imagen-principal {
     width: 100%;
     margin: 1.25rem 0px 1.25rem 0px;
+}
+
+.texto-oferta {
+    margin: 1rem;
 }
 
 .ofertas h3 {

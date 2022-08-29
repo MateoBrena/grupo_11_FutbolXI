@@ -19,7 +19,7 @@ const userController = {
          if(user){
              return res.render('../views/Users/userProfile',{user})     
          }
-            return res.render('../views/Users/userProfile',{user:null})
+            return res.render("../views/404Error")
     },
     edit: (req,res) => {
         let user = one(req.params.id)
@@ -40,7 +40,7 @@ const userController = {
                 elemento.nombre = req.body.nombre;
                 elemento.apellido = req.body.apellido
                 elemento.email = req.body.email
-                elemento.categoria = req.body.categoria;
+                elemento.categoria = req.body.email.includes("@futbolxi") ? "Administrador" : "Cliente";
                 elemento.imagen = req.files && req.files.length > 0 ? req.files[0].filename : elemento.imagen;
             }
             return elemento

@@ -72,18 +72,12 @@
                     
                 
                 </article>
-
                 <article class="prueba3">
                     <h3>DETALLES:</h3>
-                   <p> <%= product.descripcion %> </p>  
-
-                   <form action="/productos/borrar ? m = DELETE" method = "post">
-                    <input type="hidden" name= "id" value="<% product.id %> " >
-                    <button type="submit">Borrar</button>
-                    </form>                
-                </article>
-                    <% } %> 
-        </section>
+                   <p> <%= product.descripcion %> </p>
+                   <% } %> 
+                </article> 
+        </section> 
     </main>
     <footer>
         <%- include('../partials/footer.ejs')  %> 

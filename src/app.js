@@ -21,4 +21,8 @@ const usersRoutes = require("./routes/users.routes")
 server.use(productsRoutes); 
 server.use(indexRoutes);
 server.use(usersRoutes); 
+server.use((req,res,next) => {
+    res.status(404).render("404Error")
+   return next()
+})
 

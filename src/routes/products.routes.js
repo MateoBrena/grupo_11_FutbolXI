@@ -35,7 +35,7 @@ route.get("/productCart",controller.cart)
 route.get("/edit/:id",controller.edit)
 route.put("/update",upload.any(), controller.update)
 
-route.delete("/delete/:id", controller.remove)
+route.delete("/borrar", controller.remove)
 
 
 module.exports = route

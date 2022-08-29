@@ -8,6 +8,10 @@
         </div>
         </a>
         <div class="contenedor">
+            <form action="/borrar?m=DELETE" method ="post" class="eliminar">
+                <input type="hidden" name= "id" value="<%= elemento.id %>"  >
+                <button type="submit"><i class="fa-solid fa-trash-can"></i></button>
+            </form>
             <button type="submit" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button> 
             <a href="/edit/<%= elemento.id %> "><i class="fa-solid fa-pencil"></i></a>
         </div>
