@@ -3,6 +3,7 @@
 ### Comenzar a hacer
 Verificar los cambios realizados y el estado del repositorio previo a un pull.
 Testeo final de todo el sprint previo a la entrega para asegurarse de no entregar incompleto o con errores.
+Anunciar al resto del equipo al comenzar a trabajar en el código para evitar conflictos.
 ### Hacer más
 Determinar en un principio fecha de entrega a las tareas individuales para cumplir con los tiempos y estar organizados.
 Recordar hacer un "git pull" antes de comenzar a modificar código. 
