@@ -1,8 +1,10 @@
 # Retrospectiva estrella de mar 
 
 ### Comenzar a hacer
-Determinar en un principio fecha de entrega a las tareas individuales para cumplir con los tiempos y estar organizados.
+Verificar los cambios realizados y el estado del repositorio previo a un pull.
+Testeo final de todo el sprint previo a la entrega para asegurarse de no entregar incompleto o con errores.
 ### Hacer más
+Determinar en un principio fecha de entrega a las tareas individuales para cumplir con los tiempos y estar organizados.
 Recordar hacer un "git pull" antes de comenzar a modificar código. 
 Hacer más commits entre todos, para mostrar el avance del trabajo y que todos puedan visualizarlo y descargarlo.
 ### Continuar haciendo
@@ -13,6 +15,7 @@ Testear entre todos los miembros el trabajo realizado para recibir feedback o co
 ### Hacer menos
 Usar medidas no relativas, en lo posible evitarlas para dar dinamismo y adaptabilidad a la página. (rems, vw, vh).
 Evitar demoras en el comienzo del sprint, no dejar pasar mucho tiempo antes de comenzar a trabajar.
-### Dejar de hacer
 No usar siempre la misma descripción o nombres genéricos para los commits.
 No comunicarse con otros miembros y no avisar sobre nuevos commits que puedan generar conflicto con el código de alguien más.
+### Dejar de hacer
+Pushear código incompleto y que borre el trabajo ya realizado anteriormente.
