@@ -9,7 +9,6 @@
         <%- include('../partials/header.ejs')  %> 
     </header>
     <main>
-        <% if (user) { %>
             <section>
                 <h1> Detalle de Usuario <%= user.id %> </h1>
                 <article>
@@ -18,13 +17,12 @@
                     <p class="info-usuario"> <span> Email:</span> <%= user.email %> </p>
                     <p class="info-usuario" id="categoria"> <span> Categoría:</span> <%= user.categoria  %> </p>
                     <a href="/userEdit/<%= user.id%>" class="boton">Editar Usuario</a>
-                    <form action="/borrar?m=DELETE" method="post">
+                    <form action="/borraruser?m=DELETE" method="post">
                         <input type="hidden" name="id" value="<%= user.id %>">
                         <button type="submit" class="boton">Eliminar Usuario</button>
                     </form>
                 </article>
             </section>
-        <% } %> 
     </main>
     <footer>
         <%- include('../partials/footer.ejs')  %> 

@@ -1,46 +1,28 @@
 [
   {
-    "id": 2,
-    "nombre": "Mauricio",
-    "apellido": "Duch",
-    "email": "mauricioduch@futbolxi.com",
-    "clave": "123456",
-    "categoria": "Administrador",
-    "imagen": "default.png"
-  },
-  {
-    "id": 3,
-    "nombre": "Jeremías",
-    "apellido": "Rombolá",
-    "email": "jeremiasrombola@futbolxi.com",
-    "clave": "123456",
-    "categoria": "Administrador",
-    "imagen": "default.png"
-  },
-  {
-    "id": 4,
-    "nombre": "Emilse",
-    "apellido": "Díaz",
-    "email": "emilsediaz@futbolxi.com",
-    "clave": "123456",
-    "categoria": "Administrador",
-    "imagen": "default.png"
-  },
-  {
-    "id": 5,
-    "nombre": "Primer",
-    "apellido": "Cliente",
-    "email": "uncliente@gmail.com",
-    "clave": "123456",
+    "id": 7,
+    "nombre": "Usuario",
+    "apellido": "Tercero",
+    "email": "usuariotercero@gmail.com",
+    "clave": "$2b$10$O7sYSg7KCx5m5Zdcc5bYMel4Xe8iZYpr/pfURw1Xeq3Vah2kjCYKO",
     "categoria": "Cliente",
     "imagen": "default.png"
   },
   {
-    "id": 6,
+    "id": 8,
+    "nombre": "Prueba",
+    "apellido": "Validator",
+    "email": "pruebavalidator@gmail.com",
+    "clave": "$2b$10$KBCN1pDOtp1qGrrGBA1g6uurM0C1xug1vEgN4eQFyP4PQGFHoRty2",
+    "categoria": "Cliente",
+    "imagen": "default.png"
+  },
+  {
+    "id": 9,
     "nombre": "Mateo",
     "apellido": "Brena",
     "email": "matubrena@futbolxi.com",
-    "clave": "123456",
+    "clave": "$2b$10$doUFsQbfMhvtEdpJSBg21uSM2TPLF80wHJdPXFcD4gGL68iV3DlS2",
     "categoria": "Administrador",
     "imagen": "default.png"
   }

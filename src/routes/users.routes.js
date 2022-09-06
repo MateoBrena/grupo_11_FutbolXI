@@ -18,6 +18,8 @@ const filename = function(req,file,cb){
     return cb(null, name)
 }
 const multer = require("multer")
+const validaciones = require("../validations/register")
+const validatorLogin = require("../validations/login")
 
 
 const upload = multer({
@@ -25,18 +27,19 @@ const upload = multer({
 })
 
 route.get("/login",controller.login)
-
+route.post("/access", validatorLogin ,controller.access)
 
 route.get("/register",controller.register)
-route.post("/register/save", upload.any(), controller.save)
+route.post("/register/save", upload.any(), validaciones,controller.save)
 
 route.get("/usersList",controller.index)
-route.get("/userProfile/:id", controller.show)
+route.get("/userProfile/:id",controller.show)
 
 route.get('/userEdit/:id',controller.edit)
 route.put("/actualizar",upload.any(),controller.update)
 
-route.delete("/borrar", controller.remove)
+route.delete("/borraruser", controller.remove)
+route.get('/logout', controller.logout)
 
 
 module.exports = route

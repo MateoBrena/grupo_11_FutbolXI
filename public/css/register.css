@@ -30,6 +30,12 @@ section {
     border-radius: 0.3125rem;
 }
 
+.feedback {
+    padding: 1rem;
+    background-color: tomato;
+    color: snow;
+}
+
 .formulario-registro label {
     margin: 0.625rem 0px 0px 0.3125rem;
 }

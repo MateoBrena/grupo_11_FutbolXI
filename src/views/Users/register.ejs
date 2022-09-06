@@ -17,11 +17,26 @@
                 <label for="apellido"> Apellido </label>
                 <input type="text" name="apellido" required>
                 <label for="email"> Email</label>
-                <input type="email" name="email" required>
+                <input type="text" name="email" >
+                <% if (locals.errores && locals.errores.email) { %>
+                    <p class="feedback">
+                        <%= locals.errores.email.msg %> 
+                    </p>
+                <% } %>
                 <label for="clave"> Ingrese una contraseña </label>
-                <input type="password" name="clave" required>
+                <input type="password" name="clave">
+                <% if (locals.errores && locals.errores.clave) { %>
+                    <p class="feedback">
+                        <%= locals.errores.clave.msg %> 
+                    </p>
+                <% } %>
                 <label for="confirmarClave"> Confirme su contraseña </label>
-                <input type="password" name="confirmarClave" required>
+                <input type="password" name="confirmarClave">
+                <% if (locals.errores && locals.errores.confirmarClave) { %>
+                    <p class="feedback">
+                        <%= locals.errores.confirmarClave.msg %> 
+                    </p>
+                <% } %>
                 <label for="imagen"> Imagen de usuario </label>
                 <input type="file" name="imagen">
                 <div class="botones">

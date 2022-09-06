@@ -1,5 +1,12 @@
 <nav class="encabezado">
     <a href="/" class="imagen-logo"><img src="/img/logo-futbolXI.png" alt="Logo Futbol XI"  class="imagen-logo"></a>
+    <% if (user) { %> 
+    <h5> <%= user.email %> 
+        <a href="/logout">
+            <i class="fa-solid fa-door-open"></i>
+        </a>
+    </h5>
+    <% } %> 
    <form action="/" method="get" class="searchbar"> 
        <input  type="text"  placeholder="Buscar productos,marcas">
        <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>

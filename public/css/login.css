@@ -32,6 +32,12 @@ section {
     margin: 0.625rem 0 0 0.3125rem;
 }
 
+.feedback {
+    padding: 1rem;
+    background-color: tomato;
+    color: snow;
+}
+
 h1 {
     font-size: 1.2rem;
     background-color: #248232;

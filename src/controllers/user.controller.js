@@ -1,6 +1,8 @@
 const {all,one, generate, write} = require("../models/users.model")
-const {unlinkSync} = require("fs")
+const {unlinkSync} = require("fs");
 const {resolve} = require('path');
+const {hashSync} = require("bcrypt");
+const {validationResult} = require("express-validator");
 
 const userController = {
     index: (req,res) => {
@@ -26,12 +28,42 @@ const userController = {
         return res.render("../views/Users/userEdit", {user})  
     },
     save: (req,res) => {
+        // control de las validaciones 
+        const result = validationResult(req)
+        if(!result.isEmpty()) {
+            let errores = result.mapped();
+            return res.render("../views/Users/register",{ 
+                errores: errores,
+                data: req.body
+            })
+        }
         req.body.imagen = req.files && req.files.length > 0 ? req.files[0].filename : "default.png";
+        req.body.clave = hashSync(req.body.clave,10)
         let nuevo = generate(req.body)
         let todos = all()
         todos.push(nuevo)
         write(todos)
         return res.redirect("/usersList")
+    },
+    access : (req,res) => {
+        const result = validationResult(req)
+        if(!result.isEmpty()) {
+            let errores = result.mapped();
+            return res.render("../views/Users/login",{
+                errores: errores,
+                data: req.body
+            })
+        }
+        res.cookie("user", req.body.email, {maxAge: 1000 * 60 * 3 })
+        let todos = all()
+        req.session.user = todos.find(user => user.email == req.body.email)
+        return res.redirect("/")
+
+    },
+    logout : (req,res) => {
+        delete req.session.user
+        res.cookie("user", null, {maxAge: -1})
+        res.redirect("/")
     },
     update: (req,res) => {
         let todos = all();
