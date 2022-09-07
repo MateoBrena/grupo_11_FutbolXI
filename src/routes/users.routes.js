@@ -1,7 +1,7 @@
 const {Router} = require('express')
 const route = Router();
 const controller = require("../controllers/user.controller")
-
+const isLogged = require("../middlewares/isLogged")
 const {resolve, extname} = require("path")
 const { existsSync,mkdirSync } = require('fs')
 const destination = function(req,file,cb){
@@ -32,8 +32,8 @@ route.post("/access", validatorLogin ,controller.access)
 route.get("/register",controller.register)
 route.post("/register/save", upload.any(), validaciones,controller.save)
 
-route.get("/usersList",controller.index)
-route.get("/userProfile/:id",controller.show)
+route.get("/usersList",[isLogged],controller.index)
+route.get("/userProfile/:id",[isLogged],controller.show)
 
 route.get('/userEdit/:id',controller.edit)
 route.put("/actualizar",upload.any(),controller.update)
