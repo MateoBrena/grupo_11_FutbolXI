@@ -25,5 +25,23 @@
     "clave": "$2b$10$doUFsQbfMhvtEdpJSBg21uSM2TPLF80wHJdPXFcD4gGL68iV3DlS2",
     "categoria": "Administrador",
     "imagen": "default.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Jeremías",
+    "apellido": "Rombolá",
+    "email": "jere.rombola@gmail.com",
+    "clave": "$2b$10$EYLVcPgh6dr1eabSAmzl4ePkgp0swvZaCEvV60y7jDpcVOOH6EA3e",
+    "categoria": "Administrador",
+    "imagen": "default.png"
+  },
+  {
+    "id": 11,
+    "nombre": "Prueba",
+    "apellido": "Cliente",
+    "email": "cliente@gmail.com",
+    "clave": "$2b$10$SonvXfQCWyOOf3KrcdUydOGGKM4sXHtC1J4JqN3PY2f9LILjOD4qu",
+    "categoria": "Cliente",
+    "imagen": "default.png"
   }
 ]

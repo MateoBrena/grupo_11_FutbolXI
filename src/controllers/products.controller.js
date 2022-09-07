@@ -5,12 +5,23 @@ const {resolve} = require('path');
 const controller = {
     index: (req,res) => {
         let products = all()
-        if(req.params.marcas){
-            products = products.filter(e => e.marca == req.params.marcas)
-            return res.render('../views/Product/productList',{products})
+        let data = {
+            Adidas: products.filter(elemento => (elemento.marca === "Adidas")),
+            Nike: products.filter(elemento => (elemento.marca === "Nike")),
+            Puma: products.filter(elemento => (elemento.marca === "Puma")),
+            marcas: ["Adidas","Nike","Puma"],
+            title: "Lista de botines"
+        }
+
+        if(req.params.marca){
+            data.marcas = [req.params.marca]
+            data.title = "Botines " + req.params.marca
+           // data = products.filter(e => e.marca == req.params.marcas)
+            return res.render('../views/Product/productList',{data})
         } 
-        return res.render('../views/Product/productList',{products})
+        return res.render('../views/Product/productList',{data})
     },
+    
     show: (req,res) =>{
          let product = one(req.params.producto)
          if(product){

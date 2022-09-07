@@ -1,7 +1,7 @@
 const {Router} = require('express')
 const route = Router();
 const controller = require("../controllers/products.controller")
-
+const isLogged = require("../middlewares/isLogged")
 const {resolve, extname} = require("path")
 const { existsSync,mkdirSync } = require('fs')
 const destination = function(req,file,cb){
@@ -17,7 +17,8 @@ const filename = function(req,file,cb){
     let name = file.fieldname + "-" + unique + extname(file.originalname);
     return cb(null, name)
 }
-const multer = require("multer")
+const multer = require("multer");
+const { show } = require('../controllers/user.controller');
 
 
 const upload = multer({
@@ -25,15 +26,15 @@ const upload = multer({
 })
 
 
-route.get("/create",controller.create)
-route.post("/save", upload.any(), controller.save)
+route.get("/create",[isLogged],controller.create)
+route.post("/save",[isLogged], upload.any(), controller.save)
 
-route.get("/productList",controller.index)
+route.get("/productList/:marca?",controller.index)
 route.get("/productDetail/:producto", controller.show)
 route.get("/productCart",controller.cart)
 
-route.get("/edit/:id",controller.edit)
-route.put("/update",upload.any(), controller.update)
+route.get("/edit/:id",[isLogged],controller.edit)
+route.put("/update",[isLogged],upload.any(), controller.update)
 
 route.delete("/borrar", controller.remove)
 

@@ -1,10 +1,10 @@
 let middleware = (req,res,next) => {
-    if (req.session && req.session.user) {
+    if (!req.session && !req.session.user) {
 
         next()
     }
     
-    res.redirect("/login")
+    res.redirect("/userProfile/:id")
 }
 
 

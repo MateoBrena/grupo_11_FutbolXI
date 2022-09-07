@@ -3,6 +3,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 header {
@@ -27,8 +29,9 @@ header {
     background-color: white;
     margin-top: 0.625rem;
     width: 50vw;
-    margin-right: 0.9375rem;
+
 }
+
 
 .searchbar input , 
 .searchbar button {
@@ -59,7 +62,23 @@ header {
     width: 2.125rem;
     height: 2.125rem;
 }
+.user{
+    display: flex;
+    font-size: 13px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.navbar1 {
+    display: block;
+    position: relative;
+    margin-top: 2rem;
+    margin-left:  2rem;
+    font-size: 14px;
+}
 
+.fa-door-open{
+    margin-left: 1rem;
+}
 #carrito {
     position: absolute;
     top: 0.3125rem;

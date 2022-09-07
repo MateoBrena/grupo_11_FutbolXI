@@ -3,6 +3,9 @@
 <head>
     <%- include('../partials/head.ejs')  %> 
     <link rel="stylesheet" href="\css\list.css">
+    <link rel="icon" type="image/png" href="/img/logo-futbolXI.png"/>
+    <title> <%= data.title %>  </title>
+
 </head>
     <body>
         <header>
@@ -10,37 +13,25 @@
 
         </header>
         <main>
+            <% if (user && user.categoria == "Administrador"){ %> 
             <a href="/create"><i class="fa-solid fa-plus"></i></a>
-            <section> 
-                <h3>Adidas</h3>
                 
-                <section class="ofertas">
-
-                    <% products.filter(elemento => {if (elemento.marca === "Adidas") { %> 
-        
-                    <%- include("../partials/products.ejs",{elemento:elemento}) %> 
-                    <%}});%> 
-                </section>
-            </section>
-            <section>
-                <h3>Nike</h3>
-                <section class="ofertas">
-                    <% products.filter(elemento => {if (elemento.marca === "Nike") { %> 
-        
-                        <%- include("../partials/products.ejs",{elemento:elemento}) %> 
-                        <%}});%> 
-                </section>
-            </section>
-
-            <section>
-                <h3>Puma</h3>
-                <section class="ofertas">
-                    <% products.filter(elemento => {if (elemento.marca === "Puma") { %> 
-        
-                        <%- include("../partials/products.ejs",{elemento:elemento}) %> 
-                        <%}});%> 
-                </section>
-            </section>
+            <%}%>
+                <% for( let i = 0; i < data.marcas.length; i++ ) { %>
+                    <% let marca = data.marcas[i] %> 
+                    <section> 
+                        <h3><%= marca %></h3>
+                        
+                        <section class="ofertas">
+                
+                            <% data[marca].forEach(elemento => { %> 
+                
+                            <%- include("../partials/products.ejs",{elemento:elemento}) %> 
+                            <%});%> 
+                        </section>
+                        
+                    </section>
+                <% } %>
         </main>
         <footer>
             <%- include('../partials/footer.ejs')  %> 
