@@ -54,9 +54,14 @@ const userController = {
                 data: req.body
             })
         }
-        res.cookie("user", req.body.email, {maxAge: 1000 * 60 * 3 })
+        if(req.body.check != undefined){
+            res.cookie("user", req.body.email, {maxAge: 1000 * 60 * 3 })
+            
+        }
+        
         let todos = all()
         req.session.user = todos.find(user => user.email == req.body.email)
+       
         return res.redirect("/")
 
     },
