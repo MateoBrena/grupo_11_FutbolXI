@@ -69,12 +69,11 @@ const controller = {
     },
     remove: (req,res) => {
     let product = one(req.body.id)
-    if(product.imagen != "default.jpg"){
-        product.imagen.forEach( (unaImagen) => {
+    product.imagen.forEach( (unaImagen) => {
+        if(unaImagen != "default.jpg"){
             let file = resolve(__dirname,"..","..","public","img","Botines",unaImagen)
             unlinkSync(file)
-        })
-    }
+        }})
     let todos = all();
     let noEliminados = todos.filter(elemento => elemento.id != req.body.id)
     write(noEliminados)
