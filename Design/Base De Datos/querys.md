@@ -1,6 +1,6 @@
 // CREANDO BASE DE DATOS //
 
-CREATE DATABASE futbolxi
+CREATE DATABASE futbolxi_db
 
 //-----------------------------------------------------------------------------------------------------------------------//
 
@@ -26,7 +26,7 @@ admin boolean NOT NULL,
 image VARCHAR(200)
 )
 
-CREATE TABLE imagen (
+CREATE TABLE images (
 id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 imagen VARCHAR(200) NOT NULL,
 product_id INT NOT NULL,
@@ -113,43 +113,43 @@ INSERT INTO products VALUES (null, "King", "Firme", "El fútbol es rey en este r
 // INSERTANDO DATOS EN LA TABLA IMAGENES //
 
 
-INSERT INTO imagen VALUES (null, "Adidas Nemeziz 19.jpg", 1), (null,"Adidas Nemeziz 19.2.jpg",1),(null,"Adidas Nemeziz 19.3.jpg",1)
+INSERT INTO images VALUES (null, "Adidas Nemeziz 19.jpg", 1), (null,"Adidas Nemeziz 19.2.jpg",1),(null,"Adidas Nemeziz 19.3.jpg",1)
 
-INSERT INTO imagen VALUES (null,"Botines Adidas Predator Edge.4.jpg" , 4), (null,"Botines Adidas Predator Edge.4.2.jpg",4),(null,"Botines Adidas Predator Edge.4.3.jpg",4)
+INSERT INTO images VALUES (null,"Botines Adidas Predator Edge.4.jpg" , 4), (null,"Botines Adidas Predator Edge.4.2.jpg",4),(null,"Botines Adidas Predator Edge.4.3.jpg",4)
 
-INSERT INTO imagen VALUES (null, "Botines adidas X Speedflow 4 Versátil.jpg", 3), (null,"Botines adidas X Speedflow 4 Versátil.2.jpg",3),(null,"Botines adidas X Speedflow 4 Versátil.3.jpg",3)
+INSERT INTO images VALUES (null, "Botines adidas X Speedflow 4 Versátil.jpg", 3), (null,"Botines adidas X Speedflow 4 Versátil.2.jpg",3),(null,"Botines adidas X Speedflow 4 Versátil.3.jpg",3)
 
-INSERT INTO imagen VALUES (null, "Botines Adidas Predator 20.3.jpg", 2), (null,"Botines Adidas Predator 20.3.2.jpg",2),(null,"Botines Adidas Predator 20.3.3.jpg",2)
-
-
-//-----------------------------------------------------------------------------------------------------------------------//
-
-
-INSERT INTO imagen VALUES (null,"Botines Nike Phantom GT Elite.jpg" , 5), (null,"Botines Nike Phantom GT Elite.2.jpg",5),(null,"Botines Nike Phantom GT Elite.3.jpg",5)
-
-INSERT INTO imagen VALUES (null,"Botines Nike Mercurial Superfly 8 Academy KM.jpg", 6), (null,"Botines Nike Mercurial Superfly 8 Academy KM.2.jpg",6),(null,"Botines Nike Mercurial Superfly 8 Academy KM.3.jpg",6)
-
-INSERT INTO imagen VALUES (null,"Botines Nike Mercurial Vapor 13 Elite FG.jpg", 7), (null,"Botines Nike Mercurial Vapor 13 Elite FG.2.jpg",7),(null,"Botines Nike Mercurial Vapor 13 Elite FG.3.jpg",7)
-
-INSERT INTO imagen VALUES (null,"Botines Nike Tiempo Legend 8 Elite Fg.jpg", 8), (null,"Botines Nike Tiempo Legend 8 Elite Fg.2.jpg",8),(null,"Botines Nike Tiempo Legend 8 Elite Fg.3.jpg",8)
-
-
-
-
-
-
+INSERT INTO images VALUES (null, "Botines Adidas Predator 20.3.jpg", 2), (null,"Botines Adidas Predator 20.3.2.jpg",2),(null,"Botines Adidas Predator 20.3.3.jpg",2)
 
 
 //-----------------------------------------------------------------------------------------------------------------------//
 
 
+INSERT INTO images VALUES (null,"Botines Nike Phantom GT Elite.jpg" , 5), (null,"Botines Nike Phantom GT Elite.2.jpg",5),(null,"Botines Nike Phantom GT Elite.3.jpg",5)
 
-INSERT INTO imagen VALUES (null,"Botines Puma Ultra-3.1.jpg", 9), (null,"Botines Puma Ultra-3.1.2.jpg",9),(null,"Botines Puma Ultra-3.1.3.jpg",9)
+INSERT INTO images VALUES (null,"Botines Nike Mercurial Superfly 8 Academy KM.jpg", 6), (null,"Botines Nike Mercurial Superfly 8 Academy KM.2.jpg",6),(null,"Botines Nike Mercurial Superfly 8 Academy KM.3.jpg",6)
 
-INSERT INTO imagen VALUES (null,"Puma Future Z 4.3.jpg", 10), (null,"Puma Future Z 4.3.2.jpg",10),(null,"Puma Future Z 4.3.3.jpg",10)
+INSERT INTO images VALUES (null,"Botines Nike Mercurial Vapor 13 Elite FG.jpg", 7), (null,"Botines Nike Mercurial Vapor 13 Elite FG.2.jpg",7),(null,"Botines Nike Mercurial Vapor 13 Elite FG.3.jpg",7)
 
-INSERT INTO imagen VALUES (null,"Botines Puma Ultra 4.2.jpg", 11), (null,"Botines Puma Ultra 4.2.2.jpg",11),(null,"Botines Puma Ultra 4.2.3.jpg",11)
-INSERT INTO imagen VALUES (null,"Botines Puma King.jpg", 12), (null,"default.jpg",12),(null,"default.jpg",12)
+INSERT INTO images VALUES (null,"Botines Nike Tiempo Legend 8 Elite Fg.jpg", 8), (null,"Botines Nike Tiempo Legend 8 Elite Fg.2.jpg",8),(null,"Botines Nike Tiempo Legend 8 Elite Fg.3.jpg",8)
+
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------//
+
+
+
+INSERT INTO images VALUES (null,"Botines Puma Ultra-3.1.jpg", 9), (null,"Botines Puma Ultra-3.1.2.jpg",9),(null,"Botines Puma Ultra-3.1.3.jpg",9)
+
+INSERT INTO images VALUES (null,"Puma Future Z 4.3.jpg", 10), (null,"Puma Future Z 4.3.2.jpg",10),(null,"Puma Future Z 4.3.3.jpg",10)
+
+INSERT INTO images VALUES (null,"Botines Puma Ultra 4.2.jpg", 11), (null,"Botines Puma Ultra 4.2.2.jpg",11),(null,"Botines Puma Ultra 4.2.3.jpg",11)
+INSERT INTO images VALUES (null,"Botines Puma King.jpg", 12), (null,"default.jpg",12),(null,"default.jpg",12)
 
 
 
@@ -157,10 +157,14 @@ INSERT INTO imagen VALUES (null,"Botines Puma King.jpg", 12), (null,"default.jpg
 
 // INSERTANDO DATOS EN LA TABLA MARCAS //
 
-INSERT INTO  marcas VALUES (null,”Adidas”, “logo-adidas-blanco.png”), (null,"Nike", “logo-nike-blanco.jpg”),(null,”Puma",”logo-puma-blanco.jpg”)
+INSERT INTO marcas VALUES (null,”Adidas”, “logo-adidas-blanco.png”), (null,"Nike", “logo-nike-blanco.jpg”),(null,”Puma",”logo-puma-blanco.jpg”)
 
 //--------------------------------------------------------------------------------------------------------------------//
 
 Foreign Key 
 
 ALTER TABLE products ADD FOREIGN KEY (marca_id) REFERENCES marcas(id)
+
+
+
+
