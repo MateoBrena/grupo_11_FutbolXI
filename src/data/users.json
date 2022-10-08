@@ -18,7 +18,7 @@
     "imagen": "default.png"
   },
   {
-    "id": 9,
+    "id": 1,
     "nombre": "Mateo",
     "apellido": "Brena",
     "email": "matubrena@futbolxi.com",
@@ -27,7 +27,7 @@
     "imagen": "default.png"
   },
   {
-    "id": 10,
+    "id": 2,
     "nombre": "Jeremías",
     "apellido": "Rombolá",
     "email": "jere.rombola@gmail.com",
@@ -52,5 +52,14 @@
     "clave": "$2b$10$gXfm90WzDaLmBAEoryRzSu.NOI8vBIHben6pPkX6y5Q5TPYahB8Ae",
     "categoria": "Administrador",
     "imagen": "imagen-1662945320839-799898768.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Jeremías",
+    "apellido": "Rombolá",
+    "email": "llll@futbolxi.com.ar",
+    "clave": "$2b$10$g4vJU.DHlzdBpH.hbMwi3e8RjjNlQ4ohMCTuSs2LlGmKZVL.WY.g6",
+    "categoria": "Administrador",
+    "imagen": "default.png"
   }
 ]

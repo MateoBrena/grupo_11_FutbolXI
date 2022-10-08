@@ -35,11 +35,11 @@ route.post("/register/save", upload.any(), validaciones,controller.save)
 route.get("/usersList",[isLogged],controller.index)
 route.get("/userProfile/:id",[isLogged],controller.show)
 
-route.get('/userEdit/:id',controller.edit)
-route.put("/actualizar",upload.any(),controller.update)
+route.get('/userEdit/:id',[isLogged],controller.edit)
+route.put("/actualizar",[isLogged],upload.any(),controller.update)
 
-route.delete("/borraruser", controller.remove)
-route.get('/logout', controller.logout)
+route.delete("/borraruser",[isLogged], controller.remove)
+route.get('/logout',[isLogged], controller.logout)
 
 
 module.exports = route

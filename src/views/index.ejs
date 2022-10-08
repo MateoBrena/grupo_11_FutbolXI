@@ -16,7 +16,7 @@
         <section>
             <h3 class="texto-oferta">Sección de ofertas</h3>
              <section class="ofertas">
-                <% products.filter(elemento => {if (elemento.oferta == "Si") { %> 
+                <% response.filter(elemento => { if (elemento.oferta == 1) { %> 
         
                 <%- include("./partials/ofertas.ejs",{elemento:elemento}) %> 
                 <%}})%> 

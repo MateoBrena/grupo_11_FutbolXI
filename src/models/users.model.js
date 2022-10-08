@@ -1,6 +1,6 @@
 const {resolve} = require("path")
 const fs = require("fs")
-
+/*
 let userModel ={
     all: function(){
         let file = resolve(__dirname,"../data/users.json");
@@ -32,4 +32,4 @@ let userModel ={
     },
 }
 
-module.exports = userModel
+module.exports = userModel*/
