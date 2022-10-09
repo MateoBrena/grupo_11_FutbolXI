@@ -1,5 +1,5 @@
 const model = function(sequelize,DataTypes) {
-    let alias = "user"
+    let alias = "User"
     let cols = {
         nombre: {
            type: DataTypes.STRING,
@@ -31,6 +31,7 @@ const model = function(sequelize,DataTypes) {
         timestamps: false
     }
     const User = sequelize.define(alias,cols,config)
+    
     return User
 }
 

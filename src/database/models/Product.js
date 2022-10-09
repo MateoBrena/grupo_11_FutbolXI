@@ -1,5 +1,5 @@
 const model = function(sequelize,DataTypes) {
-    let alias = "product"
+    let alias = "Product"
     let cols = {
         nombre: {
            type: DataTypes.STRING,
@@ -33,12 +33,12 @@ const model = function(sequelize,DataTypes) {
     const Product = sequelize.define(alias,cols,config)
 
     Product.associate = function(models) {
-        Product.belongsTo(models.marca,{
+        Product.belongsTo(models.Marca,{
             as: "marca",
             foreignKey: "marca_id"
         })
-        Product.hasMany(models.image,{
-            as: "image",
+        Product.hasMany(models.Image,{
+            as: "images",
             foreignKey: "product_id"
         })
     }

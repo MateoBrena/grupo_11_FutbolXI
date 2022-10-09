@@ -1,5 +1,5 @@
 const model = function(sequelize,DataTypes) {
-    let alias = "image"
+    let alias = "Image"
     let cols = {
         imagen: {
            type: DataTypes.STRING,
@@ -17,9 +17,9 @@ const model = function(sequelize,DataTypes) {
     const Image = sequelize.define(alias,cols,config)
 
     Image.associate = function(models) {
-        Image.belongsTo(models.product,{
-            as: "product",
-            otherKey: "product_id"
+        Image.belongsTo(models.Product,{
+            as: "products",
+            foreignKey: "product_id"
         })
     }
 

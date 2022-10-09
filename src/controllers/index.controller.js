@@ -1,5 +1,5 @@
 const {all,one, generate, write} = require("../models/index.model")
-const {product,image}= require("../database/models/index")
+const {Product,image}= require("../database/models/index")
 const FileAppender = require("multer/lib/file-appender")
 const controller = {
    /* 
@@ -14,7 +14,7 @@ const controller = {
     },*/
 
     index: (req,res)=>{
-        product.findAll()
+        Product.findAll()
         .then(response=> res.render("index",{response}));
         
     }

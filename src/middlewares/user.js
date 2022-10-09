@@ -1,12 +1,12 @@
 const {all} = require("../models/users.model")
-const {user} = require("../database/models/index");
+const {User} = require("../database/models/index");
 
 let middleware = (req,res,next) => {
     let user =  null
     // Step 1: cookie from user exists
     if(req.cookies && req.cookies.user){
-        req.session.user= user.findAll({where:{
-            email: req.cookies.user
+        req.session.user = User.findAll({where:{
+            email: req.session.user
         }})
         .then(result=>result)
        

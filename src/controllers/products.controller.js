@@ -1,7 +1,7 @@
 const {all,one, generate, write} = require("../models/products.model")
 const {unlinkSync} = require("fs");
 const {resolve} = require('path');
-const {product,image} = require("../database/models/index");
+const {Product,Image} = require("../database/models/index");
 const { where } = require("sequelize");
 const controller = {
    /*index: (req,res) => {
@@ -25,10 +25,11 @@ const controller = {
     
     */
     index: (req,res)=>{
-        product.findAll()
+     
+        Product.findAll()
         .then(products => {
             let data = {
-                todos: products,
+                image: Image.findAll().then(image=>image),
                 Adidas: products.filter(elemento => (elemento.marca_id == "1")),
                 Nike: products.filter(elemento => (elemento.marca_id == "2")),
                 Puma: products.filter(elemento => (elemento.marca_id == "3")),
@@ -55,7 +56,7 @@ const controller = {
    },*/
     show: (req,res) =>{
 
-        product.findByPk(req.params.producto).
+        Product.findByPk(req.params.producto).
         then(product => {if(product){
             return res.render('../views/Product/productDetail',{product})  
         }return res.render("../views/404Error")})
@@ -70,7 +71,7 @@ const controller = {
         return res.render("../views/Product/create.ejs")
     },
     edit: (req,res) => {
-        product.findByPk(req.params.id).
+        Product.findByPk(req.params.id).
         then(product => {if(product){
             return res.render('../views/Product/productEdit',{product})  
         }return res.render("../views/404Error")})
@@ -96,7 +97,7 @@ const controller = {
         } else{
             nuevo.oferta = 0
         }
-        product.update({
+        Product.update({
             nombre: nuevo.nombre,
             categoria: nuevo.terreno,
             descripcion: nuevo.descripcion,
@@ -139,7 +140,7 @@ const controller = {
             nuevo.oferta = 0
         }
         
-        product.create({
+        Product.create({
             nombre: nuevo.nombre,
             categoria: nuevo.terreno,
             descripcion: nuevo.descripcion,
@@ -165,7 +166,7 @@ const controller = {
     return res.redirect ("/productList")    
     }*/
     remove: (req,res) => {
-        product.destroy({
+        Product.destroy({
             where:{
                 id: req.body.id
             }

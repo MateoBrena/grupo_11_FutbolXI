@@ -1,5 +1,5 @@
 const model = function(sequelize,DataTypes) {
-    let alias = "marca"
+    let alias = "Marca"
     let cols = {
         nombre: {
            type: DataTypes.STRING,
@@ -17,7 +17,7 @@ const model = function(sequelize,DataTypes) {
     const Marca = sequelize.define(alias,cols,config)
 
     Marca.associate = function(models) {
-        Marca.hasMany(models.product,{
+        Marca.hasMany(models.Product,{
             as: "product",
             foreignKey: "marca_id"
         })

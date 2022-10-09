@@ -3,14 +3,15 @@ const {unlinkSync} = require("fs");
 const {resolve} = require('path');
 const {hashSync} = require("bcrypt");
 const {validationResult} = require("express-validator");
-const {user,image} = require("../database/models/index");
+const {User,Image} = require("../database/models/index");
+const { getMaxListeners } = require("process");
 const userController = {
   /*  index: (req,res) => {
         let usuarios = all()
         return res.render('../views/Users/usersList',{usuarios})
     },*/
     index: (req,res)=>{
-        user.findAll()
+        User.findAll()
         .then(usuarios=> res.render("../views/Users/usersList",{usuarios}))
         .catch(error => res.status(404).json(error))
     },
@@ -30,7 +31,7 @@ const userController = {
     },*/
     show: (req,res) =>{
 
-        user.findByPk(req.params.id)
+        User.findByPk(req.params.id)
         .then(user=> {if(user){
             return res.render('../views/Users/userProfile',{user})  
             
@@ -41,7 +42,7 @@ const userController = {
         return res.render("../views/Users/userEdit", {user})  
     }*/
     edit: (req,res) => {
-        user.findByPk(req.params.id)
+        User.findByPk(req.params.id)
         .then(user=> res.render("../views/Users/userEdit", {user}) ) 
         .catch(error => res.status(404).json(error))
     }
@@ -60,7 +61,7 @@ const userController = {
         nuevo.imagen = req.files && req.files.length > 0 ? req.files[0].filename : "default.png";
         nuevo.clave = hashSync(req.body.clave,10)
         
-        user.create({
+        User.create({
 
             nombre: nuevo.nombre,
             apellido: nuevo.apellido,
@@ -113,18 +114,13 @@ const userController = {
             
         }
         
-        user.findAll({
-            where:{
-                email: req.body.email
-            }
-        }
-        )
-        .then(user=>{
-            req.session.user = user
-        })
-        
+        User.findAll()
+        .then(user=> {
+            req.session.user = user.find(user => user.email == req.body.email) ;
+            return res.redirect("/")})
+        .catch(error => res.status(404).json(error))
 
-        return res.redirect("/")
+        
 
     },
     logout : (req,res) => {
@@ -147,7 +143,7 @@ const userController = {
         write(actualizados)*/
         let nuevo = req.body;
 
-        user.update({
+        User.update({
             nombre: nuevo.nombre,
             apellido: nuevo.apellido,
             email: nuevo.email,
@@ -168,7 +164,7 @@ const userController = {
         let todos = all();
         let noEliminados = todos.filter(elemento => elemento.id != req.body.id);
         write(noEliminados)*/
-        user.destroy({
+        User.destroy({
             where:{
                 id: req.body.id
             }
