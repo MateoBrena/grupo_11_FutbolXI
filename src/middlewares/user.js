@@ -5,10 +5,12 @@ let middleware = (req,res,next) => {
     let user =  null
     // Step 1: cookie from user exists
     if(req.cookies && req.cookies.user){
-        req.session.user = User.findAll({where:{
-            email: req.session.user
+        User.findOne({where:{
+            email: req.cookies.user
         }})
-        .then(result=>result)
+        .then(result=> {
+            return req.session.user = result
+        })
        
     }
     // Step 2: user in session exists

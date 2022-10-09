@@ -1,6 +1,6 @@
 <article>
     <a href="/productDetail/<%= elemento.id %> ">
-        <img src="/img/Botines/<%=elemento.imagen %> " alt="CACA">
+        <img src="/img/Botines/<%=elemento.images[0].imagen%>" alt="Botines">
         <div class="descripcion">
             <h5> <%= elemento.nombre %></h5>
             <p> Terreno <%= elemento.categoria %> </p>
@@ -9,7 +9,7 @@
         </a>
 
         <div class="contenedor">
-        <% if (user && user.categoria === "Administrador"){%> 
+        <% if (user && user.admin == 1){%> 
             <form action="/borrar?m=DELETE" method ="post" class="eliminar">
                 <input type="hidden" name= "id" value="<%= elemento.id %>"  >
                 <button type="submit"><i class="fa-solid fa-trash-can"></i></button>

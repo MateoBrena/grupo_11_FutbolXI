@@ -1,8 +1,8 @@
 const {all,one, generate, write} = require("../models/products.model")
 const {unlinkSync} = require("fs");
 const {resolve} = require('path');
-const {Product,Image} = require("../database/models/index");
-const { where } = require("sequelize");
+const {Product,Image} = require("../database/models");
+const { where, Association } = require("sequelize");
 const controller = {
    /*index: (req,res) => {
         let products = all()
@@ -26,10 +26,10 @@ const controller = {
     */
     index: (req,res)=>{
      
-        Product.findAll()
+        Product.findAll({include:["images"]})
         .then(products => {
             let data = {
-                image: Image.findAll().then(image=>image),
+                image: Image.findAll(),
                 Adidas: products.filter(elemento => (elemento.marca_id == "1")),
                 Nike: products.filter(elemento => (elemento.marca_id == "2")),
                 Puma: products.filter(elemento => (elemento.marca_id == "3")),
@@ -56,7 +56,7 @@ const controller = {
    },*/
     show: (req,res) =>{
 
-        Product.findByPk(req.params.producto).
+        Product.findByPk(req.params.producto, {include:["images"]}).
         then(product => {if(product){
             return res.render('../views/Product/productDetail',{product})  
         }return res.render("../views/404Error")})
@@ -71,7 +71,7 @@ const controller = {
         return res.render("../views/Product/create.ejs")
     },
     edit: (req,res) => {
-        Product.findByPk(req.params.id).
+        Product.findByPk(req.params.id, {include:["images"]}).
         then(product => {if(product){
             return res.render('../views/Product/productEdit',{product})  
         }return res.render("../views/404Error")})
@@ -84,28 +84,18 @@ const controller = {
 
         let nuevo = req.body;
 
-        if(nuevo.marca == "Adidas"){
-            nuevo.marca = 1
-        }else if(nuevo.marca == "Nike"){
-            nuevo.marca = 2
-        }else{
-            nuevo.marca = 3
-        };
-
-        if (nuevo.oferta == "Si"){
-            nuevo.oferta = 1
-        } else{
-            nuevo.oferta = 0
-        }
         Product.update({
             nombre: nuevo.nombre,
             categoria: nuevo.terreno,
             descripcion: nuevo.descripcion,
             precio:  parseInt(nuevo.precio),
-            marca_id: nuevo.marca,
-            oferta: nuevo.oferta,
-        },{
-            where:{id: req.body.id}
+            marca_id: parseInt(nuevo.marca),
+            oferta: parseInt(nuevo.oferta),
+        }).then(() => {
+            Image.findAll({
+                where:{
+                product_id: req.body.id
+            }})
         })
         /*let todos = all();
         let actualizados = todos.map(elemento => {
@@ -124,33 +114,32 @@ const controller = {
         return res.redirect("/productList")
     },
     save: (req,res) => {
-        req.body.imagen = req.files && req.files.length > 0 ? req.files.map(elemento => elemento.filename): ["default.jpg"];
         let nuevo = (req.body)
-        if(nuevo.marca == "Adidas"){
-            nuevo.marca = 1
-        }else if(nuevo.marca == "Nike"){
-            nuevo.marca = 2
-        }else{
-            nuevo.marca = 3
-        };
-
-        if (nuevo.oferta == "Si"){
-            nuevo.oferta = 1
-        } else{
-            nuevo.oferta = 0
-        }
-        
+    
         Product.create({
             nombre: nuevo.nombre,
             categoria: nuevo.terreno,
             descripcion: nuevo.descripcion,
             precio:  parseInt(nuevo.precio),
-            marca_id: nuevo.marca,
-            oferta: nuevo.oferta,
-            
-        });
-
-        return res.redirect("/productList")
+            marca_id: parseInt(nuevo.marca),
+            oferta: parseInt(nuevo.oferta),
+        }).then(() => {
+            Product.findAll().then(resultado => {
+                let product = resultado.pop().id
+                let nombreImagenes = req.files.map(elemento => elemento.filename)
+                nombreImagenes.forEach(unaFoto => {
+                    Image.create({
+                        imagen: unaFoto,
+                        product_id: product,
+                    })
+                })
+                /*Image.create({
+                    imagen: nuevo.imagen = req.files && req.files.length > 0 ? req.files.map(elemento => elemento.filename): ["default.jpg"],
+                    product_id : product
+                }) */
+            })
+            return res.redirect("/productList")
+        })
     },
     /*remove: (req,res) => {
     
@@ -166,10 +155,27 @@ const controller = {
     return res.redirect ("/productList")    
     }*/
     remove: (req,res) => {
-        Product.destroy({
+        Image.findAll({
             where:{
-                id: req.body.id
-            }
+            product_id: req.body.id
+        }}).then(arrayImagenes => {
+            arrayImagenes.forEach(cadaImagen => {
+                if (cadaImagen.imagen != "default.jpg") {
+                    let file = resolve(__dirname,"..","..","public","img","Botines", cadaImagen.imagen)
+                    unlinkSync(file)
+                }
+                Image.destroy({
+                    where:{
+                        id: cadaImagen.id
+                    }
+                })
+            })
+        }).then(() => {
+            Product.destroy({
+                where:{
+                    id: req.body.id
+                }
+            })
         })
         
         return res.redirect ("/productList")    

@@ -19,13 +19,13 @@
                 <article class="prueba1">
 
                     <picture>
-                        <img src="/img/Botines/<%= product.image %> " alt="">
+                        <img src="/img/Botines/<%=product.images[0].imagen%> " alt="">
                     </picture>
                 
                     <article class="minimagenes">
-                        <img class="minimagenes1" src="\img\Botines/<%= product.image%>">
-                        <img class="minimagenes2" src="\img\Botines/<%= product.image %>">
-                        <img class="minimagenes3" src="\img\Botines/<%= product.image %>">
+                        <img class="minimagenes1" src="/img/Botines/<%= product.images[0].imagen%>">
+                        <img class="minimagenes2" src="/img/Botines/<%= product.images[1].imagen%>">
+                        <img class="minimagenes3" src="/img/Botines/<%= product.images[2].imagen%>">
                     </article>
                     
                 </article>
@@ -67,7 +67,7 @@
                     
                 
                     <div class="descripcion">
-                        <p> Tipo de terreno: <%= product.terreno %>  </p>
+                        <p> Tipo de terreno: <%= product.categoria %>  </p>
                         <p> Precio: $<%= product.precio %> </p>
                     </div>
                 

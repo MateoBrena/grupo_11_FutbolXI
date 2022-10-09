@@ -21,35 +21,35 @@
                 <input type="text" name="nombre" value="<%= product.nombre %>" required>
                 <label for="marca"> Marca </label>
                 <span>
-                    <input type="radio" name="marca" value="Adidas" id="Adidas" <%= product.marca == "Adidas" ? "checked" : "" %>>
+                    <input type="radio" name="marca" value="1" id="Adidas" <%= product.marca_id == 1 ? "checked" : "" %>>
                     <label for="Adidas"> Adidas </label>
                 </span>
                 <span>
-                    <input type="radio" name="marca" value="Nike" id="Nike" <%= product.marca == "Nike" ? "checked" : "" %>>
+                    <input type="radio" name="marca" value="2" id="Nike" <%= product.marca_id == 2 ? "checked" : "" %>>
                     <label for="Nike"> Nike </label>
                 </span>
                 <span>
-                    <input type="radio" name="marca" value="Puma" id="Puma" <%= product.marca == "Puma" ? "checked" : "" %>>
+                    <input type="radio" name="marca" value="3" id="Puma" <%= product.marca_id == 3 ? "checked" : "" %>>
                     <label for="Puma"> Puma </label>
                 </span>
                 <label for="terreno"> Tipo de terreno </label>
                 <span>
-                    <input type="radio" name="terreno" value="Firme" id="Firme" <%= product.terreno == "Firme" ? "checked" : "" %>>
+                    <input type="radio" name="terreno" value="Firme" id="Firme" <%= product.categoria == "Firme" ? "checked" : "" %>>
                     <label for="Firme"> Firme </label>
                 </span>
                 <span>
-                    <input type="radio" name="terreno" value="Blando" id="Blando" <%= product.terreno == "Blando" ? "checked" : "" %>>
+                    <input type="radio" name="terreno" value="Blando" id="Blando" <%= product.categoria == "Blando" ? "checked" : "" %>>
                     <label for="Blando"> Blando </label>
                 </span>
                 <label for="Price"> Precio </label>
                 <input type="number" name="precio" value="<%= product.precio %>" required>
                 <label for="oferta"> Está en oferta</label>
                 <span>
-                    <input type="radio" name="oferta" value="Si" id="Si" <%= product.oferta == "Si" ? "checked" : "" %>>
+                    <input type="radio" name="oferta" value="1" id="Si" <%= product.oferta == 1 ? "checked" : "" %>>
                     <label for="Si"> Si </label>
                 </span>
                 <span>
-                    <input type="radio" name="oferta" value="No" id="No" <%= product.oferta == "No" ? "checked" : "" %>>
+                    <input type="radio" name="oferta" value="0" id="No" <%= product.oferta == 0 ? "checked" : "" %>>
                     <label for="No"> No </label>
                 </span>
                 <label for="imagen"> Imagen </label>

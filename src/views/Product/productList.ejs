@@ -13,7 +13,7 @@
 
         </header>
         <main>
-            <% if (user && user.categoria == "Administrador"){ %> 
+            <% if (user && user.admin == 1){ %> 
             <a href="/create"><i class="fa-solid fa-plus"></i></a>
                 
             <%}%>

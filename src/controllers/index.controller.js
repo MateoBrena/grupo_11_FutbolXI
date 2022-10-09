@@ -14,7 +14,7 @@ const controller = {
     },*/
 
     index: (req,res)=>{
-        Product.findAll()
+        Product.findAll({include:["images"]})
         .then(response=> res.render("index",{response}));
         
     }

@@ -88,6 +88,7 @@ h1 {
 @media screen and (min-width: 1280px) {
     section {
         max-width: 60vw;
+        padding: 25px;
     }
     .footerout{
         margin-top: 5%;

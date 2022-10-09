@@ -5,6 +5,8 @@ const {hashSync} = require("bcrypt");
 const {validationResult} = require("express-validator");
 const {User,Image} = require("../database/models/index");
 const { getMaxListeners } = require("process");
+const { json } = require("sequelize");
+const { stringify } = require("querystring");
 const userController = {
   /*  index: (req,res) => {
         let usuarios = all()
@@ -62,15 +64,12 @@ const userController = {
         nuevo.clave = hashSync(req.body.clave,10)
         
         User.create({
-
             nombre: nuevo.nombre,
             apellido: nuevo.apellido,
             email: nuevo.email,
             clave:  nuevo.clave,
             admin: nuevo.email.includes("@futbolxi") ? 1: 0,
-            image: "default.jpg"
-            
-            
+            image: nuevo.imagen
         });
        
         return res.redirect("/usersList")
@@ -110,8 +109,7 @@ const userController = {
             })
         }
         if(req.body.check != undefined){
-            res.cookie("user", req.body.email, {maxAge: 1000 * 60 * 3 })
-            
+            res.cookie("user", req.body.email, {maxAge: 1000 * 60 * 60 * 24 })
         }
         
         User.findAll()
@@ -119,8 +117,6 @@ const userController = {
             req.session.user = user.find(user => user.email == req.body.email) ;
             return res.redirect("/")})
         .catch(error => res.status(404).json(error))
-
-        
 
     },
     logout : (req,res) => {
@@ -147,28 +143,31 @@ const userController = {
             nombre: nuevo.nombre,
             apellido: nuevo.apellido,
             email: nuevo.email,
-            clave:  nuevo.clave,
+            clave: nuevo.clave,
             admin: nuevo.email.includes("@futbolxi") ? 1: 0,
-            image: "default.jpg"
+            image: req.files && req.files.length > 0 ? req.files[0].filename : "default.png"
         },{
             where:{id: req.body.id}
         })
         return res.redirect("/usersList")
     },
     remove : (req,res) => {
-        /*let user = one(req.body.id)
-        if (user.imagen != "default.png") {
-            let file = resolve(__dirname,"..","..","public","img","Usuarios", user.imagen)
-            unlinkSync(file)
-        }
-        let todos = all();
+        /*let todos = all();
         let noEliminados = todos.filter(elemento => elemento.id != req.body.id);
         write(noEliminados)*/
-        User.destroy({
-            where:{
-                id: req.body.id
+        User.findByPk(req.body.id).then(resultado => {
+            if (resultado.image != "default.png") {
+                let file = resolve(__dirname,"..","..","public","img","Usuarios", resultado.image)
+               return unlinkSync(file)
             }
+        }).then(() => {
+            User.destroy({
+                where:{
+                    id: req.body.id
+                }
+            })
         })
+        
         return res.redirect("/usersList")
     }
 }
