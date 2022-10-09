@@ -108,7 +108,7 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `nombre` varchar(200) NOT NULL,
   `categoria` varchar(200) NOT NULL,
-  `descripcion` varchar(max) NOT NULL,
+  `descripcion` text NOT NULL,
   `precio` int(11) NOT NULL,
   `marca_id` int(11) NOT NULL,
   `oferta` tinyint(1) NOT NULL
