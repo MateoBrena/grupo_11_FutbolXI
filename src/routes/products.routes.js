@@ -32,6 +32,7 @@ route.post("/save",[isLogged], upload.any(), controller.save)
 route.get("/productList/:marca?",controller.index)
 route.get("/productDetail/:producto", controller.show)
 route.get("/productCart",[isLogged],controller.cart)
+route.get("/search",controller.search)
 
 route.get("/edit/:id",[isLogged],controller.edit)
 route.put("/update",[isLogged],upload.any(), controller.update)

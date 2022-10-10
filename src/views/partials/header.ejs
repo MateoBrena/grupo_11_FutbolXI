@@ -1,8 +1,8 @@
 <nav class="encabezado">
     <a href="/" class="imagen-logo"><img src="/img/logo-futbolXI.png" alt="Logo Futbol XI"  class="imagen-logo"></a>
   
-   <form action="/" method="get" class="searchbar"> 
-       <input  type="text"  placeholder="Buscar productos,marcas">
+   <form action="/search"data-submitfalse="q" method="get" class="searchbar" role ="search" > 
+       <input  type="text" name="q"  placeholder="Buscar productos,marcas">
        <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
    </form>
 </nav>  

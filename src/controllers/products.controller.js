@@ -3,6 +3,8 @@ const {unlinkSync} = require("fs");
 const {resolve} = require('path');
 const {Product,Image} = require("../database/models");
 const { where, Association } = require("sequelize");
+const { emitWarning } = require("process");
+const { query } = require("express");
 const controller = {
    /*index: (req,res) => {
         let products = all()
@@ -57,7 +59,9 @@ const controller = {
     show: (req,res) =>{
 
         Product.findByPk(req.params.producto, {include:["images"]}).
-        then(product => {if(product){
+        then(product => 
+            
+            {if(product){
             return res.render('../views/Product/productDetail',{product})  
         }return res.render("../views/404Error")})
         .catch(error => res.status(404).json(error))
@@ -83,7 +87,6 @@ const controller = {
     update: (req,res) => {
 
         let nuevo = req.body;
-
         Product.update({
             nombre: nuevo.nombre,
             categoria: nuevo.terreno,
@@ -91,12 +94,41 @@ const controller = {
             precio:  parseInt(nuevo.precio),
             marca_id: parseInt(nuevo.marca),
             oferta: parseInt(nuevo.oferta),
+
+        },
+        {
+            where:{id: req.body.id}
+        })
+        .then(()=>{
+            let nombreImagenes = req.files.map(elemento => elemento.filename)
+            nombreImagenes.forEach(unaFoto => {
+                Image.update({
+                    imagen: unaFoto,
+                    
+                },{
+                    where:{product_id: req.body.id}
+                })
+            })
+           
+        })
+        /*Product.update({
+            nombre: nuevo.nombre,
+            categoria: nuevo.terreno,
+            descripcion: nuevo.descripcion,
+            precio:  parseInt(nuevo.precio),
+            marca_id: parseInt(nuevo.marca),
+            oferta: parseInt(nuevo.oferta),
+
+        },
+        {
+            where:{id: req.body.id}
         }).then(() => {
             Image.findAll({
                 where:{
                 product_id: req.body.id
             }})
-        })
+        })*/
+        .catch(error => res.status(404).json(error))
         /*let todos = all();
         let actualizados = todos.map(elemento => {
             if(elemento.id == req.body.id){
@@ -179,8 +211,26 @@ const controller = {
         })
         
         return res.redirect ("/productList")    
-        }
-   
+        },
+
+    search:  (req,res) => {
+        
+        let querys = req.query.q
+        let config = {
+            where: {nombre:querys},            
+            include:["images"]}
+
+        Product.findOne(config)
+        .then(product => 
+            
+            {
+                
+                if(product == null){
+                 return res.render("../views/404Error")} 
+        return res.render('../views/Product/productDetail',{product})})   
+        
+        .catch(error => res.status(404).json(error))
+    }
 }
 
 module.exports = controller
