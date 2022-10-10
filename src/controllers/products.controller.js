@@ -101,14 +101,28 @@ const controller = {
         })
         .then(()=>{
             let nombreImagenes = req.files.map(elemento => elemento.filename)
-            nombreImagenes.forEach(unaFoto => {
-                Image.update({
-                    imagen: unaFoto,
+            Image.findAll({
+                where:{
+                product_id: req.body.id
+            }}).then(arrayImagenes => {
+                for (let i = 0; i < arrayImagenes.length; i++) {
+                    const imagenes = arrayImagenes[i]
+                    Image.update({
+                        imagen: nombreImagenes[i]
+                       
+                    },{
+                        where:{id: imagenes.id
+                            
+                        }
+                    })
+                }
+                
                     
-                },{
-                    where:{product_id: req.body.id}
-                })
+                
+                
+           
             })
+            
            
         })
         /*Product.update({
