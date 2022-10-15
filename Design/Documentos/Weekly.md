@@ -8,7 +8,6 @@
 - CRUD de productos completado
 - Testing final del cuarto sprint
 
-
 ## Reunión Weekly Jueves 01/9/2022 20hs
 
 - Retrospectiva estrella de mar actualizada
@@ -18,3 +17,8 @@
 - Finalización de tareas del quinto sprint
 - Testing final del quinto sprint
 - Corrección de fallos o agregados 
+
+## Reunión Weekly Viernes 14/10/2022 20hs
+- Retrsopectiva estrella de mar realizada
+- División de tareas para Sprint 7
+- Devolución Sprint 6
