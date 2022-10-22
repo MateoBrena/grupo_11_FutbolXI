@@ -27,7 +27,7 @@ const upload = multer({
 })
 
 route.get("/login",controller.login)
-route.post("/access", controller.access)
+route.post("/access",validatorLogin, controller.access)
 
 route.get("/register",controller.register)
 route.post("/register/save", upload.any(), validaciones,controller.save)

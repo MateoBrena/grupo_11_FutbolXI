@@ -11,70 +11,14 @@ const userController = {
   /*  index: (req,res) => {
         let usuarios = all()
         return res.render('../views/Users/usersList',{usuarios})
-    },*/
-    index: (req,res)=>{
-        User.findAll()
-        .then(usuarios=> res.render("../views/Users/usersList",{usuarios}))
-        .catch(error => res.status(404).json(error))
     },
-    register: (req,res) => {
-        return res.render("../views/Users/register")
-        
-    },
-    login: (req,res) => {
-        return res.render("../views/Users/login")
-    },
-   /* show: (req,res) =>{
+      show: (req,res) =>{
          let user = one(req.params.id)
          if(user){
              return res.render('../views/Users/userProfile',{user})     
          }
             return res.render("../views/404Error")
-    },*/
-    show: (req,res) =>{
-
-        User.findByPk(req.params.id)
-        .then(user=> {if(user){
-            return res.render('../views/Users/userProfile',{user})  
-            
-        }return res.render("../views/404Error")})
-    },
-    /*edit: (req,res) => {
-        let user = one(req.params.id)
-        return res.render("../views/Users/userEdit", {user})  
-    }*/
-    edit: (req,res) => {
-        User.findByPk(req.params.id)
-        .then(user=> res.render("../views/Users/userEdit", {user}) ) 
-        .catch(error => res.status(404).json(error))
-    }
-    ,
-    save: (req,res) => {
-        // control de las validaciones 
-        const result = validationResult(req)
-        if(!result.isEmpty()) {
-            let errores = result.mapped();
-            return res.render("../views/Users/register",{ 
-                errores: errores,
-                data: req.body
-            })
-        }
-        let nuevo = req.body;
-        nuevo.imagen = req.files && req.files.length > 0 ? req.files[0].filename : "default.png";
-        nuevo.clave = hashSync(req.body.clave,10)
-        
-        User.create({
-            nombre: nuevo.nombre,
-            apellido: nuevo.apellido,
-            email: nuevo.email,
-            clave:  nuevo.clave,
-            admin: nuevo.email.includes("@futbolxi") ? 1: 0,
-            image: nuevo.imagen
-        });
-       
-        return res.redirect("/usersList")
-    },
-    /*access : (req,res) => {
+    },access : (req,res) => {
         const result = validationResult(req)
         if(!result.isEmpty()) {
             let errores = result.mapped();
@@ -98,7 +42,84 @@ const userController = {
        
         return res.redirect("/")
 
-    },*/
+    },
+    // control de las validaciones 
+        edit: (req,res) => {
+        let user = one(req.params.id)
+        return res.render("../views/Users/userEdit", {user})  
+    },
+    update: (req,res) => {
+    let todos = all();
+        let actualizados = todos.map(elemento => {
+            if(elemento.id == req.body.id){
+                elemento.nombre = req.body.nombre;
+                elemento.apellido = req.body.apellido
+                elemento.email = req.body.email
+                elemento.categoria = req.body.email.includes("@futbolxi") ? "Administrador" : "Cliente";
+                elemento.imagen = req.files && req.files.length > 0 ? req.files[0].filename : elemento.imagen;
+            }
+            return elemento
+        })
+        write(actualizados)
+    }, remove : (req,res) => {
+        /*let todos = all();
+        let noEliminados = todos.filter(elemento => elemento.id != req.body.id);
+        write(noEliminados
+    */
+
+
+    index: (req,res)=>{
+        User.findAll()
+        .then(usuarios=> res.render("../views/Users/usersList",{usuarios}))
+        .catch(error => res.status(404).json(error))
+    },
+    register: (req,res) => {
+        return res.render("../views/Users/register")
+        
+    },
+    login: (req,res) => {
+        return res.render("../views/Users/login")
+    },
+    show: (req,res) =>{
+
+        User.findByPk(req.params.id)
+        .then(user=> {if(user){
+            return res.render('../views/Users/userProfile',{user})  
+            
+        }return res.render("../views/404Error")})
+    },
+ 
+    edit: (req,res) => {
+        User.findByPk(req.params.id)
+        .then(user=> res.render("../views/Users/userEdit", {user}) ) 
+        .catch(error => res.status(404).json(error))
+    }
+    ,
+    save: (req,res) => {
+        
+        const result = validationResult(req)
+        if(!result.isEmpty()) {
+            let errores = result.mapped();
+            return res.render("../views/Users/register",{ 
+                errores: errores,
+                data: req.body
+            })
+        }
+        let nuevo = req.body;
+        nuevo.imagen = req.files && req.files.length > 0 ? req.files[0].filename : "default.png";
+        nuevo.clave = hashSync(req.body.clave,10)
+        
+        User.create({
+            nombre: nuevo.nombre,
+            apellido: nuevo.apellido,
+            email: nuevo.email,
+            clave:  nuevo.clave,
+            admin: nuevo.email.includes("@futbolxi") ? 1: 0,
+            image: nuevo.imagen
+        });
+       
+        return res.redirect("/usersList")
+    },
     access : (req,res) => {
         const result = validationResult(req)
         if(!result.isEmpty()) {
@@ -125,20 +146,7 @@ const userController = {
         res.redirect("/")
     },
     update: (req,res) => {
-        /*let todos = all();
-        let actualizados = todos.map(elemento => {
-            if(elemento.id == req.body.id){
-                elemento.nombre = req.body.nombre;
-                elemento.apellido = req.body.apellido
-                elemento.email = req.body.email
-                elemento.categoria = req.body.email.includes("@futbolxi") ? "Administrador" : "Cliente";
-                elemento.imagen = req.files && req.files.length > 0 ? req.files[0].filename : elemento.imagen;
-            }
-            return elemento
-        })
-        write(actualizados)*/
         let nuevo = req.body;
-
         User.update({
             nombre: nuevo.nombre,
             apellido: nuevo.apellido,
@@ -152,9 +160,6 @@ const userController = {
         return res.redirect("/usersList")
     },
     remove : (req,res) => {
-        /*let todos = all();
-        let noEliminados = todos.filter(elemento => elemento.id != req.body.id);
-        write(noEliminados)*/
         User.findByPk(req.body.id).then(resultado => {
             if (resultado.image != "default.png") {
                 let file = resolve(__dirname,"..","..","public","img","Usuarios", resultado.image)

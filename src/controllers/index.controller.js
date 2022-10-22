@@ -1,5 +1,5 @@
 const {all,one, generate, write} = require("../models/index.model")
-const {Product,image}= require("../database/models/index")
+const {Product,Image}= require("../database/models/index")
 const FileAppender = require("multer/lib/file-appender")
 const controller = {
    /* 

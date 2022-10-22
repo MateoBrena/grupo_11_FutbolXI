@@ -18,7 +18,7 @@ const model = function(sequelize,DataTypes) {
 
     Marca.associate = function(models) {
         Marca.hasMany(models.Product,{
-            as: "product",
+            as: "products",
             foreignKey: "marca_id"
         })
     }

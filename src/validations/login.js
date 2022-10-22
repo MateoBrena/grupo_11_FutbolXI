@@ -1,30 +1,26 @@
 const {body} = require("express-validator");
-const {all} = require("../models/users.model")
 const {compareSync} = require("bcrypt")
 const {User} = require("../database/models/index");
-
-let email = 
-body("email").notEmpty().withMessage("Email no puede quedar vacío").bail().isEmail().withMessage("Email no válido").custom((value,{req}) => {
 /*let users = all()let lisOfEmails = users.map(user => user.email)
 if(lisOfEmails.indexOf(value) == -1) {
     throw new Error("Usuario no encontrado")
 }*/
-User.findAll()
-.then(users=> {
-    let user = users
-    let lisOfEmails = user.map(user => user.email)
-    if(lisOfEmails.indexOf(value) == -1) {
+const emailValidation = 
+
+body("email")
+.notEmpty().withMessage("Email no puede quedar vacío").bail()
+.isEmail().withMessage("Email no válido")
+.custom((value,{req}) => {
+    let user = User.findOne({where:{email: req.body.email}}).then(userFound=>
+        {if(!userFound){
         throw new Error("Usuario no encontrado")
-    }
-    return true
-})
-.catch(error => console.log(error))
+        }
+        return true
+    })
+    return user
 })
 
-
-let clave = 
-   body("clave").notEmpty().withMessage("Debes ingresar una contraseña").bail().isLength({min:4}).withMessage("Mínimo 4 caraceteres").custom((value,{req}) => {
-    /*let users = all() let result = users.find(user => user.email == req.body.email)
+ /*let users = all() let result = users.find(user => user.email == req.body.email)
     if(!result) {
         throw new Error("Credenciales inválidas")
     }
@@ -33,23 +29,28 @@ let clave =
     }
     return true
     })*/
-    User.findAll({where:{email : req.body.email}})
-    .then(result =>
-        
-        {
-        let user = result.find(user => user.email == req.body.email)
-        if(!user) {
-        throw new Error("Credenciales inválidas")
-    }
-    
-    if (!compareSync(value,user.clave)) {
-        throw new Error("La contraseña no coincide")
-    }
-    return true
+
+const passwordValidation = 
+   body("clave")
+   .notEmpty().withMessage("Debes ingresar una contraseña").bail()
+   .isLength({min:4}).withMessage("Mínimo 4 caraceteres")
+   .custom((value,{req}) => {
+     let password = User.findOne({where:{email : req.body.email}})
+    .then(userFound => {
+        if(!userFound){
+            throw new Error("Credenciales inválidas")
+
+        }
+        console.log(userFound.clave);
+        if (!compareSync(value,userFound.clave)) {
+            throw new Error("La contraseña no coincide")
+        }
+        return true
     })
-    .catch(error => console.log(error))
+  
+    return password
 })
 
-let validaciones = [email,clave]
+let validations = [emailValidation,passwordValidation]
 
-module.exports = validaciones;
+module.exports = validations;

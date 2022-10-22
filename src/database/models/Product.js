@@ -34,7 +34,7 @@ const model = function(sequelize,DataTypes) {
 
     Product.associate = function(models) {
         Product.belongsTo(models.Marca,{
-            as: "marca",
+            as: "marcas",
             foreignKey: "marca_id"
         })
         Product.hasMany(models.Image,{
