@@ -4,6 +4,7 @@
     <%- include('../partials/head.ejs')  %> 
     <link rel="stylesheet" href="\css\login.css">
     <link rel="icon" type="image/png" href="/img/logo-futbolXI.png"/>
+    <script src="/js/validacionLogin.js"defer></script>
     <title> Login </title>
 
 <body>
@@ -16,23 +17,15 @@
             <h1> Ingresa tu cuenta:</h1>
             <form action="/access" method="post" class="formulario-registro">
                 <label for="email"> Email</label>
-                <input type="email" name="email" required>
-                <% if (locals.errores && locals.errores.email) { %>
-                    <p class="feedback">
-                        <%= locals.errores.email.msg %> 
-                    </p>
-                <% } %>
+                <input type="email" name="email" class="email" required>
+                <div class="errores" id="errorEmail">
                 <label for="clave"> Contraseña </label>
-                <input type="password" name="clave" required>
-                <% if (locals.errores && locals.errores.clave) { %>
-                    <p class="feedback">
-                        <%= locals.errores.clave.msg %> 
-                    </p>
-                <% } %>
+                <input type="password" name="clave"class="password" required>
+                <div class="errores" id="errorPassword">
                 <label for="check"> Recuerda mi contraseña</label>
                 <input type="checkbox" id="check" name="check">
                 <div class="botones">
-                    <button type="submit"> Ingresar </button>
+                    <button type="submit"class="login"> Ingresar </button>
                     <button type="reset"> Borrar </button> 
                 </div>
             </form>
