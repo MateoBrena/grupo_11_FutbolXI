@@ -21,8 +21,10 @@ let confirmarClave = body("confirmarClave").notEmpty().withMessage("Debes confir
     return true;
   })
 
+  const imageValidation =
+  body("imagen")
+  .isIn([ "PNG", "JPEG", "GIF" ]).withMessage("El archivo debe ser JPEG, PNG O GIF")
 
-
-let validaciones = [email,clave,confirmarClave]
+let validaciones = [email,clave,confirmarClave,imageValidation]
 
 module.exports = validaciones;
