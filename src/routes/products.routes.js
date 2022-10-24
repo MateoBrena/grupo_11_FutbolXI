@@ -2,7 +2,7 @@ const {Router} = require('express')
 const route = Router();
 const controller = require("../controllers/products.controller")
 const isLogged = require("../middlewares/isLogged")
-const productCreate = require("../validations/productValidation")
+const productValidation = require("../validations/productValidation")
 
 const {resolve, extname} = require("path")
 const { existsSync,mkdirSync } = require('fs')
@@ -28,7 +28,7 @@ const upload = multer({
 
 
 route.get("/create",[isLogged],controller.create)
-route.post("/save",[isLogged], upload.any(),productCreate, controller.save)
+route.post("/save",[isLogged], upload.any(),productValidation, controller.save)
 
 route.get("/productList/:marca?",controller.index)
 route.get("/productDetail/:producto", controller.show)
@@ -36,7 +36,7 @@ route.get("/productCart",[isLogged],controller.cart)
 route.get("/search",controller.search)
 
 route.get("/edit/:id",[isLogged],controller.edit)
-route.put("/update",[isLogged],upload.any(), controller.update)
+route.put("/update",[isLogged],upload.any(),productValidation, controller.update)
 
 route.delete("/borrar", controller.remove)
 
