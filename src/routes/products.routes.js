@@ -2,6 +2,8 @@ const {Router} = require('express')
 const route = Router();
 const controller = require("../controllers/products.controller")
 const isLogged = require("../middlewares/isLogged")
+const productCreate = require("../validations/productValidation")
+
 const {resolve, extname} = require("path")
 const { existsSync,mkdirSync } = require('fs')
 const destination = function(req,file,cb){
@@ -18,7 +20,6 @@ const filename = function(req,file,cb){
     return cb(null, name)
 }
 const multer = require("multer");
-const { show } = require('../controllers/user.controller');
 
 
 const upload = multer({
@@ -27,7 +28,7 @@ const upload = multer({
 
 
 route.get("/create",[isLogged],controller.create)
-route.post("/save",[isLogged], upload.any(), controller.save)
+route.post("/save",[isLogged], upload.any(),productCreate, controller.save)
 
 route.get("/productList/:marca?",controller.index)
 route.get("/productDetail/:producto", controller.show)

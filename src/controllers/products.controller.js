@@ -5,6 +5,8 @@ const {Product,Image} = require("../database/models");
 const { where, Association } = require("sequelize");
 const { emitWarning } = require("process");
 const { query } = require("express");
+const {validationResult} = require("express-validator");
+
 const controller = {
    /*index: (req,res) => {
         let products = all()
@@ -161,7 +163,14 @@ const controller = {
     },
     save: (req,res) => {
         let nuevo = (req.body)
-    
+        const result = validationResult(req)
+        if(!result.isEmpty()) {
+            let errores = result.mapped();
+            return res.render("../views/Product/create",{
+                errores: errores,
+                data: req.body
+            })
+        }
         Product.create({
             nombre: nuevo.nombre,
             categoria: nuevo.terreno,
