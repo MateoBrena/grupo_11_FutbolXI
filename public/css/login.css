@@ -53,7 +53,9 @@ h1 {
     left: -45%;
     height: 1rem;
 }
-
+.errores{
+    color: snow;
+}
 .botones {
     display: flex;
     justify-content: center;
