@@ -1,6 +1,8 @@
-const {body} = require("express-validator");
+const {body,check} = require("express-validator");
 const { is } = require("express/lib/request");
 const {Product} = require("../database/models/index");
+
+
 
 const nameValidation = 
 body("nombre")
@@ -13,8 +15,22 @@ body("descripcion")
 .isLength({min:20}).withMessage("Mínimo 20 caraceteres");
 
 const imageValidation =
-body("imagen")
-.isIn([ "PNG", "JPEG", "GIF" ]).withMessage("El archivo debe ser JPEG, PNG O GIF")
+check("imagen")
+.custom((value, {req}) => {
+    let files = req.files.map(file=> file.mimetype)
+    console.log(files);
+   let validations= files.forEach(file => {
+        console.log(file);
+        if (file == 'image/png' || file == "image/jpg" || file == "image/gif" || file == "image/jpeg"){
+            return true;
+        } 
+        throw new Error ('El archivo no es PNG, JPG, JPEG O GIF')
+    })
+    
+    return true
+})
+
+
 
 
 module.exports = [nameValidation,descriptionValidation,imageValidation]

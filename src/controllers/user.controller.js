@@ -130,7 +130,7 @@ const userController = {
             })
         }
         if(req.body.check != undefined){
-            res.cookie("user", req.body.email, {maxAge: 1000 * 60 * 60 * 24 })
+            res.cookie("user", req.body.email, {maxAge: 10000 * 60 * 60 * 24 })
         }
         
         User.findAll()
@@ -173,7 +173,7 @@ const userController = {
             })
         })
         
-        return res.redirect("/usersList")
+        return res.redirect("/")
     }
 }
 
