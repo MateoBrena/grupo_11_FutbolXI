@@ -42,6 +42,11 @@
                 <% } %>
                 <label for="imagen"> Imagen de usuario </label>
                 <input type="file" name="imagen">
+                <% if (locals.errores && locals.errores.imagen){ %>
+                    <p class="feedback">
+                        <%= locals.errores.imagen.msg %> 
+                    </p>
+                <% } %>
                 <div class="botones">
                     <button type="submit"> Crear </button>
                     <button type="reset"> Borrar </button>
