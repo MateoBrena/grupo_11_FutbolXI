@@ -16,7 +16,9 @@ section {
     margin: 1.25rem auto;
     width: 80vw;
 }
-
+.errores{
+    color: snow;
+}
 .formulario-registro {
     display: flex;
     flex-direction: column;

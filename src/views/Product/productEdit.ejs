@@ -4,6 +4,8 @@
     <%- include('../partials/head.ejs')  %> 
     <link rel="stylesheet" href="/css/editsStyle.css">
     <link rel="icon" type="image/png" href="/img/logo-futbolXI.png"/>
+    <script defer src="./js/editValidation.js"></script>
+
     <title> Editar producto </title>
 
 </head>
@@ -19,11 +21,8 @@
                 <input type="hidden" name="id" value="<%=product.id %>">
                 <label for="nombre"> Nombre del producto </label>
                 <input type="text" name="nombre" value="<%= product.nombre %>" required>
-                <% if (locals.errores && locals.errores.nombre) { %>
-                    <p>
-                        <%= locals.errores.nombre.msg %> 
-                    </p>
-                <% } %>
+                <div class="errores" id="errorNombre"></div>
+
                 <label for="marca"> Marca </label>
                 <span>
                     <input type="radio" name="marca" value="1" id="Adidas" <%= product.marca_id == 1 ? "checked" : "" %>>
@@ -48,6 +47,8 @@
                 </span>
                 <label for="Price"> Precio </label>
                 <input type="number" name="precio" value="<%= product.precio %>" required>
+                <div class="errores" id="errorPrecio"></div>
+
                 <label for="oferta"> Está en oferta</label>
                 <span>
                     <input type="radio" name="oferta" value="1" id="Si" <%= product.oferta == 1 ? "checked" : "" %>>
@@ -58,21 +59,17 @@
                     <label for="No"> No </label>
                 </span>
                 <label for="imagen"> Imagen </label>
-                <input type="file" name="imagen"  multiple>
-                <% if (locals.errores && locals.errores.imagen) { %>
-                    <p>
-                        <%= locals.errores.imagen.msg %> 
-                    </p>
-                <% } %>
+                <input id="imagen" type="file" name="imagen" multiple>
+                <div class="errores" id="errorImagen"></div>
+
+              
                 <label for="descripcion"> Descripción </label>
                 <textarea name="descripcion" id="descripcion" cols="30" rows="10"><%= product.descripcion %> </textarea required>
-                    <% if (locals.errores && locals.errores.descripcion) { %>
-                        <p>
-                            <%= locals.errores.descripcion.msg %> 
-                        </p>
-                    <% } %>
+                    <div class="errores" id="errorDescripcion"></div>
+
+                
                 <div class="botones">
-                    <button type="submit"> Editar </button>
+                    <button id="edit" type="submit"> Editar </button>
                     <button type="reset"> Borrar </button>
                 </div>
             </form>
