@@ -2,16 +2,17 @@ let nombre = document.querySelector("#nombre");
 let precio = document.querySelector("#precio");
 let descripcion = document.querySelector("#descripcion");
 let imagen = document.querySelector("#imagen");
-let edit = document.querySelector("#edit");
 let errorNombre = document.querySelector("#errorNombre");
 let errorPrecio = document.querySelector("#errorPrecio");
 let errorDescripcion = document.querySelector("#errorDescripcion");
 let errorImagen = document.querySelector("#errorImagen");
-
+let editar = document.getElementById("editar")
 let form = document.querySelector(".formulario-registro")
+
 let allowedExtensions =/(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
-edit.addEventListener("click", function(event){
+ 
+editar.addEventListener("click", function(event){
     event.preventDefault();
     let errores = {};
     if(nombre.value.length < 5 ){
@@ -19,7 +20,7 @@ edit.addEventListener("click", function(event){
     }
 
     if(!allowedExtensions.exec(imagen.value)){
-        errores.image = "El formato de imagen no egs válido"
+        errores.image = "El formato de imagen no es válido"
     }
 
     if(descripcion.value.length < 20 ){

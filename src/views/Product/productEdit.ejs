@@ -20,7 +20,7 @@
             <form action="/update?m=PUT" method="post" class="formulario-registro" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<%=product.id %>">
                 <label for="nombre"> Nombre del producto </label>
-                <input type="text" name="nombre" value="<%= product.nombre %>" required>
+                <input type="text" id="nombre" name="nombre" value="<%= product.nombre %>" required>
                 <div class="errores"  id="errorNombre"></div>
 
                 <label for="marca"> Marca </label>
@@ -46,7 +46,7 @@
                     <label for="Blando"> Blando </label>
                 </span>
                 <label for="Price"> Precio </label>
-                <input type="number" name="precio" value="<%= product.precio %>" required>
+                <input type="number" id="precio" name="precio" value="<%= product.precio %>" required>
                 <div class="errores" id="errorPrecio"></div>
 
                 <label for="oferta"> Está en oferta</label>
@@ -69,7 +69,7 @@
 
                 
                 <div class="botones">
-                    <button id="edit" type="submit"> Editar </button>
+                    <button id="editar" type="submit"> Editar </button>
                     <button type="reset"> Borrar </button>
                 </div>
             </form>
