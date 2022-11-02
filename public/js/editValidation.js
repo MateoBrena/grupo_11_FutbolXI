@@ -11,8 +11,6 @@ let errorImagen = document.querySelector("#errorImagen");
 let form = document.querySelector(".formulario-registro")
 let allowedExtensions =/(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
-
-
 edit.addEventListener("click", function(event){
     event.preventDefault();
     let errores = {};
