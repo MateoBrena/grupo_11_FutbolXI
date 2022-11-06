@@ -4,7 +4,7 @@
     <%- include('../partials/head.ejs')  %> 
     <link rel="stylesheet" href="/css/editsStyle.css">
     <link rel="icon" type="image/png" href="/img/logo-futbolXI.png"/>
-    <script defer src="./js/editValidation.js"></script>
+    <script defer src="/js/editValidation.js"></script>
 
     <title> Editar producto </title>
 
@@ -20,7 +20,7 @@
             <form action="/update?m=PUT" method="post" class="formulario-registro" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<%=product.id %>">
                 <label for="nombre"> Nombre del producto </label>
-                <input type="text" id="nombre" name="nombre" value="<%= product.nombre %>" required>
+                <input id="nombre" type="text" " name="nombre" value="<%= product.nombre %>" required>
                 <div class="errores"  id="errorNombre"></div>
 
                 <label for="marca"> Marca </label>
@@ -46,7 +46,7 @@
                     <label for="Blando"> Blando </label>
                 </span>
                 <label for="Price"> Precio </label>
-                <input type="number" id="precio" name="precio" value="<%= product.precio %>" required>
+                <input id="precio" type="number" name="precio" value="<%= product.precio %>" required>
                 <div class="errores" id="errorPrecio"></div>
 
                 <label for="oferta"> Está en oferta</label>

@@ -6,7 +6,7 @@ let errorNombre = document.querySelector("#errorNombre");
 let errorPrecio = document.querySelector("#errorPrecio");
 let errorDescripcion = document.querySelector("#errorDescripcion");
 let errorImagen = document.querySelector("#errorImagen");
-let editar = document.getElementById("editar")
+let editar = document.querySelector("#editar");
 let form = document.querySelector(".formulario-registro")
 
 let allowedExtensions =/(\.jpg|\.jpeg|\.png|\.gif)$/i;
