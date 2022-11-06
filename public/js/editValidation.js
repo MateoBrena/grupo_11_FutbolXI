@@ -19,12 +19,12 @@ editar.addEventListener("click", function(event){
     errores.nombre = "El minimo debe ser 5 caracteres";
     }
 
-    if(!allowedExtensions.exec(imagen.value)){
+    if(imagen.value && !allowedExtensions.exec(imagen.value)){
         errores.image = "El formato de imagen no es válido"
     }
 
     if(descripcion.value.length < 20 ){
-        errores.descripcion = "El minimo debe ser 4 caracteres";
+        errores.descripcion = "El minimo debe ser 20 caracteres";
     }
     if(precio.value.length < 1 ){
         errores.precio = "El campo debe estar completo";
@@ -39,5 +39,7 @@ editar.addEventListener("click", function(event){
         errorDescripcion.style.backgroundColor+= "tomato"
         errorImagen.innerText = errores.image ? errores.image : null;
         errorImagen.style.backgroundColor+= "tomato"
-    } else { form.submit() }
+    } else {
+         form.submit()
+         }
 })

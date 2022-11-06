@@ -18,7 +18,7 @@ create.addEventListener("click", function(event){
     errores.nombre = "El minimo debe ser 5 caracteres";
     }
 
-    if(!allowedExtensions.exec(imagen.value)){
+    if(imagen.value && !allowedExtensions.exec(imagen.value)){
         errores.image = "El formato de imagen no es válido"
     }
 

@@ -29,12 +29,17 @@ let confirmarClave = body("confirmarClave").notEmpty().withMessage("Debes confir
 const imageValidation =
 check("imagen")
 .custom((value, {req}) => {
-    let file = req.files[0].mimetype
-
-    if(file == 'image/png' || file == 'image/jpg' || file == 'image/gif' || file == 'image/jpeg'){
-        return true;
-    } 
-    throw new Error ('El archivo no es PNG, JPG, JPEG O GIF')
+    let files = req.files.map(file=> file.mimetype)
+    console.log(files);
+   let validations= files.forEach(file => {
+        console.log(file);
+        if (file == 'image/png' || file == "image/jpg" || file == "image/gif" || file == "image/jpeg"){
+            return true;
+        } 
+        throw new Error ('El archivo no es PNG, JPG, JPEG O GIF')
+    })
+    
+    return true
 })
 
 let validaciones = [email,clave,confirmarClave,imageValidation]

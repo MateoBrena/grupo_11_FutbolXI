@@ -15,7 +15,8 @@ let errorimagen = document.querySelector("#errorImagen");
 
 
 let validRegex = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$/;
-let form = document.querySelector("formulario-registro")
+let form = document.querySelector(".formulario-registro")
+let allowedExtensions =/(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
 register.addEventListener("click", function(event){
     
@@ -40,9 +41,8 @@ register.addEventListener("click", function(event){
         errores.ConfiPass = "El minimo debe ser de 8 caracteres";
     }
 
-    () =>{ 
-        let extension = imagen.files[0].type; 
-        !extension.includes("image") ? errores.imagen = "El archivo no es PNG, JPG, JPEG O GIF" : null;
+    if(imagen.value && !allowedExtensions.exec(imagen.value)){
+        errores.imagen = "El formato de imagen no es válido"
     }
 
     
