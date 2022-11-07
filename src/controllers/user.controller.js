@@ -1,71 +1,10 @@
-const {all,one, generate, write} = require("../models/users.model")
+
 const {unlinkSync} = require("fs");
 const {resolve} = require('path');
 const {hashSync} = require("bcrypt");
 const {validationResult} = require("express-validator");
-const {User,Image} = require("../database/models/index");
-const { getMaxListeners } = require("process");
-const { json } = require("sequelize");
-const { stringify } = require("querystring");
+const {User} = require("../database/models/index");
 const userController = {
-  /*  index: (req,res) => {
-        let usuarios = all()
-        return res.render('../views/Users/usersList',{usuarios})
-    },
-      show: (req,res) =>{
-         let user = one(req.params.id)
-         if(user){
-             return res.render('../views/Users/userProfile',{user})     
-         }
-            return res.render("../views/404Error")
-    },access : (req,res) => {
-        const result = validationResult(req)
-        if(!result.isEmpty()) {
-            let errores = result.mapped();
-            return res.render("../views/Users/login",{
-                errores: errores,
-                data: req.body
-            })
-        }
-        if(req.body.check != undefined){
-            res.cookie("user", req.body.email, {maxAge: 1000 * 60 * 3 })
-            
-        }
-        
-        req.session.user = user.findOne({where:{
-             email: req.body.email
-         }})
-            .then(user => user,
-                res.redirect("/"))
-        let todos = all()
-        req.session.user = todos.find(user => user.email == req.body.email)
-       
-        return res.redirect("/")
-
-    },
-    // control de las validaciones 
-        edit: (req,res) => {
-        let user = one(req.params.id)
-        return res.render("../views/Users/userEdit", {user})  
-    },
-    update: (req,res) => {
-    let todos = all();
-        let actualizados = todos.map(elemento => {
-            if(elemento.id == req.body.id){
-                elemento.nombre = req.body.nombre;
-                elemento.apellido = req.body.apellido
-                elemento.email = req.body.email
-                elemento.categoria = req.body.email.includes("@futbolxi") ? "Administrador" : "Cliente";
-                elemento.imagen = req.files && req.files.length > 0 ? req.files[0].filename : elemento.imagen;
-            }
-            return elemento
-        })
-        write(actualizados)
-    }, remove : (req,res) => {
-        /*let todos = all();
-        let noEliminados = todos.filter(elemento => elemento.id != req.body.id);
-        write(noEliminados
-    */
 
 
     index: (req,res)=>{
@@ -162,18 +101,19 @@ const userController = {
     remove : (req,res) => {
         User.findByPk(req.body.id).then(resultado => {
             if (resultado.image != "default.png") {
-                let file = resolve(__dirname,"..","..","public","img","Usuarios", resultado.image)
-               return unlinkSync(file)
+                let file = resolve(__dirname,"..","..","public","img","Usuarios", resultado.image);
+               return unlinkSync(file);
+            
             }
-        }).then(() => {
             User.destroy({
                 where:{
-                    id: req.body.id
+                    id: resultado.id
                 }
             })
+            .then(() => res.redirect("/"))
         })
         
-        return res.redirect("/")
+        
     }
 }
 

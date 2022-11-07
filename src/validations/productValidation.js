@@ -1,6 +1,5 @@
 const {body,check} = require("express-validator");
-const { is } = require("express/lib/request");
-const {Product} = require("../database/models/index");
+
 
 
 

@@ -1,4 +1,3 @@
-const {all} = require("../models/users.model")
 const {User} = require("../database/models/index");
 
 let middleware = (req,res,next) => {
