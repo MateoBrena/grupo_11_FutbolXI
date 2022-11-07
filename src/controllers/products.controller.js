@@ -1,16 +1,14 @@
 const {unlinkSync} = require("fs");
 const {resolve} = require('path');
-const {Product,Image} = require("../database/models");
+const {Product} = require("../database/models");
 const {validationResult} = require("express-validator");
 
 const controller = {
   
     index: (req,res)=>{
-     
         Product.findAll({include:["images"]})
         .then(products => {
             let data = {
-                image: Image.findAll(),
                 Adidas: products.filter(elemento => (elemento.marca_id == "1")),
                 Nike: products.filter(elemento => (elemento.marca_id == "2")),
                 Puma: products.filter(elemento => (elemento.marca_id == "3")),
@@ -26,12 +24,9 @@ const controller = {
         })
         .catch(error => res.status(404).json(error))
     },
-
     show: (req,res) =>{
-
         Product.findByPk(req.params.producto, {include:["images"]}).
-        then(product => 
-            
+        then(product =>    
             {if(product){
             return res.render('../views/Product/productDetail',{product})  
         }return res.render("../views/404Error")})
@@ -62,31 +57,14 @@ const controller = {
             precio:  parseInt(nuevo.precio),
             marca_id: parseInt(nuevo.marca),
             oferta: parseInt(nuevo.oferta),
-
+            imagen: nuevo.imagen
         },
         {
             where:{id: req.body.id}
         })
-        .then(()=>{
-            let nombreImagenes = req.files.map(elemento => elemento.filename)
-            Image.findAll({
-                where:{
-                product_id: req.body.id
-            }}).then(arrayImagenes => {
-                for (let i = 0; i < arrayImagenes.length; i++) {
-                    const imagenes = arrayImagenes[i]
-                    Image.update({
-                        imagen: nombreImagenes[i]
-                       
-                    },{
-                        where:{id: imagenes.id       
-                        }
-                    })
-                }        
-            })           
-        })
+        .then(()=> res.redirect("/productList"))           
         .catch(error => res.status(404).json(error))
-        return res.redirect("/productList")
+       
     },
     save: (req,res) => {
         let nuevo = (req.body)
@@ -105,66 +83,42 @@ const controller = {
             precio:  parseInt(nuevo.precio),
             marca_id: parseInt(nuevo.marca),
             oferta: parseInt(nuevo.oferta),
-        }).then(() => {
-            Product.findAll().then(resultado => {
-                let product = resultado.pop().id
-                let nombreImagenes = req.files.map(elemento => elemento.filename)
-                nombreImagenes.forEach(unaFoto => {
-                    Image.create({
-                        imagen: unaFoto,
-                        product_id: product,
-                    })
-                })
-                
-            })
-            return res.redirect("/productList")
+            imagen: nuevo.imagen
         })
-    },
+        .then(() => res.redirect("/productList") )
+        .catch(error => res.status(404).json(error))   
+        }
+    ,
     remove: (req,res) => {
-        Image.findAll({
-            where:{
-            product_id: req.body.id
-        }}).then(arrayImagenes => {
-            arrayImagenes.forEach(cadaImagen => {
-                if (cadaImagen.imagen != "default.jpg") {
-                    let file = resolve(__dirname,"..","..","public","img","Botines", cadaImagen.imagen)
-                    unlinkSync(file)
-                }
-                Image.destroy({
-                    where:{
-                        id: cadaImagen.id
-                    }
-                })
-            })
-        }).then(() => {
+        Product.findByPk(req.body.id).then(resultado => {
+            if (resultado.imagen != "default.png") {
+                let file = resolve(__dirname,"..","..","public","img","Usuarios", resultado.image);
+               return unlinkSync(file);
+            
+            }
             Product.destroy({
                 where:{
-                    id: req.body.id
+                    id: resultado.id
                 }
             })
+            .then(() => res.redirect("/"))
         })
         
-        return res.redirect ("/productList")    
-        },
-
-    search:  (req,res) => {
         
-        let querys = req.query.q
-        let config = {
-            where: {nombre:querys},            
-            include:["images"]}
-
-        Product.findOne(config)
-        .then(product => 
-            
-            {
-                
-                if(product == null){
-                 return res.render("../views/404Error")} 
-        return res.render('../views/Product/productDetail',{product})})   
-        
-        .catch(error => res.status(404).json(error))
     }
-}
+    ,
+        search:  (req,res) => {
+            Product.findAll({where: {nombre: {[Op.Like]: req.query.q}}})
+            .then(product => 
+                {
+                  if(product == null){
+                     return res.render("../views/404Error")} 
+            return res.render('../views/Product/productDetail',{product})})   
+            
+            .catch(error => res.status(404).json(error))
+        }
+        
+    }
+
 
 module.exports = controller
