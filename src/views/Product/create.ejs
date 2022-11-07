@@ -20,7 +20,12 @@
                 <label for="nombre"> Nombre del producto </label>
                 <input id="nombre" type="text" name="nombre" required>
                 <div class="errores" id="errorNombre"></div>
-
+                <input type="text" name="nombre" required>
+                <% if (locals.errores && locals.errores.nombre) { %>
+                    <p>
+                        <%= locals.errores.nombre.msg %> 
+                    </p>
+                <% } %>
                
                 <label for="marca"> Marca </label>
 
@@ -61,12 +66,21 @@
                 <label for="imagen"> Imagen </label>
                 <input id="imagen" type="file" name="imagen" multiple>
                 <div class="errores" id="errorImagen"></div>
-
+                <input type="file" name="imagen" multiple>
+                <% if (locals.errores && locals.errores.imagen) { %>
+                    <p>
+                        <%= locals.errores.imagen.msg %> 
+                    </p>
+                <% } %>
                 
                 <label for="descripcion"> Descripción </label>
                 <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea required>
                     <div  class="errores" id="errorDescripcion"></div>
-
+                    <% if (locals.errores && locals.errores.descripcion) { %>
+                        <p>
+                            <%= locals.errores.descripcion.msg %> 
+                        </p>
+                    <% } %>
                    
                 <div class="botones">
                     <button id="create" type="submit"> Crear </button>

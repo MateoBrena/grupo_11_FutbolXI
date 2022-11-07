@@ -27,19 +27,35 @@
                 <label for="email"> Email</label>
                 <input type="text" name="email" id="email">
                 <div class="errores" id="errorEmail"></div>
-           
+                <% if (locals.errores && locals.errores.email) { %>
+                    <p class="feedback">
+                        <%= locals.errores.email.msg %> 
+                    </p>
+                <% } %>
                 <label for="clave"> Ingrese una contraseña </label>
                 <input type="password" name="clave" id="contraseña">
                 <div class="errores" id="errorContraseña"></div>
-             
+                <% if (locals.errores && locals.errores.confirmarClave) { %>
+                    <p class="feedback">
+                        <%= locals.errores.confirmarClave.msg %> 
+                    </p>
+                <% } %>
                 <label for="confirmarClave"> Confirme su contraseña </label>
                 <input type="password" name="confirmarClave" id="confipass">
                 <div class="errores" id="errorConfiPass"></div>
-             
+                <% if (locals.errores && locals.errores.confirmarClave) { %>
+                    <p class="feedback">
+                        <%= locals.errores.confirmarClave.msg %> 
+                    </p>
+                <% } %>
                 <label for="imagen"> Imagen de usuario </label>
                 <input type="file" name="imagen" id="imagen">
                 <div class="errores" id="errorImagen"></div>
-             
+                <% if (locals.errores && locals.errores.imagen){ %>
+                    <p class="feedback">
+                        <%= locals.errores.imagen.msg %> 
+                    </p>
+                <% } %>
                 <div class="botones">
                     <button type="submit" id="register"> Crear </button>
                     <button type="reset"> Borrar </button>
