@@ -19,6 +19,13 @@
 - Corrección de fallos o agregados 
 
 ## Reunión Weekly Viernes 14/10/2022 20hs
-- Retrsopectiva estrella de mar realizada
+- Retrospectiva estrella de mar actualizada
 - División de tareas para Sprint 7
 - Devolución Sprint 6
+
+## Reunión Weekly Lunes 7/11/2022 18hs
+- Devolución Sprint 6
+- Corrección de errores y comienzo de Sprint 8
+
+## Reunión Weekly Martes 8/11/2022 20hs
+- Retrospectiva estrella de mar actualizada
