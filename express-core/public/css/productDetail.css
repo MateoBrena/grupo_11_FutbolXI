@@ -41,7 +41,7 @@ h3 {
     width: 80%;
     position: relative;
     left: 10%;
-    margin-top: 20%;
+    margin-top: 10%;
     transition: box-shadow 450ms
 }
 
@@ -54,7 +54,6 @@ h3 {
     width: 80%;
     position: relative;
     left: 10%;
-    margin-bottom: 10%;
     transition: box-shadow 450ms
 }
 
@@ -69,7 +68,6 @@ h3 {
     padding: 5%;
     position: relative;
     left: 10%;
-    margin-top: 10%;
     margin-bottom: 10%;
 }
 
@@ -137,9 +135,7 @@ article img {
         background-color: white;
         width: 55%;
         margin-top: 10%;
-        
     }
-
 
     .prueba2{
         text-align: center;
@@ -147,7 +143,6 @@ article img {
         background-color: white;
         height: 16%;
         width: 55%;
-        margin-bottom: 10%;
         border-top: 1px solid #111;
     }
     
@@ -155,6 +150,8 @@ article img {
         text-align: left;
         display: block;
         background-color: white;
+        margin-top: 10%;
+        margin-bottom: 0px;
         height: 80%;
         width: 55%;
         padding: 2%;
@@ -162,7 +159,7 @@ article img {
 
 
     .productComple{
-        margin-bottom: 15%;
+        margin-bottom: 10%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -184,21 +181,21 @@ article img {
         width: 30%;
         position: relative;
         left: 44%;
-        margin-bottom: 10%;
         border: 1px solid #111;
         padding: 4.6rem 0;
+        margin-top: 5%;
     }
     
     .prueba2{
         text-align: center;
         display: block;
         background-color: white;
-        padding: 7rem 0;
+        padding: 7.2rem 0;
         width: 30%;
         position: relative;
         left: 45.5%;
-        margin-bottom: 0%;
         border: 1px solid #111;
+        margin-top: 5%;
     }
     
     .prueba3{
@@ -208,8 +205,10 @@ article img {
         width: 30%;
         position: relative;
         left: -48%;
-        padding: 7.2rem 0;
+        padding: 9rem 1rem;
         border: 1px solid #111;
+        margin-top: 5%;
+        max-height: 465px;
     }
 
     .empuje{
@@ -229,6 +228,7 @@ article img {
         position: absolute;
         bottom: 30%;
         font-size: 1.5rem;
+        margin: 1rem;
     }
     
     .agregar-carrito {
@@ -247,7 +247,7 @@ article img {
 
 
     .productComple{
-        margin-bottom: 15%;
+        margin-bottom: 5%;
         display: flex;
         flex-direction: row;
         align-items: center;
