@@ -27,7 +27,6 @@ const passwordValidation =
             throw new Error("Credenciales inválidas")
 
         }
-        console.log(userFound.clave);
         if (!compareSync(value,userFound.clave)) {
             throw new Error("La contraseña no coincide")
         }

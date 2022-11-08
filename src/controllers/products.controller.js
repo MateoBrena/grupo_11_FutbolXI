@@ -83,31 +83,36 @@ const controller = {
             precio:  parseInt(nuevo.precio),
             marca_id: parseInt(nuevo.marca),
             oferta: parseInt(nuevo.oferta),
-            imagen: nuevo.imagen
+            imagen: req.files[0] ? req.files[0].filename : "default.jpg"
         })
-        .then(() => res.redirect("/productList") )
+        .then(() =>{
+        
+        
+        res.redirect("/productList")} )
         .catch(error => res.status(404).json(error))   
         }
     ,
     remove: (req,res) => {
-        Product.findByPk(req.body.id).then(resultado => {
-            if (resultado.imagen != "default.png") {
-                let file = resolve(__dirname,"..","..","public","img","Usuarios", resultado.image);
-               return unlinkSync(file);
-            
+        Product.findByPk(req.body.id)
+        .then(resultado => {
+            if (resultado.imagen != "default.jpg") {
+                let file = resolve(__dirname,"..","..","public","img","Botines", resultado.imagen);
+                unlinkSync(file);
+        
             }
             Product.destroy({
                 where:{
+                   
                     id: resultado.id
                 }
             })
             .then(() => res.redirect("/"))
+
         })
-        
-        
-    }
-    ,
-        search:  (req,res) => {
+            
+        }
+
+    ,   search:(req,res) => {
             Product.findAll({where: {nombre: {[Op.like]: req.query.q}}})
             .then(products => {
                 let product = products.pop() 

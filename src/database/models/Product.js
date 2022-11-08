@@ -27,7 +27,7 @@ const model = function(sequelize,DataTypes) {
         },
         imagen: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
          },
     }
     let config = {

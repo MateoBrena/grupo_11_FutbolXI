@@ -17,7 +17,6 @@ const imageValidation =
 check("imagen")
 .custom((value, {req}) => {
     let files = req.files.map(file=> file.mimetype)
-    console.log(files);
    let validations= files.forEach(file => {
         console.log(file);
         if (file == 'image/png' || file == "image/jpg" || file == "image/gif" || file == "image/jpeg"){
