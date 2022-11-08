@@ -41,7 +41,7 @@ const controller = {
         return res.render("../views/Product/create.ejs")
     },
     edit: (req,res) => {
-        Product.findByPk(req.params.id, {include:["images"]}).
+        Product.findByPk(req.params.id,).
         then(product => {if(product){
             return res.render('../views/Product/productEdit',{product})  
         }return res.render("../views/404Error")})

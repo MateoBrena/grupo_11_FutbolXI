@@ -55,6 +55,10 @@ h1 {
 }
 .errores{
     color: snow;
+    text-align: center;
+    margin-left: .5rem;
+    border-radius: .5rem;
+    width: 16vw;
 }
 .botones {
     display: flex;

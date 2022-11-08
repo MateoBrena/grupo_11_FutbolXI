@@ -18,6 +18,10 @@ section {
 }
 .errores{
     color: snow;
+    text-align: center;
+    margin-left: .5rem;
+    border-radius: .5rem;
+    width: 16vw;
 }
 .formulario-registro {
     display: flex;

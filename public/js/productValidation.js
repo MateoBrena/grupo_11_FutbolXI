@@ -23,7 +23,7 @@ create.addEventListener("click", function(event){
     }
 
     if(descripcion.value.length < 20 ){
-        errores.descripcion = "El minimo debe ser 4 caracteres";
+        errores.descripcion = "El minimo debe ser 20 caracteres";
     }
     if(precio.value.length < 1 ){
         errores.precio = "El campo debe estar completo";
