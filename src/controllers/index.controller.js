@@ -3,7 +3,7 @@ const controller = {
 
 
     index: (req,res)=>{
-        Product.findAll({include:["images"]})
+        Product.findAll()
         .then(response=> res.render("index",{response}));
         
     }

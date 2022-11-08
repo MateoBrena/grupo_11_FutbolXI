@@ -24,7 +24,11 @@ const model = function(sequelize,DataTypes) {
         oferta: {
             type: DataTypes.BIGINT(10),
             allowNull: false
-        }
+        },
+        imagen: {
+            type: DataTypes.STRING,
+            allowNull: false
+         },
     }
     let config = {
         tableName: "products",
@@ -36,10 +40,6 @@ const model = function(sequelize,DataTypes) {
         Product.belongsTo(models.Marca,{
             as: "marcas",
             foreignKey: "marca_id"
-        })
-        Product.hasMany(models.Image,{
-            as: "images",
-            foreignKey: "product_id"
         })
     }
     return Product

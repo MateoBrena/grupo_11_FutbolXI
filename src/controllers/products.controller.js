@@ -1,12 +1,12 @@
 const {unlinkSync} = require("fs");
 const {resolve} = require('path');
-const {Product} = require("../database/models");
+const {Product, Sequelize} = require("../database/models");
 const {validationResult} = require("express-validator");
-
+const Op = Sequelize.Op
 const controller = {
   
     index: (req,res)=>{
-        Product.findAll({include:["images"]})
+        Product.findAll()
         .then(products => {
             let data = {
                 Adidas: products.filter(elemento => (elemento.marca_id == "1")),
@@ -25,7 +25,7 @@ const controller = {
         .catch(error => res.status(404).json(error))
     },
     show: (req,res) =>{
-        Product.findByPk(req.params.producto, {include:["images"]}).
+        Product.findByPk(req.params.producto).
         then(product =>    
             {if(product){
             return res.render('../views/Product/productDetail',{product})  
@@ -108,15 +108,17 @@ const controller = {
     }
     ,
         search:  (req,res) => {
-            Product.findAll({where: {nombre: {[Op.Like]: req.query.q}}})
-            .then(product => 
-                {
+            Product.findAll({where: {nombre: {[Op.like]: req.query.q}}})
+            .then(products => {
+                let product = products.pop() 
+                console.log(product);
                   if(product == null){
                      return res.render("../views/404Error")} 
-            return res.render('../views/Product/productDetail',{product})})   
             
+            return res.render('../views/Product/productDetail',{product})})   
             .catch(error => res.status(404).json(error))
         }
+            
         
     }
 
