@@ -186,16 +186,14 @@ article img {
         left: 44%;
         margin-bottom: 10%;
         border: 1px solid #111;
-        padding: 3rem 0;
+        padding: 4.6rem 0;
     }
     
     .prueba2{
         text-align: center;
         display: block;
-        align-items: center;
         background-color: white;
         padding: 7rem 0;
-
         width: 30%;
         position: relative;
         left: 45.5%;
@@ -204,15 +202,13 @@ article img {
     }
     
     .prueba3{
-        text-align: left;
+        text-align: center;
         display: block;
         background-color: white;
-        padding: 3rem 0;
-
         width: 30%;
         position: relative;
         left: -48%;
-        padding: 2%;
+        padding: 7.2rem 0;
         border: 1px solid #111;
     }
 
