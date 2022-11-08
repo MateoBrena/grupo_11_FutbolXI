@@ -24,7 +24,7 @@
 - Devolución Sprint 6
 
 ## Reunión Weekly Lunes 7/11/2022 18hs
-- Devolución Sprint 6
+- Devolución Sprint 7
 - Corrección de errores y comienzo de Sprint 8
 
 ## Reunión Weekly Martes 8/11/2022 20hs
