@@ -17,7 +17,7 @@ const usersController = {
                         }
                     })
                 })
-            })
+            }).catch(error => res.send(error))
     },
     'detail': (req, res) => {
         db.User.findByPk(req.params.id)
@@ -27,11 +27,10 @@ const usersController = {
                     nombre: user.nombre,
                     apellido: user.apellido,
                     email: user.email,
-                    imagen: user.image
+                    imagen: "/img/Usuarios/"+user.image
                 });
-            });
+            }).catch(error => res.send(error))
     }
-
 }
 
 module.exports = usersController;

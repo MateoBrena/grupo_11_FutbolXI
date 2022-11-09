@@ -17,22 +17,42 @@ const productsController = {
                         }
                     })
                 })
-            })
+            }).catch(error => res.send(error))
     },
     'detail': (req, res) => {
         db.Product.findByPk(req.params.id)
             .then(product => {
+                let marca = "";
+                switch (product.marca_id) {
+                    case 1 : 
+                        marca = "Adidas"
+                        break;
+                    case 2 : 
+                        marca = "Nike"
+                        break;
+                    case 3 : 
+                        marca = "Puma"
+                        break;
+                    default:
+                        break;
+                }
+                let oferta = ""
+                if(product.oferta == 1) {
+                    oferta = "Si"
+                } else {
+                    oferta = "No"
+                }
                 return res.status(200).json({
                     id: product.id,
                     nombre: product.nombre,
                     categoria: product.categoria,
                     descripcion: product.descripcion,
                     precio: product.precio,
-                    marca: product.marca_id,
-                    oferta: product.oferta,
-                    imagen: product.imagen
+                    marca: marca,
+                    oferta: oferta,
+                    imagen: "/img/Botines/"+product.imagen
                 });
-            });
+            }).catch(error => res.send(error))
     }
 
 }
