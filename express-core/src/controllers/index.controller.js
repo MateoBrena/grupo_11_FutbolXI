@@ -1,4 +1,4 @@
-const {Product,Image}= require("../database/models/index")
+const {Product}= require("../database/models/index")
 const controller = {
 
 

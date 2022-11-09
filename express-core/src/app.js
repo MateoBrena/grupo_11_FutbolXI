@@ -25,16 +25,19 @@ server.use(session({
 
 server.use(cookie())
 
-
 server.use(require("./middlewares/user"))
 
 const productsRoutes = require('./routes/products.routes'); 
 const indexRoutes = require("./routes/index.routes")
 const usersRoutes = require("./routes/users.routes")
+const apiProductsRoutes = require("./routes/api/products.routes")
+const apiUsersRoutes = require("./routes/api/users.routes")
 
 server.use(productsRoutes); 
 server.use(indexRoutes);
 server.use(usersRoutes); 
+server.use(apiProductsRoutes); 
+server.use(apiUsersRoutes);
 server.use((req,res,next) => {
     res.status(404).render("404Error")
    return next()

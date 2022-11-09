@@ -86,8 +86,6 @@ const controller = {
             imagen: req.files[0] ? req.files[0].filename : "default.jpg"
         })
         .then(() =>{
-        
-        
         res.redirect("/productList")} )
         .catch(error => res.status(404).json(error))   
         }
@@ -98,21 +96,16 @@ const controller = {
             if (resultado.imagen != "default.jpg") {
                 let file = resolve(__dirname,"..","..","public","img","Botines", resultado.imagen);
                 unlinkSync(file);
-        
             }
             Product.destroy({
                 where:{
-                   
                     id: resultado.id
                 }
             })
             .then(() => res.redirect("/"))
-
-        })
-            
-        }
-
-    ,   search:(req,res) => {
+            })
+        }, 
+        search:(req,res) => {
             Product.findAll({where: {nombre: {[Op.like]: req.query.q}}})
             .then(products => {
                 let product = products.pop() 
@@ -123,8 +116,6 @@ const controller = {
             return res.render('../views/Product/productDetail',{product})})   
             .catch(error => res.status(404).json(error))
         }
-            
-        
     }
 
 

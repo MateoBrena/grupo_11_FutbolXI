@@ -4,8 +4,8 @@ const {resolve} = require('path');
 const {hashSync} = require("bcrypt");
 const {validationResult} = require("express-validator");
 const {User} = require("../database/models/index");
-const userController = {
 
+const userController = {
 
     index: (req,res)=>{
         User.findAll()
