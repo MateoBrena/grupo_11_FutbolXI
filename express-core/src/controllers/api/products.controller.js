@@ -8,6 +8,11 @@ const productsController = {
             .then(products => {
                 return res.status(200).json({
                     count: products.length,
+                    countByCategory: {
+                     Adidas: products.filter(cadaProducto => cadaProducto.marca_id == 1).length,
+                     Nike: products.filter(cadaProducto => cadaProducto.marca_id == 2).length,
+                     Puma: products.filter(cadaProducto => cadaProducto.marca_id == 3).length,  
+                    },
                     productos: products.map( cadaProducto => {
                         return {
                             id: cadaProducto.id,
