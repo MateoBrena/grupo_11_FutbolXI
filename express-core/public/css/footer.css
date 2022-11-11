@@ -58,6 +58,24 @@ footer p {
     height: 2.125rem;
 }
 
+.foot{
+    display: none;
+}
+
+#ubi{
+    display: none;
+}
+
+#color{
+    display: none;
+}
+
+#metopago{
+    width: 35vw;
+    position: relative;
+    right: 25vh;
+}
+
 @media screen and (min-width: 768px) {
     footer p {
         font-size: 0.8rem;
@@ -76,5 +94,26 @@ footer p {
     }
     .ofertas{
         margin-bottom: 2.3%;
+    }
+    .foot{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+
+    #ubi{
+        display: block;
+        width: 12vw;
+    }
+
+    #color{
+        display: block;
+        color: snow;
+    }
+
+    #metopago{
+        width: 25vw;
+        position: relative;
+        right: 10%;
     }
 }
