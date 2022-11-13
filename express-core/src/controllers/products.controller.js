@@ -57,7 +57,7 @@ const controller = {
             precio:  parseInt(nuevo.precio),
             marca_id: parseInt(nuevo.marca),
             oferta: parseInt(nuevo.oferta),
-            imagen: req.files[0] ? req.files[0].filename : "default.jpg"
+            imagen:  req.files[0] ? req.files[0].filename : nuevo.imagen
         },
         {
             where:{id: req.body.id}
