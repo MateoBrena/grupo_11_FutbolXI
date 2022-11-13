@@ -24,7 +24,7 @@ export default class ProductsList extends Component {
            if (peticion.ok) { // ckeck if status code is 200
                const respuesta = await peticion.json();
                console.log(respuesta);
-               this.setState({ userList: respuesta.productos});
+               this.setState({ userList: respuesta});
            } else { this.setState({ error: true }) }
        } catch (e) { //code will jump here if there is a network problem
    this.setState({ error: true });
