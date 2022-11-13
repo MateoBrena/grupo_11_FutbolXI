@@ -57,16 +57,18 @@
                                     <option value="Cant">5</option>
                                 </select>
                         </article>
+                        <div class="descripcion">
+                            <p> Tipo de terreno: <%= product.categoria %>  </p>
+                            <p> Precio: $<%= product.precio %> </p>
+                        </div>
+                    
+                        <button type="submit" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button>
+                        
                     </section>
                     
                 
-                    <div class="descripcion">
-                        <p> Tipo de terreno: <%= product.categoria %>  </p>
-                        <p> Precio: $<%= product.precio %> </p>
-                    </div>
                 
-                    <button type="submit" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button>
-                    
+            
                 
                 </article>
                 <article class="prueba3">

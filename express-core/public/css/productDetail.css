@@ -32,17 +32,23 @@ h3 {
 .prueba2:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-
-.prueba1{
+.productComple{
     text-align: center;
-    display: block;
-    align-items: center;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+  
+    
+}
+.prueba1{
     background-color: white;
-    width: 80%;
-    position: relative;
-    left: 10%;
-    margin-top: 10%;
-    transition: box-shadow 450ms
+    transition: box-shadow 450ms;
+    margin-top: 2rem;
+}  
+.prueba1 img{
+    width: 80vw;
+
 }
 
 .prueba2{
@@ -50,11 +56,9 @@ h3 {
     display: block;
     align-items: center;
     background-color: white;
-    height: 72%;
-    width: 80%;
-    position: relative;
-    left: 10%;
-    transition: box-shadow 450ms
+    transition: box-shadow 450ms;
+    width: 80vw;
+
 }
 
 .prueba3{
@@ -63,51 +67,29 @@ h3 {
     align-items: center;
     font-size: 15px;
     background-color: white;
-    height: 72%;
-    width: 80%;
-    padding: 5%;
-    position: relative;
-    left: 10%;
-    margin-bottom: 10%;
+    width: 80vw;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+
 }
 
 .linial{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
-
-.minimagenes{
- margin: 0rem;
-}
-
 
 
 div a {
-    width: 100%;
     text-align: center;
     background-color: white;
     margin-top: 5px;
-
-}
-
-.descripcion {
-    width: 100%;
-}
-
-article div {
-    width: 100%;
-}
-
-article img {
-    width: 100%;
-    
 }
 
 .verde{
     background-color:#248232 ;
     color: #fff;
 }
-
 
 .agregar-carrito {
     margin: 10px 0px;
@@ -125,10 +107,7 @@ article img {
 
 @media screen and (min-width: 768px) {
 
-    article img {
-        width:100%;
-    }
-
+/*
     .prueba1{
         text-align: center;
         display: block;
@@ -136,84 +115,59 @@ article img {
         width: 55%;
         margin-top: 10%;
     }
-
+*/
+    .prueba1 img{
+        width: 55vw;
+    }
     .prueba2{
-        text-align: center;
-        display: block;
-        background-color: white;
-        height: 16%;
-        width: 55%;
-        border-top: 1px solid #111;
+     border-top: 1px solid #111;
+     width: 55vw;
     }
     
     .prueba3{
-        text-align: left;
-        display: block;
-        background-color: white;
         margin-top: 10%;
-        margin-bottom: 0px;
-        height: 80%;
-        width: 55%;
-        padding: 2%;
+        width: 55vw;
     }
 
-
-    .productComple{
-        margin-bottom: 10%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        left: -8.5%;
-    }
 }
 
 @media screen and (min-width: 1280px) {
-    article img {
-        width: 68%;
-    }
-
-    .prueba1{
-        text-align: center;
-        display: block;
-        align-items: center;
-        background-color: white;
-        width: 30%;
-        position: relative;
-        left: 44%;
-        border: 1px solid #111;
-        padding: 4.6rem 0;
-        margin-top: 5%;
-    }
     
+    .prueba1 img{
+        width: 25vw;
+    }
+    .prueba1{
+        width: 32vw;
+        height: 400px;
+        border: 1px solid #111;  
+        margin: 0;
+       
+
+    }
+   
     .prueba2{
-        text-align: center;
-        display: block;
-        background-color: white;
-        padding: 7.2rem 0;
-        width: 30%;
-        position: relative;
-        left: 45.5%;
+        margin: 0;
+        width: 32vw;
         border: 1px solid #111;
-        margin-top: 5%;
+        height: 400px;
+        align-items: center;
     }
     
     .prueba3{
-        text-align: center;
-        display: block;
-        background-color: white;
-        width: 30%;
-        position: relative;
-        left: -48%;
-        padding: 9rem 1rem;
+        margin: 0;
+        width: 32vw;
+        height: 400px;
         border: 1px solid #111;
-        margin-top: 5%;
-        max-height: 465px;
+    } 
+    .productComple{
+        align-items: center;
+        margin: 1rem 0;
+        
     }
 
     .empuje{
-        margin-top: 10%;
-        margin-bottom: 25%;
+        margin-top: 4rem;
+        margin-bottom: 8rem;
     }
 
     .formulario{
@@ -224,12 +178,6 @@ article img {
         font-size: 1.5rem;
     }
 
-    .descripcion{
-        position: absolute;
-        bottom: 30%;
-        font-size: 1.5rem;
-        margin: 1rem;
-    }
     
     .agregar-carrito {
         margin: 10px 0px;
@@ -239,21 +187,8 @@ article img {
         border: none;
         border-radius: 5px;
         transition: box-shadow 450ms;
-        position: absolute;
-        bottom: 11%;
-        left: 27%;
+       
         font-size: 1.5rem;
     } 
-
-
-    .productComple{
-        margin-bottom: 5%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-    }
-
-   
 
 }
