@@ -1,6 +1,6 @@
 import React, { Component } from "react";
  
-export default class UserList extends Component {
+export default class ProductsList extends Component {
    state = {
       userList: [], // list is empty in the beginning
       error: false
@@ -12,10 +12,19 @@ export default class UserList extends Component {
  
    getUserList = async () => {
        try { //try to get data
-           const peticion = await fetch("http://localhost:3030/api/products");
+           const peticion = await fetch("http://localhost:3030/api/products",{
+            method: 'GET',  
+            withCredentials: true,  
+            crossorigin: true,  
+            mode: 'no-cors',  
+           });
+          
+           
+
            if (peticion.ok) { // ckeck if status code is 200
                const respuesta = await peticion.json();
-               this.setState({ userList: respuesta.results});
+               console.log(respuesta);
+               this.setState({ userList: respuesta.productos});
            } else { this.setState({ error: true }) }
        } catch (e) { //code will jump here if there is a network problem
    this.setState({ error: true });

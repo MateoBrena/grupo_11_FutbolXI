@@ -1,12 +1,14 @@
+
+import React from "react";
 import './Dashboard.css';
-import Lista from "./components/products.jsx"
+import ProductsList from './components/products.jsx';
 
 
 function App() {
   return (
     <div className="App">
       
-      <Lista/>
+      <ProductsList/>
       
     </div>
   );
