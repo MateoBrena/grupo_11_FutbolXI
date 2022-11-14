@@ -1,11 +1,11 @@
 const express = require('express');
 const methodOverride = require('method-override');
-const cors = require('cors');
 const server = express();
 const {join,resolve} = require('path');
 const{port,start} = require("./modules/server")
 const session = require("express-session")
 const cookie = require("cookie-parser")
+const cors = require('cors');
 
 server.listen(port,start());
 
@@ -26,6 +26,8 @@ server.use(session({
 server.use(cookie())
 
 server.use(require("./middlewares/user"))
+
+server.use(cors())
 
 const productsRoutes = require('./routes/products.routes'); 
 const indexRoutes = require("./routes/index.routes")

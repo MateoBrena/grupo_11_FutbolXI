@@ -1,14 +1,16 @@
 
 import React from "react";
 import './Dashboard.css';
-import ProductsList from './components/products.jsx';
+import UserList from './components/userList.jsx';
+import ProductList from './components/totalProducts.jsx';
 
 
 function App() {
   return (
     <div className="App">
       
-      <ProductsList/>
+      <UserList/>
+      <ProductList/>
       
     </div>
   );
