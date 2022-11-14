@@ -58,6 +58,7 @@ h3 {
     background-color: white;
     transition: box-shadow 450ms;
     width: 80vw;
+    margin-top: 1rem;
 
 }
 
@@ -76,7 +77,7 @@ h3 {
 .linial{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 
@@ -84,6 +85,12 @@ div a {
     text-align: center;
     background-color: white;
     margin-top: 5px;
+}
+
+#talleCant{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .verde{
@@ -97,8 +104,12 @@ div a {
     background-color: #248232;
     padding: 8px;
     border: none;
+    width: 35vw;
     border-radius: 5px;
-    transition: box-shadow 450ms
+    transition: box-shadow 450ms;
+    position: relative;
+    left: 28%;
+    
 }
 
 .agregar-carrito:hover {
@@ -107,67 +118,95 @@ div a {
 
 @media screen and (min-width: 768px) {
 
-/*
-    .prueba1{
-        text-align: center;
-        display: block;
-        background-color: white;
-        width: 55%;
-        margin-top: 10%;
-    }
-*/
     .prueba1 img{
         width: 55vw;
     }
     .prueba2{
      border-top: 1px solid #111;
      width: 55vw;
+     margin-top: 1rem;
     }
     
     .prueba3{
-        margin-top: 10%;
+        margin-top: 3%;
         width: 55vw;
+        padding: 1rem;
+        font-size: 1rem;
     }
 
+    .descripcion{
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .formulario{
+        font-size: 1.5rem;
+    }
+
+    .empuje{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #talleCant{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .agregar-carrito {
+        margin: 10px 0px;
+        color: white;
+        width: 25vw;
+        background-color: #248232;
+        padding: 8px;
+        border: none;
+        border-radius: 1rem;
+        transition: box-shadow 450ms;
+        font-size: 1.5rem;
+        position: relative;
+        left: 26%;
+    } 
 }
 
 @media screen and (min-width: 1280px) {
     
     .prueba1 img{
-        width: 25vw;
+        width: 23vw;
     }
     .prueba1{
         width: 32vw;
-        height: 400px;
+        height: 53vh;
         border: 1px solid #111;  
         margin: 0;
-       
-
+    
     }
    
     .prueba2{
         margin: 0;
         width: 32vw;
         border: 1px solid #111;
-        height: 400px;
+        height: 53vh;
         align-items: center;
     }
     
     .prueba3{
         margin: 0;
         width: 32vw;
-        height: 400px;
+        height: 53vh;
+        padding: 2rem;
         border: 1px solid #111;
     } 
     .productComple{
         align-items: center;
-        margin: 1rem 0;
+        margin: 4rem 0;
         
     }
 
     .empuje{
         margin-top: 4rem;
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
     }
 
     .formulario{
@@ -178,17 +217,31 @@ div a {
         font-size: 1.5rem;
     }
 
+    .descripcion{
+        font-size: 1.5rem;
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+
     
     .agregar-carrito {
         margin: 10px 0px;
         color: white;
+        width: 25vw;
         background-color: #248232;
         padding: 8px;
         border: none;
-        border-radius: 5px;
+        border-radius: 1rem;
         transition: box-shadow 450ms;
-       
         font-size: 1.5rem;
+        position: relative;
+        left: 10%;
     } 
+
+    #talleCant{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
 }
