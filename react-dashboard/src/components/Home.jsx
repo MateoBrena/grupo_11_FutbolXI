@@ -14,7 +14,7 @@ render(){
             <br />
             <Link to="/lastUser" exact={true}>Último usuario creado</Link>
             <br />
-            <Link to="/eachCategory" exact={true}>Marcas</Link>
+            <Link to="/eachCategory" exact={true}>Marcas y categorías</Link>
         </div>
         
     )

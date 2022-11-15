@@ -133,6 +133,12 @@ article img {
     article img {
         width: 40vw;
     }
+    .ultimo-boton{
+        position: absolute;
+        bottom: 85%;
+        right: 5vw;
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1280px) {
