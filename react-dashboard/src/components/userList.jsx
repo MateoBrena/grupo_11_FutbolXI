@@ -1,44 +1,44 @@
 import React, { Component } from "react";
+import {Link} from "react-router-dom"
  
 export default class UserList extends Component {
-   state = {
-      userList: [], // list is empty in the beginning
-      error: false
-   };
- 
-   componentDidMount() {
-       this.getUserList(); // function call
+
+    constructor(props){
+        super(props)
+        this.state = {
+         userList: [],
+         count: 0
+        }
+    }
+   async componentWillMount() {
+    try {
+        let request = await fetch("http://localhost:3030/api/users")
+        let data = await request.json()
+        this.setState({...this.state,userList: data.usuarios, count:data.count})
+    } catch(error) {
+        return new Error(error)
+    }
    }
  
-   getUserList = async () => {
-       try { //try to get data
-           let peticion = await fetch("http://localhost:3030/api/users");
-          
-           if (peticion.ok) { // ckeck if status code is 200
-               let respuesta = await peticion.json();
-               this.setState({ userList: respuesta.usuarios});
-           } else { this.setState({ error: true }) }
-       } catch (e) { //code will jump here if there is a network problem
-   this.setState({ error: true });
-  }
-};
+   async componentWillUpdate() {
+    try {
+        let request = await fetch("http://localhost:3030/api/users")
+        let data = await request.json()
+        this.setState({...this.state,userList: data.usuarios, count:data.count})
+    } catch(error) {
+        return new Error(error)
+    }
+   }
+
  
   render() {
-  const { userList, error } = this.state
       return (
-          <div>
-            {userList.map(usuario => (
-              <div key={usuario}>
-                  <img src={usuario.imagen} alt="usuario"/>
- 
-                  <div>
-                      <div>{usuario.nombre}</div>
-                      <div>{usuario.detail}</div>
-                      <div>{usuario.email}</div>
-                  </div>
-              </div>
-            ))}
-            {error && <div>Sorry, can not display the data</div>}
-          </div>
+          <main>
+            <h2>Listado de usuarios</h2>
+            <h3>Total de usuarios: {this.state.count}</h3> 
+            <ul>{this.state.userList.map(user => <li key={user.id}><Link to={`/user/${user.id} `}>{user.nombre}</Link></li>)}</ul>
+            <p><Link to="/" exact={true}>Home</Link></p>
+          </main>
       )
-            }}
+    }
+}

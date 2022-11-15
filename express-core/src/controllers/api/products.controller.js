@@ -11,7 +11,9 @@ const productsController = {
                     countByCategory: {
                      Adidas: products.filter(cadaProducto => cadaProducto.marca_id == 1).length,
                      Nike: products.filter(cadaProducto => cadaProducto.marca_id == 2).length,
-                     Puma: products.filter(cadaProducto => cadaProducto.marca_id == 3).length,  
+                     Puma: products.filter(cadaProducto => cadaProducto.marca_id == 3).length,
+                     TerrenoFirme: products.filter(cadaProducto => cadaProducto.categoria == "Firme").length,
+                     TerrenoBlando: products.filter(cadaProducto => cadaProducto.categoria == "Blando").length 
                     },
                     productos: products.map( cadaProducto => {
                         return {
