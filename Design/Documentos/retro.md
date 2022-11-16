@@ -43,7 +43,6 @@
 ### Sprint 3
 ##### Cosas positivas: 
 - Rápida adaptación de todos a la hora de dividir las tareas y trabajar en un nuevo equipo.
-
 ##### Cosas negativas:
 - Dificultades de horarios entre todos para definir fechas de reuniones.
 
@@ -51,23 +50,27 @@
 ### Sprint 4
 ##### Cosas positivas: 
 - Reuniones Weeklies frecuentes con la participación de todos los miembros.
-
 ##### Cosas negativas:
+- Conflictos con pusheos y versionado en GitHub.
+
 
 ### Sprint 5
 ##### Cosas positivas: 
-
+- Se comenzó a mejorar la comunicación para trabajar en equipo y evitar conflictos en GitHub.
 ##### Cosas negativas:
+- No se tomó nota de errores marcados en las correcciones y por lo tanto no fueron resueltos para el próximo sprint.
+
 
 ### Sprint 6
 ##### Cosas positivas: 
-
+- Se lograron sobrepasar los problemas presentados por migrar de la base de datos en JSON a una base de datos relacional en MySQL y Sequelize
 ##### Cosas negativas:
+- No se ordenaron en orden de prioridades los problemas que debíamos resolver de sprints anteriores, no fueron resueltos.
+
 
 ### Sprint 7
 ##### Cosas positivas: 
 - Se tomó nota de las correcciones para no olvidarlas y resolver los errores comunicados en la devolución.
-
 ##### Cosas negativas:
 - No se realizó una retrospectiva para analizar el sprint 6.
 
@@ -76,6 +79,6 @@
 ##### Cosas positivas: 
 - El resultado es un proyecto funcional realizado con la participación de todos los miembros.
 - Corrección de errores arrastrados de sprints anteriores.
-
 ##### Cosas negativas:
 - Se dejaron varias cosas a resolver de otros sprints, todos los miembros debieron trabajar mucho para cumplir con las fechas.
+
