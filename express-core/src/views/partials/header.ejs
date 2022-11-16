@@ -7,12 +7,15 @@
    </form>
 </nav>  
 <nav>  
-   <% if (user) { %> 
+   <% if (user) { %>  
     <ul>
         <li class="user"> <a href="/userProfile/<%= user.id %> "> Bienvenido <%=user.nombre%> <%=user.apellido%> </a> <a href="/logout"> <i class="fa-solid fa-door-open"></i> </h5></li>
         <li class="navbar1  "> <a href="/productList"> Todas las Marcas </a></li>
         <li> <a href="/productCart" id="carrito"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
     </ul>
+        <% if (user.admin == 1) { %>
+         <a href="usersList" class="users-list"> Lista de Usuarios </a>
+        <% } %>
         <% }else{ %> 
             <ul>
                <li class="navbar1"><a href="/productList"> <h4>Todas las Marcas</h4> </a></li> 
@@ -21,7 +24,6 @@
             </ul>
             
     <% } %> 
-   
 </nav>  
 <nav class="imagenes-marcas">
    <a href="/productList/Adidas"><img src="/img/logo-adidas-blanco.png" alt="Logo Adidas" id="logo-adidas"></a>
