@@ -17,14 +17,24 @@
         <section class="footerout">
             <h1> Ingresa tu cuenta:</h1>
             <form action="/access" method="post" class="formulario-registro">
+                
                 <label for="email"> Email</label>
                 <input type="email" name="email" id="email" required>
                 <div class="errores" id="errorEmail"></div>
+                <% if (locals.errores && locals.errores.email) { %>
+                    <p class="feedback">
+                        <%= locals.errores.email.msg %> 
+                    </p>
+                <% } %>
 
                 <label for="clave"> Contraseña </label>
                 <input type="password" name="clave" id="password" required>
-                <div class="errores" id="errorPassword"></div>
-
+                <div class="errores" id="errorContraseña"></div>
+                <% if (locals.errores && locals.errores.confirmarClave) { %>
+                    <p class="feedback">
+                        <%= locals.errores.confirmarClave.msg %> 
+                    </p>
+                <% } %>
                     
                 <label for="check"> Recuerda mi contraseña </label>
                 <input type="checkbox" id="check" name="check">
