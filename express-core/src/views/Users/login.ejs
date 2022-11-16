@@ -30,9 +30,9 @@
                 <label for="clave"> Contraseña </label>
                 <input type="password" name="clave" id="password" required>
                 <div class="errores" id="errorContraseña"></div>
-                <% if (locals.errores && locals.errores.confirmarClave) { %>
+                <% if (locals.errores && locals.errores.clave) { %>
                     <p class="feedback">
-                        <%= locals.errores.confirmarClave.msg %> 
+                        <%= locals.errores.clave.msg %> 
                     </p>
                 <% } %>
                     
