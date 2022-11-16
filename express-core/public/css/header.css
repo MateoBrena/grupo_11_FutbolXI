@@ -62,32 +62,25 @@ header {
     width: 2.125rem;
     height: 2.125rem;
 }
-.user{
-    display: flex;
-    font-size: 13px;
-    margin-top: 2rem;
-    margin-left: 2rem;
-}
-
-.user a{
-    color: white;
-}
 
 .navbar1 {
     display: block;
     position: relative;
     margin-top: 2rem;
-    margin-left:  2rem;
+    margin-left: 2rem;
     font-size: 14px;
-}
-
-.navbar1 a {
     color: white;
 }
 
-.fa-door-open{
-    margin-left: 1rem;
+.navbar1 a{
+    display: block;
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 14px;
+    color: white;
 }
+
 #carrito {
     position: absolute;
     top: 0.3125rem;
@@ -98,6 +91,45 @@ header {
     border-radius: 3.125rem;
     width: 2.125rem;
     height: 2.125rem;
+}
+
+#btn {
+    position: absolute;
+    top: 0.3125rem;
+    right: 3rem;
+    color: white;
+    padding: 0.3125rem 0.5rem;
+    background-color: black;
+    border-radius: 3.125rem;
+    width: 2.125rem;
+    height: 2.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+#menu-desplegable {
+    background-color: black;
+    width: 20vw;
+    position: absolute;
+    top: 6vh;
+    right: 0vw;
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+    z-index: 0;
+    transform: translateX(100%);
+    transition: all .3s ease-out; 
+    padding: 0.5rem;
+}
+
+#menu-desplegable li a{
+   color: white;
+}
+
+#menu-desplegable.active {
+     transform: translateX(0); 
 }
 
 .imagenes-marcas {
@@ -132,12 +164,6 @@ header {
     max-width: 6rem;
 }
 
-.users-list {
-    color: white;
-    position: absolute;
-    right: 5vw;
-    top: 10vh
-}
 
 @media screen and (min-width: 768px) {
     
@@ -160,5 +186,29 @@ header {
     #usuario {
         top: 0.9375rem;
         right: 3.125rem;
+    }
+
+
+    #btn {
+        top: 0.9375rem;
+        right: 3.125rem;
+    }
+
+    #menu-desplegable {
+        top: 8vh;
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    #menu-desplegable {
+        transform: translateY(-100%);
+        width: 10vw;
+        right: 12vw;
+        top: 0;
+    }
+
+    #menu-desplegable.active {
+        transform: translateY(0); 
     }
 }
