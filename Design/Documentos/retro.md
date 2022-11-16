@@ -21,3 +21,61 @@
 ### Dejar de hacer
 - Pushear código incompleto y que borre el trabajo ya realizado anteriormente.
 - No usar siempre la misma descripción o nombres genéricos para los commits.
+
+
+# Retrospectiva línea del tiempo
+
+### Sprint 1
+##### Cosas positivas:
+- Haber definido productos y características (wireframes, bocetos) del proyecto de forma correcta y eficiente.
+- Buena división de tareas a pesar de la situación de algunos miembros.
+##### Cosas negativas:
+- Situación poco clara en cuanto a los miembros del equipo, algunos salían y otros entraban pero no había participación.
+
+
+### Sprint 2
+##### Cosas positivas: 
+- Sobre el final del sprint se definieron los 4 miembros actuales del equipo.
+##### Cosas negativas:
+- Jere y Emi no pudieron participar de las actividades debido a que se les asignó el grupo sobre el final del sprint.
+
+
+### Sprint 3
+##### Cosas positivas: 
+- Rápida adaptación de todos a la hora de dividir las tareas y trabajar en un nuevo equipo.
+
+##### Cosas negativas:
+- Dificultades de horarios entre todos para definir fechas de reuniones.
+
+
+### Sprint 4
+##### Cosas positivas: 
+- Reuniones Weeklies frecuentes con la participación de todos los miembros.
+
+##### Cosas negativas:
+
+### Sprint 5
+##### Cosas positivas: 
+
+##### Cosas negativas:
+
+### Sprint 6
+##### Cosas positivas: 
+
+##### Cosas negativas:
+
+### Sprint 7
+##### Cosas positivas: 
+- Se tomó nota de las correcciones para no olvidarlas y resolver los errores comunicados en la devolución.
+
+##### Cosas negativas:
+- No se realizó una retrospectiva para analizar el sprint 6.
+
+
+### Sprint 8
+##### Cosas positivas: 
+- El resultado es un proyecto funcional realizado con la participación de todos los miembros.
+- Corrección de errores arrastrados de sprints anteriores.
+
+##### Cosas negativas:
+- Se dejaron varias cosas a resolver de otros sprints, todos los miembros debieron trabajar mucho para cumplir con las fechas.
