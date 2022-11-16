@@ -180,21 +180,22 @@ div a {
         height: 53vh;
         border: 1px solid #111;  
         margin: 0;
-    
+        height: 28vw;
+
     }
    
     .prueba2{
         margin: 0;
         width: 32vw;
         border: 1px solid #111;
-        height: 53vh;
+        height: 28vw;
         align-items: center;
     }
     
     .prueba3{
         margin: 0;
         width: 32vw;
-        height: 53vh;
+        height: 28vw;
         padding: 2rem;
         border: 1px solid #111;
     } 
