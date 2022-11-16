@@ -17,4 +17,8 @@
     text-decoration: underline;
   }
 
-  
+  .links{
+    font-family: "Heebo";
+    text-decoration: none;
+    color: black;
+  }

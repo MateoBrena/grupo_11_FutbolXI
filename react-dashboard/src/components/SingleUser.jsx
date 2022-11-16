@@ -40,7 +40,7 @@ export default class SingleUser extends Component {
             <h3>{this.state.usuario.email}</h3>
             <img className={styles.img} src={`http://localhost:3030/${this.state.usuario.imagen}`} alt="" />
             </article> 
-            <p><Link to="/" exact={true}>Home</Link></p>
+            <p><Link className={styles.links} to="/" exact={true}>Home</Link></p>
           </main>
       )
     }

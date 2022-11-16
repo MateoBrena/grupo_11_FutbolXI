@@ -44,7 +44,7 @@ export default class SingleProduct extends Component {
             <img className={styles.img} src={`http://localhost:3030/${this.state.producto.imagen}`} alt="" />
             
             </article>
-            <p><Link to="/" exact={true}>Home</Link></p>
+            <p>< Link className={styles.links} to="/" exact={true}>Home</Link></p>
           </main>
       )
     }

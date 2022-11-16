@@ -15,3 +15,13 @@
 .ul{
   list-style: none;
 }
+.buttonP{
+  background-color: #E7E7E7;
+  margin-left: 2.5rem
+  
+}
+.buttonN{
+  background-color: #E7E7E7;
+  margin-left: .5rem
+  
+}

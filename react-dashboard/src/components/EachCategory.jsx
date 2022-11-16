@@ -30,7 +30,7 @@ export default class EachCategory extends Component {
             <div className={styles.list} >Terreno Blando:{this.state.eachCategory.TerrenoBlando}</div>
 
 
-            <p><Link to="/" exact={true}>Home</Link></p>
+            <p>< Link className={styles.links}to="/" exact={true}>Home</Link></p>
           </main>
       )
     }
