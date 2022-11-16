@@ -17,7 +17,7 @@
         <li class="user"> <a href="/userProfile/<%= user.id %> "> Tu perfil</a> </li>
         <li><a href="/logout"> Cerrar sesión</a></li>
         <% if (user.admin == 1) { %>
-            <li><a href="usersList" class="users-list"> Lista de Usuarios</a></li>
+            <li><a href="/usersList" class="users-list"> Lista de Usuarios</a></li>
            <% } %>
     </ul>
         <% }else{ %> 
