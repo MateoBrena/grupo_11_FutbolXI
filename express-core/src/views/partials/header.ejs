@@ -8,6 +8,7 @@
 </nav>  
 <nav>
    <% if (user) { %>
+    
     <nav>
         <a href="#" id="btn"><i class="fa-solid fa-bars"></i></a>
         <a href="/productList" class="navbar1"> Todas las Marcas </a>
@@ -19,7 +20,8 @@
         <% if (user.admin == 1) { %>
             <li><a href="/usersList" class="users-list"> Lista de Usuarios</a></li>
            <% } %>
-    </ul>
+    </ul> 
+    <script src="/js/menu-desplegable.js"></script>  
         <% }else{ %> 
             <ul>
                <li class="navbar1"><a href="/productList"> <h4>Todas las Marcas</h4> </a></li> 
@@ -34,4 +36,3 @@
    <a href="/productList/Nike"><img src="/img/logo-nike-blanco.jpg" alt="Logo Nike" id="logo-nike"></a>
    <a href="/productList/Puma"><img src="/img/logo-puma-blanco.jpg" alt="Logo Puma" id="logo-puma"></a>
 </nav>
-<script src="/js/menu-desplegable.js"></script>  
