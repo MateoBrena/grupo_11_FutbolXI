@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
- 
+import styles from "./SingleUser.module.css"
 export default class SingleUser extends Component {
 
     constructor(props){
@@ -34,10 +34,12 @@ export default class SingleUser extends Component {
 
   render() {
       return (
-          <main>
+          <main >
+            <article className={styles.user}>
             <h2>{this.state.usuario.nombre} {this.state.usuario.apellido}</h2>
             <h3>{this.state.usuario.email}</h3>
-            <img src={`http://localhost:3030/${this.state.usuario.imagen}`} alt="" />
+            <img className={styles.img} src={`http://localhost:3030/${this.state.usuario.imagen}`} alt="" />
+            </article> 
             <p><Link to="/" exact={true}>Home</Link></p>
           </main>
       )

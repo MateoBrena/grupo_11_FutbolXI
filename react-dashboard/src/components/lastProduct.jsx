@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
- 
+import styles from "./LastProduct.module.css"
+
 export default class LastProduct extends Component {
 
     constructor(props){
@@ -22,9 +23,9 @@ export default class LastProduct extends Component {
   render() {
       return (
           <main>
-            <h2>Último producto creado:</h2>
-            <div>{this.state.allProducts.name}</div>
-            <div>{this.state.allProducts.description}</div>
+            <h2 className={styles.h2}>Último producto creado:</h2>
+            <div className={styles.list}> {this.state.allProducts.name}</div>
+            <div className={styles.list}>{this.state.allProducts.description}</div>
             <p><Link to="/" exact={true}>Home</Link></p>
           </main>
       )

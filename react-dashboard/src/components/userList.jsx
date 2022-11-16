@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom"
- 
+import styles from "./UserList.module.css"
 export default class UserList extends Component {
 
     constructor(props){
@@ -36,7 +36,7 @@ export default class UserList extends Component {
           <main>
             <h2>Listado de usuarios</h2>
             <h3>Total de usuarios: {this.state.count}</h3> 
-            <ul>{this.state.userList.map(user => <li key={user.id}><Link to={`/user/${user.id} `}>{user.nombre}</Link></li>)}</ul>
+            <ul className={styles.ul} >{this.state.userList.map(user => <li key={user.id}className={styles.li} ><Link className={styles.links} to={`/user/${user.id} `}>{user.nombre}</Link></li>)}</ul>
             <p><Link to="/" exact={true}>Home</Link></p>
           </main>
       )

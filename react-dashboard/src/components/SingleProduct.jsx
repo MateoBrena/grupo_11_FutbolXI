@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
-
+import styles from "./SingleProduct.module.css"
 export default class SingleProduct extends Component {
 
     constructor(props){
@@ -35,11 +35,15 @@ export default class SingleProduct extends Component {
   render() {
       return (
           <main>
-            <h2>{this.state.producto.marca} {this.state.producto.nombre}</h2>
+            <h2 className={styles.h2}>{this.state.producto.marca} {this.state.producto.nombre}</h2>
+            
+            <article className={styles.product}>
             <h3>${this.state.producto.precio}</h3>
             <h4>Tipo de terreno: {this.state.producto.categoria}</h4>
             <p>{this.state.producto.descripcion}</p>
-            <img src={`http://localhost:3030/${this.state.producto.imagen}`} alt="" />
+            <img className={styles.img} src={`http://localhost:3030/${this.state.producto.imagen}`} alt="" />
+            
+            </article>
             <p><Link to="/" exact={true}>Home</Link></p>
           </main>
       )

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
- 
+import styles from "./LastUser.module.css"
+
 export default class LastUser extends Component {
 
     constructor(props){
@@ -22,9 +23,9 @@ export default class LastUser extends Component {
   render() {
       return (
           <main>
-            <h2>Último usuario creado:</h2>
-            <div>{this.state.allUsers.nombre}</div>
-            <div>{this.state.allUsers.email}</div>
+            <h2 className={styles.h2} >Último usuario creado:</h2>
+            <div className={styles.list}>{this.state.allUsers.nombre}</div>
+            <div className={styles.list}>{this.state.allUsers.email}</div>
             <p><Link to="/" exact={true}>Home</Link></p>
           </main>
       )

@@ -1,0 +1,14 @@
+.list{
+
+  border: 2px solid black;
+  padding: 1rem 0;
+  margin: .5rem 0;
+  width: 80vw;
+  font-family: "Heebo";
+  text-decoration: none;
+  color: black;
+  font-size: 18px
+}
+.h2{
+  text-decoration: underline;
+}

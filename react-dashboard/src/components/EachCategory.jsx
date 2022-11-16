@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
- 
+ import styles from "./EachCategory.module.css"
 export default class EachCategory extends Component {
 
     constructor(props){
@@ -22,12 +22,12 @@ export default class EachCategory extends Component {
   render() {
       return (
           <main>
-            <h2>Marcas:</h2>
-            <div>Adidas:{this.state.eachCategory.Adidas}</div>
-            <div>Nike:{this.state.eachCategory.Nike}</div>
-            <div>Puma:{this.state.eachCategory.Puma}</div>
-            <div>Terreno Firme:{this.state.eachCategory.TerrenoFirme}</div>
-            <div>Terreno Blando:{this.state.eachCategory.TerrenoBlando}</div>
+            <h2 className={styles.h2} >Marcas:</h2>
+            <div className={styles.list}>Adidas:{this.state.eachCategory.Adidas}</div>
+            <div className={styles.list} >Nike:{this.state.eachCategory.Nike}</div>
+            <div className={styles.list} >Puma:{this.state.eachCategory.Puma}</div>
+            <div className={styles.list} >Terreno Firme:{this.state.eachCategory.TerrenoFirme}</div>
+            <div className={styles.list} >Terreno Blando:{this.state.eachCategory.TerrenoBlando}</div>
 
 
             <p><Link to="/" exact={true}>Home</Link></p>

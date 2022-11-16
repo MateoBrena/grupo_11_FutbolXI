@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
- 
+import styles from "./TotalProducts.module.css"
 export default class ProductList extends Component {
 
     constructor(props){
@@ -45,7 +45,7 @@ export default class ProductList extends Component {
           <main>
             <h2>Listado de productos</h2>
             <h3>Total de productos: {this.state.count}</h3> 
-            <ul>{this.state.productList.map(producto => <li key={producto.id}><Link to={`/products/${producto.id}`}>{producto.name}</Link></li>)}</ul>
+            <ul className={styles.ul} >{this.state.productList.map(producto => <li key={producto.id}className={styles.li} ><Link className={styles.links} to={`/products/${producto.id}`}>{producto.name}</Link></li>)}</ul>
             <button onClick={() => this.decrement()}>Previous</button>
             <button onClick={() => this.increment()}>Next</button>
             <p><Link to="/" exact={true}>Home</Link></p>
