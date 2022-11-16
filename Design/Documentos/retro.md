@@ -81,4 +81,3 @@
 - Corrección de errores arrastrados de sprints anteriores.
 ##### Cosas negativas:
 - Se dejaron varias cosas a resolver de otros sprints, todos los miembros debieron trabajar mucho para cumplir con las fechas.
-
