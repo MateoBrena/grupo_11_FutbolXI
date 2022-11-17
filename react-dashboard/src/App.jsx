@@ -26,7 +26,7 @@ class App extends Component {
         <Route path="/lastuser" exact component={LastUser}/>
         <Route path="/" exact component={Home}/> 
       </Switch>
-      {/* <Link to="/productList" exact={true}>Lista de productos</Link> */}
+      <a href="http://localhost:3030/"> Volver al sitio </a>
       </div>
     );
   }
