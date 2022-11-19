@@ -37,7 +37,7 @@ export default class UserList extends Component {
             <h2>Listado de usuarios</h2>
             <h3>Total de usuarios: {this.state.count}</h3> 
             <ul className={styles.ul} >{this.state.userList.map(user => <li key={user.id}className={styles.li} ><Link className={styles.links} to={`/user/${user.id} `}>{user.nombre}</Link></li>)}</ul>
-            <p><Link to="/" exact={true}>Home</Link></p>
+            <p>< Link className={styles.links} to="/" exact={true}>Home</Link></p>
           </main>
       )
     }

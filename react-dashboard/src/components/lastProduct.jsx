@@ -26,7 +26,7 @@ export default class LastProduct extends Component {
             <h2 className={styles.h2}>Último producto creado:</h2>
             <div className={styles.list}> {this.state.allProducts.name}</div>
             <div className={styles.list}>{this.state.allProducts.description}</div>
-            <p><Link to="/" exact={true}>Home</Link></p>
+            <p>< Link className={styles.links}to="/" exact={true}>Home</Link></p>
           </main>
       )
     }

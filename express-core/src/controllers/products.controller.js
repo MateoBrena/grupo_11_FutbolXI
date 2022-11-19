@@ -109,7 +109,6 @@ const controller = {
             Product.findAll({where: {nombre: {[Op.like]: req.query.q}}})
             .then(products => {
                 let product = products.pop() 
-                console.log(product);
                   if(product == null){
                      return res.render("../views/404Error")} 
             
