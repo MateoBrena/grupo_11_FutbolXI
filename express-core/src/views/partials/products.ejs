@@ -17,7 +17,7 @@
             <button type="none" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button> 
             <a href="/edit/<%= elemento.id %> "><i class="fa-solid fa-pencil"></i></a>
         </div>
-<% }if(!user){ %> 
+<% }else { %> 
     <button type="none" class="agregar-carrito"><a href="/productCart"class="verde">Añadir al carrito</a></button> 
       <%} %> 
             

@@ -8,10 +8,12 @@
     width: 30vw;
     margin-right: 3rem;
     border: 2px solid black;
+    text-align: center;
 
   }
   .product{
     margin-left: 2rem;
+    text-align: center;
   }
 
     .h2{
@@ -22,6 +24,7 @@
     }
     .h{
       margin-bottom: 1rem;
+      text-align: center;
     }
     .pic{
       text-align: center;
