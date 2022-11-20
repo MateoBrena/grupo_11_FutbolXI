@@ -34,7 +34,6 @@ h3 {
 }
 .productComple{
     text-align: center;
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around
@@ -173,6 +172,7 @@ div a {
 @media screen and (min-width: 1280px) {
     
     .prueba1 img{
+        align-items: center;
         width: 23vw;
     }
     .prueba1{
@@ -180,22 +180,24 @@ div a {
         height: 53vh;
         border: 1px solid #111;  
         margin: 0;
-        height: 28vw;
-
+        height: 32vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
    
     .prueba2{
         margin: 0;
         width: 32vw;
         border: 1px solid #111;
-        height: 28vw;
+        height: 32vw;
         align-items: center;
     }
     
     .prueba3{
         margin: 0;
         width: 32vw;
-        height: 28vw;
+        height: 32vw;
         padding: 2rem;
         border: 1px solid #111;
     } 

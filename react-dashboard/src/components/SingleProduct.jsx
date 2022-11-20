@@ -34,17 +34,19 @@ export default class SingleProduct extends Component {
 
   render() {
       return (
-          <main>
-            <h2 className={styles.h2}>{this.state.producto.marca} {this.state.producto.nombre}</h2>
+          <main className={styles.main}>
+            <h2 className={styles.h2}> {this.state.producto.marca} {this.state.producto.nombre}</h2>
             
             <article className={styles.product}>
-            <h3>${this.state.producto.precio}</h3>
-            <h4>Tipo de terreno: {this.state.producto.categoria}</h4>
-            <p>{this.state.producto.descripcion}</p>
-            <img className={styles.img} src={`http://localhost:3030/${this.state.producto.imagen}`} alt="" />
+            <h3 className={styles.h}>${this.state.producto.precio}</h3>
+            <h4 className={styles.h}>Tipo de terreno: {this.state.producto.categoria}</h4>
+            <p className={styles.h}>{this.state.producto.descripcion}</p>
+             <picture className={styles.pic}>
+             <img className={styles.img} src={`http://localhost:3030/${this.state.producto.imagen}`} alt="" />
             
+             </picture >
             </article>
-            <p>< Link className={styles.links} to="/" exact={true}>Home</Link></p>
+            <p className={styles.links}>< Link className={styles.links} to="/productList" exact={true}>Back</Link></p>
           </main>
       )
     }

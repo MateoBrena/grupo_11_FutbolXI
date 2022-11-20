@@ -34,13 +34,13 @@ export default class SingleUser extends Component {
 
   render() {
       return (
-          <main >
-            <article className={styles.user}>
-            <h2>{this.state.usuario.nombre} {this.state.usuario.apellido}</h2>
-            <h3>{this.state.usuario.email}</h3>
+        <main className={styles.main}>
+        <article className={styles.user}>
+            <h2 className={styles.h2}>{this.state.usuario.nombre} {this.state.usuario.apellido}</h2>
+            <h3 className={styles.h2}>{this.state.usuario.email}</h3>
             <img className={styles.img} src={`http://localhost:3030/${this.state.usuario.imagen}`} alt="" />
             </article> 
-            <p><Link className={styles.links} to="/" exact={true}>Home</Link></p>
+            <p className={styles.links}><Link className={styles.links} to="/UserList" exact={true}>Back</Link></p>
           </main>
       )
     }

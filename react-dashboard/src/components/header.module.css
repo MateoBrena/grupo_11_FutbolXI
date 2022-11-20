@@ -1,6 +1,8 @@
 .header{
     background-color: #248232;
     display: flex;
+    border: solid 1px white;
+    color: white;
   }
 .img{
     width: 8vw;

@@ -16,7 +16,7 @@ class App extends Component {
       <div className={styles.App}>
 
        <Header/>     
-       <Switch className={styles.main}>
+       <Switch >
         <Route path="/productList" exact component={ProductList}/>
         <Route path="/products/:id" exact component={SingleProduct}/>
         <Route path="/userList" exact component={UserList}/>
@@ -26,7 +26,6 @@ class App extends Component {
         <Route path="/lastuser" exact component={LastUser}/>
         <Route path="/" exact component={Home}/> 
       </Switch>
-      <a href="http://localhost:3030/"> Volver al sitio </a>
       </div>
     );
   }

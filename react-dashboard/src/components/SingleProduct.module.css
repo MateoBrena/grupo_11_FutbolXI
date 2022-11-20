@@ -1,24 +1,39 @@
+  .main{
+  background-color: #E7E7E7;;
+  padding: 0 0 2rem 0;
+  margin: 0;
 
-.img{
+}
+  .img{
     width: 30vw;
     margin-right: 3rem;
+    border: 2px solid black;
+
   }
   .product{
+    margin-left: 2rem;
+  }
 
-      border: 2px solid black;
-      padding: 1rem 0;
-      width: 80vw;
-      font-family: "Heebo";
-      text-decoration: none;
-      color: black;
-      font-size: 20px
-    }
     .h2{
       text-decoration: underline;
+      text-align: center;
+      margin-bottom: 1rem;
+      padding-top: 1rem;
     }
-
+    .h{
+      margin-bottom: 1rem;
+    }
+    .pic{
+      text-align: center;
+      width: 100vw;
+      margin-top: 2rem;
+    }
     .links{
-      font-family: "Heebo";
-      text-decoration: none;
-      color: black;
+    font-family: "Heebo";
+    font-size: 20px;
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-top: 5rem;
     }

@@ -1,19 +1,42 @@
+.main{
+  background-image: url("../../public/imagen-principal-home.jpg");
+  color: #E7E7E7;
+  padding: 6rem 0 3rem 0;
+  
+}
 .list{
 
   border: 2px solid black;
-  padding: 1rem 0;
-  margin: .5rem 0;
-  width: 80vw;
-  font-family: "Heebo";
-  text-decoration: none;
+  padding: 2rem 0;
+  margin: 0 0 1rem 0; 
+  background-color: #E7E7E7;
+  font-size: 20px;
+  width: 50vw;
+  text-align: center;
   color: black;
-  font-size: 18px
 }
 .h2{
   text-decoration: underline;
+  position: relative;
+  bottom: 5rem;
 }
 .links{
   font-family: "Heebo";
   text-decoration: none;
   color: black;
+}
+.ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.p{
+  font-family: "Heebo";
+  font-size: 20px;
+  text-decoration: underline;
+  color: #E7E7E7;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-top: 10rem;
 }

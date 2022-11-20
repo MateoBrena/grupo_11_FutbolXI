@@ -21,16 +21,19 @@ export default class EachCategory extends Component {
  
   render() {
       return (
-          <main>
+          <main className={styles.main}>
             <h2 className={styles.h2} >Marcas:</h2>
-            <div className={styles.list}>Adidas:{this.state.eachCategory.Adidas}</div>
-            <div className={styles.list} >Nike:{this.state.eachCategory.Nike}</div>
-            <div className={styles.list} >Puma:{this.state.eachCategory.Puma}</div>
-            <div className={styles.list} >Terreno Firme:{this.state.eachCategory.TerrenoFirme}</div>
-            <div className={styles.list} >Terreno Blando:{this.state.eachCategory.TerrenoBlando}</div>
+            <article className={styles.ul}>
+            <div className={styles.list}>Adidas: {this.state.eachCategory.Adidas}</div>
+            <div className={styles.list} >Nike: {this.state.eachCategory.Nike}</div>
+            <div className={styles.list} >Puma: {this.state.eachCategory.Puma}</div>
+            <div className={styles.list} >Terreno Firme: {this.state.eachCategory.TerrenoFirme}</div>
+            <div className={styles.list} >Terreno Blando: {this.state.eachCategory.TerrenoBlando}</div>
+            </article>
+          
 
 
-            <p>< Link className={styles.links}to="/" exact={true}>Home</Link></p>
+            <p className={styles.p}>< Link className={styles.p}to="/" exact={true}>Home</Link></p>
           </main>
       )
     }

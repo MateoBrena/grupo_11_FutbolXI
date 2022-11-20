@@ -1,24 +1,29 @@
+.main{
+  background-color: #E7E7E7;
+  padding-bottom: 3rem;
+  
+}
+
 .img{
+  margin-top: 3rem;
   width: 30vw;
-  margin-right: 3rem;
 }
 .user{
-    margin-top: 1rem;
-    border: 2px solid black;
-    padding: 1rem 0;
-    width: 40vw;
-    font-family: "Heebo";
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
+    padding-top: 3rem;
     text-align:center
   }
   .h2{
     text-decoration: underline;
+    
+    margin-bottom: 2rem;
   }
 
   .links{
     font-family: "Heebo";
-    text-decoration: none;
+    font-size: 20px;
+    text-decoration: underline;
     color: black;
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-top:10rem;
   }

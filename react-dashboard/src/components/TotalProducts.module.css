@@ -1,11 +1,24 @@
-  
+*{
+  margin: 0 ;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.main{
+  background-image: url("../../public/imagen-principal-home.jpg");
+  color: #E7E7E7;
+  padding-bottom: 2rem;
+}
+
 .li{
   border: 2px solid black;
   padding: 2rem 0;
-  margin: .5rem 0;
-  width: 80vw;
-  
-  font-size: 20px
+  margin: 0 0 1rem 0; 
+  background-color: #E7E7E7;
+  font-size: 20px;
+  width: 50vw;
+  text-align: center;
+
 }
 .links{
   font-family: "Heebo";
@@ -14,14 +27,26 @@
 }
 .ul{
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .buttonP{
   background-color: #E7E7E7;
+  padding: .1rem .1rem;
   margin-left: 2.5rem
   
 }
 .buttonN{
   background-color: #E7E7E7;
-  margin-left: .5rem
-  
+  margin: 0 0 1rem .5rem;
+  padding: .1rem .1rem;
+}
+.p{
+  font-family: "Heebo";
+  font-size: 20px;
+  text-decoration: underline;
+  color: #E7E7E7;
+  font-weight: bold;
+  margin-left: 1rem;
 }
