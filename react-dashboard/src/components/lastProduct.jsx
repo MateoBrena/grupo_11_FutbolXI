@@ -22,11 +22,15 @@ export default class LastProduct extends Component {
  
   render() {
       return (
-          <main>
+          <main className={styles.main}>
             <h2 className={styles.h2}>Último producto creado:</h2>
+            <article className={styles.ul}>
             <div className={styles.list}> {this.state.allProducts.name}</div>
             <div className={styles.list}>{this.state.allProducts.description}</div>
-            <p>< Link className={styles.links}to="/" exact={true}>Home</Link></p>
+            
+            </article>
+          
+            <p className={styles.p}>< Link className={styles.p}to="/" exact={true}>Home</Link></p>
           </main>
       )
     }

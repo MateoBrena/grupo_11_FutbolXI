@@ -81,11 +81,17 @@ footer p {
 }
 
 @media screen and (min-width: 1280px) {
-  
+    .textos{
+        margin-top: 1.2rem;
+
+    }
+    .textos p{
+        font-size: 0.9rem;
+    }
     .iconos-redes {
         position: relative;
         left: 3rem;
-        width: 10vw;
+        width: 15vw;
     }
 
     .ubicacion{
@@ -94,5 +100,29 @@ footer p {
     }
     .ubicacion img{
         width: 10vw;
+    }
+    .logo-twitter {
+        display: flex;
+        align-items: center;
+        width: 2.8rem;
+        height: 2.8rem;
+        justify-content: center
+    }
+    .logo-facebook {
+        display: flex;
+        align-items: center;
+        width: 2.8rem;
+        height: 2.8rem;
+        justify-content: center
+    }
+    .logo-instagram {
+        display: flex;
+        align-items: center;
+        width: 2.8rem;
+        height: 2.8rem;
+        justify-content: center;
+    }
+    .fa-brands{
+        font-size: 1.3rem
     }
 }

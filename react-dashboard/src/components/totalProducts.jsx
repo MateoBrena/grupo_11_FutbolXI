@@ -42,14 +42,25 @@ export default class ProductList extends Component {
  
   render() {
       return (
-          <main>
-            <h2>Listado de productos</h2>
+          < div className={styles.main}>
+           <main>
+          
+            <h2 className={styles.main}>Listado de productos</h2>
             <h3>Total de productos: {this.state.count}</h3> 
-            <ul className={styles.ul} >{this.state.productList.map(producto => <li key={producto.id}className={styles.li} ><Link className={styles.links} to={`/products/${producto.id}`}>{producto.name}</Link></li>)}</ul>
-            <button className={styles.buttonP} onClick={() => this.decrement()}>Previous</button>
-            <button className={styles.buttonN} onClick={() => this.increment()}>Next</button>
-            <p><Link className={styles.links} to="/" exact={true}>Home</Link></p>
+
+            <ul className={styles.ul} >
+                {this.state.productList.map(producto =>
+                 <li key={producto.id}className={styles.li} >
+                     <Link className={styles.links} to={`/products/${producto.id}`}>{producto.name}
+                     </Link>
+                </li>)}
+            </ul>
+            <button className={styles.buttonP} onClick={() => this.decrement()}>Anterior</button>
+            <button className={styles.buttonN} onClick={() => this.increment()}>Siguiente</button>
+            <p><Link className={styles.p} to="/" exact={true}>Home</Link></p>
           </main>
+          </div>
+         
       )
     }
 }
