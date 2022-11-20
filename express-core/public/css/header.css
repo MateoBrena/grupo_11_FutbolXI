@@ -63,23 +63,9 @@ header {
     height: 2.125rem;
 }
 
-.navbar1 {
-    display: block;
-    position: relative;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    font-size: 14px;
-    color: white;
-}
 
-.navbar1 a{
-    display: block;
-    position: relative;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    font-size: 14px;
-    color: white;
-}
+
+
 
 #carrito {
     position: absolute;
@@ -111,17 +97,18 @@ header {
 
 #menu-desplegable {
     background-color: black;
-    width: 20vw;
+    width: 28vw;
     position: absolute;
-    top: 6vh;
-    right: 0vw;
+    top: 0vw;
+    right: 1vw;
     display: flex;
     flex-flow: column;
     gap: 0.5rem;
-    z-index: 0;
-    transform: translateX(100%);
-    transition: all .3s ease-out; 
+    z-index: 4;
+    transform: translateY(-100%);
+    transition: all .3s ease-out;
     padding: 0.5rem;
+    max-width: 150px;
 }
 
 #menu-desplegable li a{
@@ -129,7 +116,7 @@ header {
 }
 
 #menu-desplegable.active {
-     transform: translateX(0); 
+    transform: translateY(2.5rem);
 }
 
 .imagenes-marcas {
@@ -143,15 +130,21 @@ header {
     filter: brightness(1.1);
     mix-blend-mode: screen;
 }
+.imagenes-marcas h4{
+    color: white;
+    margin-top: 3.2rem;
+    font-size: 4vw;
+
+}
 
 #logo-nike {
-    width: 28vw;
+    width: 23vw;
     margin-top: 1.75rem;
     max-width: 6rem;
 }
 
 #logo-puma {
-    width: 28vw;
+    width: 23vw;
     margin-top: 1.5625rem;
     max-width: 6rem;
 }
@@ -159,14 +152,17 @@ header {
 #logo-adidas {
     position: relative;
     top: 10%;
-    width: 30vw;
+    width: 23vw;
     margin-top: 1.375rem;
     max-width: 6rem;
 }
 
 
 @media screen and (min-width: 768px) {
-    
+    .imagenes-marcas h4{
+        margin-top: 3.3rem;
+        font-size: 22px
+    }
 
     .imagen-logo {
         width: 3.75rem;
@@ -193,22 +189,11 @@ header {
         top: 0.9375rem;
         right: 3.125rem;
     }
-
     #menu-desplegable {
-        top: 8vh;
+        width: 150px
     }
-}
-
-
-@media screen and (min-width: 1280px) {
-    #menu-desplegable {
-        transform: translateY(-100%);
-        width: 10vw;
-        right: 12vw;
-        top: 0;
-    }
-
     #menu-desplegable.active {
-        transform: translateY(0); 
+        transform: translateY(3.1rem);
     }
+   
 }

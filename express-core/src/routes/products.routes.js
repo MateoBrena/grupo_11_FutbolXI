@@ -3,7 +3,6 @@ const route = Router();
 const controller = require("../controllers/products.controller")
 const isLogged = require("../middlewares/isLogged")
 const productValidation = require("../validations/productValidation")
-
 const {resolve, extname} = require("path")
 const { existsSync,mkdirSync } = require('fs')
 const destination = function(req,file,cb){

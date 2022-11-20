@@ -7,17 +7,24 @@ footer {
     position: relative;
     background-color: #248232;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
+
+
 footer p {
-    font-size: 0.6rem;
+    font-size: 13px;
     display:block;
     margin: 0.6125rem .3125rem;
     color: white;
 }
 
 .iconos-redes {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+    margin-bottom: 1rem;
 }
 
 .iconos-redes a i {
@@ -25,95 +32,67 @@ footer p {
 }
 
 
+.ubicacion{
+    display: none;
+}
+
+
+#metopago img{
+    width: 80vw;
+    max-width: 350px;
+}
 .logo-twitter {
-    position: absolute;
-    top: .5rem;
-    right: 5.3125rem;
-    padding: 0.3125rem 0.5rem;
-    background-color: black;
-    border-radius: 3.125rem;
-    width: 2.125rem;
-    height: 2.125rem;
-}
-
-.logo-instagram {
-    position: absolute;
-    top: 0.5rem;
-    right: 2.8125rem;
-    padding: 0.25rem 0.5625rem;
-    background-color: black;
-    border-radius: 3.125rem;
-    width: 2.125rem;
-    height: 2.125rem;
-}
-
-.logo-facebook {
-    position: absolute;
-    top:0.5rem;
-    right: 0.3125rem;
-    padding: 0.3125rem 0.6875rem;
-    background-color: black;
-    border-radius: 3.125rem;
-    width: 2.125rem;
-    height: 2.125rem;
-}
-
-.foot{
-    display: none;
-}
-
-#ubi{
-    display: none;
-}
-
-#color{
-    display: none;
-}
-
-#metopago{
-    width: 35vw;
     position: relative;
-    right: 15vh;
+    padding: 0.3125rem ;
+    background-color: black;
+    border-radius: 3.125rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
 }
+.logo-facebook {
+    position: relative;
+    padding: 0.3125rem ;
+    background-color: black;
+    border-radius: 3.125rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+}
+.logo-instagram {
+    position: relative;
+    padding: 0.3125rem ;
+    background-color: black;
+    border-radius: 3.125rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+}
+
 
 @media screen and (min-width: 768px) {
-    footer p {
-        font-size: 0.8rem;
-    }
-
-    .logo-twitter {
-        right: 6.25rem;
-    }
-
-    .logo-instagram {
-        right: 3.4375rem;
-    }
-
-    .logo-facebook {
-        right: 0.625rem;
-    }
-    .ofertas{
-        margin-bottom: 2.3%;
-    }
-    .foot{
-        display: flex;
-        flex-direction:row;
-        justify-content: space-between;
-    }
-
-    #ubi{
-        display: block;
-        width: 8vw;
-    }
-
-    #color{
-        display: block;
-        color: snow;
-    }
-
-    #metopago{
-        width: 25vw;
+    .iconos-redes {
         position: relative;
-        right: 8vh;
+        left: 2rem;
+        font-size: 1.1rem;
+        width: 13vw;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+  
+    .iconos-redes {
+        position: relative;
+        left: 3rem;
+        width: 10vw;
+    }
+
+    .ubicacion{
+        display: block;
+   
+    }
+    .ubicacion img{
+        width: 10vw;
     }
 }

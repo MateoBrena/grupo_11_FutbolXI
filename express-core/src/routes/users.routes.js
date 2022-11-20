@@ -2,6 +2,8 @@ const {Router} = require('express')
 const route = Router();
 const controller = require("../controllers/user.controller")
 const isLogged = require("../middlewares/isLogged")
+const isNotLogged = require("../middlewares/isNotLogged")
+
 const {resolve, extname} = require("path")
 const { existsSync,mkdirSync } = require('fs')
 const destination = function(req,file,cb){
@@ -26,10 +28,10 @@ const upload = multer({
     storage: multer.diskStorage({destination,filename})
 })
 
-route.get("/login",controller.login)
+route.get("/login",[isNotLogged],controller.login)
 route.post("/access",validatorLogin, controller.access)
 
-route.get("/register",controller.register)
+route.get("/register",[isNotLogged],controller.register)
 route.post("/register/save", upload.any(), validaciones,controller.save)
 
 route.get("/usersList",[isLogged],controller.index)
