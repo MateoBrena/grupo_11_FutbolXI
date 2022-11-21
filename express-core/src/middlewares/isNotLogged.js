@@ -4,7 +4,7 @@ let middleware = (req,res,next) => {
         next()
     }
     
-    res.redirect("/")
+    res.redirect("/userProfile/"+ req.session.user.id)
 }
 
 
