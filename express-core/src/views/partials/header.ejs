@@ -1,8 +1,10 @@
 <nav class="encabezado">
     <a href="/" class="imagen-logo"><img src="/img/logo-futbolXI.png" alt="Logo Futbol XI"  class="imagen-logo"></a>
    
-   <form action="/search"data-submitfalse="q" method="get" class="searchbar" role ="search" > 
-       <input  type="text" name="q"  placeholder="Buscar productos,marcas">
+   <form action="/search" data-submitfalse="q" method="get" class="searchbar" role ="search" > 
+       <input  type="text" name="q" id="buscador" placeholder="Buscar productos" list="productSearch" autocomplete="off">
+       <datalist id="productSearch">
+       </datalist>
        <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
    </form>
 </nav>  
@@ -36,3 +38,4 @@
    <a href="/productList/Nike"><img src="/img/logo-nike-blanco.jpg" alt="Logo Nike" id="logo-nike"></a>
    <a href="/productList/Puma"><img src="/img/logo-puma-blanco.jpg" alt="Logo Puma" id="logo-puma"></a>
 </nav>
+<script defer src="/js/searchbar.js"></script>
